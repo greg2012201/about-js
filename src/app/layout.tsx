@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
+import TopBar from "@/components/top-bar";
 
 const lato = Lato({ weight: ["100", "300", "400", "700", "900"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={lato.className}>
         <main className="h-screen bg-gradient-to-b from-[#141e30] via-[#243b55] to-[#243b55]">
+          <TopBar />
           {children}
         </main>
       </body>

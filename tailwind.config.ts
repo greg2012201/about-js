@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         accent: "#6BFF8CE5",
+        ["text-accent"]: "#6BFF8CCC",
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],
