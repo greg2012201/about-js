@@ -11,6 +11,7 @@ function Logo({ handleClick }: Props) {
       <Image
         width={74.6}
         height={26}
+        className="md:w-[100.6px]"
         src="./logo.svg"
         alt="typescript and javascript logo"
       />
