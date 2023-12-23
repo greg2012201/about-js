@@ -19,8 +19,8 @@ function NavList({ navConfig, handleItemClick }: Props) {
           ? "text-accent border-b-2 border-accent"
           : "text-white";
         return (
-          <li className={twMerge("p-1", activeClass)} key={label}>
-            <Link onClick={handleItemClick} href={href}>
+          <li className={twMerge(" p-1", activeClass)} key={label}>
+            <Link className="text-lg" onClick={handleItemClick} href={href}>
               {label}
             </Link>
           </li>
