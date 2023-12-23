@@ -9,7 +9,7 @@ type Props = {
   navList: ReactNode;
 };
 
-const Navigation = forwardRef<HTMLDivElement, Props>(
+const Sidebar = forwardRef<HTMLDivElement, Props>(
   ({ open, handleClose, navList }, ref) => {
     const openClass = open ? "translate-x-[-300px]" : "translate-x-0";
     return (
@@ -34,6 +34,6 @@ const Navigation = forwardRef<HTMLDivElement, Props>(
   },
 );
 
-Navigation.displayName = "Navigation";
+Sidebar.displayName = "Sidebar";
 
-export default Navigation;
+export default Sidebar;

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useCallback, useState } from "react";
 import { CgMenu } from "react-icons/cg";
-import Navigation from "./navigation";
+import Sidebar from "./sidebar";
 import useClickOutside from "@/hooks/use-click-outside";
 import Logo from "./logo";
 import NavList from "./nav-list";
@@ -33,7 +33,7 @@ function TopBar() {
           <CgMenu className="text-[25px] text-accent" />
         </button>
       </div>
-      <Navigation
+      <Sidebar
         ref={ref}
         open={navOpen}
         handleClose={handleClose}
