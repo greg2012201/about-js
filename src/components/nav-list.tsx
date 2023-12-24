@@ -12,7 +12,7 @@ type Props = Prettify<{
 function NavList({ navConfig, handleItemClick, horizontal = false }: Props) {
   const pathname = usePathname();
   const layoutClass = horizontal
-    ? "flex flex-row gap-x-8 text-xl" /* change font size as well */
+    ? "flex flex-row gap-x-8 text-xl"
     : "flex flex-col text-lg";
   return (
     <ul className={layoutClass}>
