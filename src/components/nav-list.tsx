@@ -15,16 +15,16 @@ function NavList({ navConfig, handleItemClick, horizontal = false }: Props) {
     ? "flex flex-row gap-x-8 text-xl" /* change font size as well */
     : "flex flex-col text-lg";
   return (
-    <ul className={twMerge(" text-white", layoutClass)}>
+    <ul className={layoutClass}>
       {navConfig.map(({ label, href }) => {
         const isActive = pathname.includes(href);
 
         const activeClass = isActive
           ? "text-accent border-accent"
-          : "text-white border-transparent";
+          : "text-white hover:text-accent border-transparent";
         return (
-          <Link key={label} onClick={handleItemClick} href={href}>
-            <li className={twMerge("border-b-2 p-1", activeClass)}>{label}</li>
+          <Link className="" key={label} onClick={handleItemClick} href={href}>
+            <li className={twMerge(" border-b-2 p-1", activeClass)}>{label}</li>
           </Link>
         );
       })}
