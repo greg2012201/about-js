@@ -20,6 +20,9 @@ const config: Config = {
       fontFamily: {
         lato: ["Lato", "sans-serif"],
       },
+      fontSize: {
+        slogan: "44px",
+      },
     },
   },
   plugins: [],
