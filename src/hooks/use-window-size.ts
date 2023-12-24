@@ -6,10 +6,14 @@ interface WindowSize {
 }
 
 const useWindowSize = (): WindowSize => {
-  const [windowSize, setWindowSize] = useState<WindowSize>({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
+  const [windowSize, setWindowSize] = useState<WindowSize | null>(
+    typeof window !== "undefined"
+      ? {
+          width: window.innerWidth,
+          height: window.innerHeight,
+        }
+      : null,
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,7 +32,7 @@ const useWindowSize = (): WindowSize => {
     };
   }, []);
 
-  return windowSize;
+  return windowSize as WindowSize /* casting is added here because we now that when the client component arrives to the browser the window will be available */;
 };
 
 export default useWindowSize;
