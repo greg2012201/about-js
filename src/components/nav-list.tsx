@@ -6,26 +6,25 @@ import { twMerge } from "tailwind-merge";
 type Props = Prettify<{
   navConfig: Record<"label" | "href", string>[];
   handleItemClick: VoidFunction;
+  horizontal?: boolean;
 }>;
 
-function NavList({ navConfig, handleItemClick }: Props) {
+function NavList({ navConfig, handleItemClick, horizontal = false }: Props) {
   const pathname = usePathname();
+  const layoutClass = horizontal
+    ? "flex flex-row gap-x-8 text-xl" /* change font size as well */
+    : "flex flex-col text-lg";
   return (
-    <ul className="text-2xl text-white">
+    <ul className={twMerge(" text-white", layoutClass)}>
       {navConfig.map(({ label, href }) => {
         const isActive = pathname.includes(href);
 
         const activeClass = isActive
-          ? "text-accent border-b-2 border-accent"
-          : "text-white";
+          ? "text-accent border-accent"
+          : "text-white border-transparent";
         return (
-          <Link
-            key={label}
-            className="text-lg"
-            onClick={handleItemClick}
-            href={href}
-          >
-            <li className={twMerge(" p-1", activeClass)}>{label}</li>
+          <Link key={label} onClick={handleItemClick} href={href}>
+            <li className={twMerge("border-b-2 p-1", activeClass)}>{label}</li>
           </Link>
         );
       })}
