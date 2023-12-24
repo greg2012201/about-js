@@ -4,7 +4,7 @@ import Italic from "../italic";
 
 function Intro() {
   return (
-    <div className="p-4 text-white">
+    <div className="min-h-screen">
       <div>
         <h1 className="text-slogan font-light leading-tight">
           What the hack is about.js?
