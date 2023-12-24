@@ -16,7 +16,7 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(
       <nav
         ref={ref}
         className={twMerge(
-          "fixed right-[-300px] top-0 bg-gradient-to-b from-[#141e30] via-[#243b55] to-[#243b55] shadow-lg duration-150",
+          "fixed right-[-300px] top-0 z-20 bg-gradient-to-b from-[#141e30] via-[#243b55] to-[#243b55] shadow-lg duration-150",
           openClass,
         )}
       >
