@@ -7,7 +7,6 @@ import Italic from "../italic";
 
 function Intro() {
   const { scrollY } = useScroll();
-  console.log("🚀 ~ file: intro.tsx:10 ~ Intro ~ scrollY:", scrollY);
   const jsY = useTransform(scrollY, [0, 300], [0, -30]);
   const jsX = useTransform(scrollY, [0, 200], [0, -20]);
   const tsY = useTransform(scrollY, [0, 300], [0, 10]);
