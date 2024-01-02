@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Intro from "./_components/sections/intro";
 import Next from "./_components/sections/next";
 import React from "./_components/sections/react";
