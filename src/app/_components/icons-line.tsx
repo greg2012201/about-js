@@ -26,7 +26,7 @@ function IconsLine({ iconSrc }: Props) {
         initial={{ scaleY: 0 }}
         whileInView={{ scaleY: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
-        className="h-full w-1 origin-top bg-white"
+        className="h-full w-1 origin-top rounded-md bg-white"
       />
     </div>
   );
