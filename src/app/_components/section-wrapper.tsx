@@ -1,18 +1,26 @@
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 import { motion } from "framer-motion";
 import { ClassNameValue, twMerge } from "tailwind-merge";
 
-type Props = { children: ReactNode; className?: ClassNameValue };
+type Props = {
+  children: ReactNode;
+  className?: ClassNameValue;
+  renderIconLine?: ReactElement | null;
+};
 
-function SectionWrapper({ children, className }: Props) {
+function SectionWrapper({ children, className, renderIconLine = null }: Props) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      className={twMerge("h-[300px] pt-8", className)}
-    >
-      {children}
-    </motion.div>
+    <div className="flex">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        className={twMerge("h-[300px] w-full pt-8", className)}
+      >
+        {children}
+      </motion.div>
+      <div className="h-[300px] w-[40px]">{renderIconLine}</div>
+    </div>
   );
 }
 
