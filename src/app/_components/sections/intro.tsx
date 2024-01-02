@@ -17,7 +17,7 @@ function Intro() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="min-h-screen"
+      className="h-[650px]"
     >
       <div>
         <h1 className="text-slogan font-light leading-tight">
