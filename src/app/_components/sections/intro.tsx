@@ -47,8 +47,8 @@ function Intro() {
         </motion.div>
       </div>
       <BaseText>
-        My name is Greg and I am here to help you to keep up with the fresh news
-        from JS land.
+        👋 My name is Greg and I am here to help you to keep up with the fresh
+        news from JS land.
       </BaseText>
     </motion.div>
   );
