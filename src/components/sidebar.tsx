@@ -24,7 +24,7 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(
           <div className="flex items-center justify-between">
             <Logo handleClick={handleClose} />
             <button type="button" onClick={handleClose}>
-              <IoCloseSharp className="h-[25px] w-[25px] text-accent" />
+              <IoCloseSharp className="h-[25px] w-[25px] text-purple-500" />
             </button>
           </div>
           {navList}

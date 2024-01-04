@@ -32,7 +32,7 @@ function TopBar() {
           }}
         >
           {!BREAKPOINT_REACHED && (
-            <CgMenu className="text-[25px] text-accent" />
+            <CgMenu className={`text-[25px] text-purple-500`} />
           )}
         </button>
         {BREAKPOINT_REACHED && (
