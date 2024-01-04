@@ -12,8 +12,6 @@ function Intro() {
   const tsY = useTransform(scrollY, [0, 300], [0, 10]);
   const tsX = useTransform(scrollY, [0, 200], [0, 30]);
 
-  // bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
