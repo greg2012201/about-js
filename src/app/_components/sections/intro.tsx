@@ -21,8 +21,8 @@ function Intro() {
       viewport={{ once: true }}
       className="relative h-[650px]"
     >
-      <div>
-        <h1 className=" text-slogan font-light leading-tight ">
+      <div className="space-y-[2px]">
+        <h1 className=" text-slogan leading-tight ">
           What the hack is about.js?
         </h1>
         <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-2xl text-transparent">{`JavaScript Blog's Code Hub.`}</p>
