@@ -21,7 +21,7 @@ function TopBar() {
 
   return (
     <>
-      <div className="flex h-[40px] w-screen items-center justify-between bg-[rgba(0,0,0,0.47)] p-2 shadow-md sm:h-[60px]">
+      <div className="flex h-[40px] w-full items-center justify-between bg-[rgba(0,0,0,0.47)] p-2 shadow-md sm:h-[60px]">
         <Logo />
         <button
           onClick={() => {
