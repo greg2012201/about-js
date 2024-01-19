@@ -19,8 +19,12 @@ function TopBar() {
   const [navOpen, setNavOpen] = useState(false);
   const windowSize = useWindowSize();
   const ref = useClickOutside<HTMLDivElement>(() => setNavOpen(false));
-  const BREAKPOINT_REACHED = windowSize.width > 640;
   const handleClose = useCallback(() => setNavOpen(false), []);
+
+  if (!windowSize) {
+    return null;
+  }
+  const BREAKPOINT_REACHED = windowSize.width > 640;
 
   return (
     <>

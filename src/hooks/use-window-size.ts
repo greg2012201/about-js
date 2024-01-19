@@ -5,7 +5,7 @@ interface WindowSize {
   height: number;
 }
 
-const useWindowSize = (): WindowSize => {
+const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState<WindowSize | null>(
     typeof window !== "undefined"
       ? {
@@ -32,7 +32,7 @@ const useWindowSize = (): WindowSize => {
     };
   }, []);
 
-  return windowSize as WindowSize /* casting is added here because we now that when the client component arrives to the browser the window will be available */;
+  return windowSize /* casting is added here because we now that when the client component arrives to the browser the window will be available */;
 };
 
 export default useWindowSize;
