@@ -10,7 +10,7 @@ function Title({ children }: Props) {
       className={`${generateRandomGradient(
         ["indigo-500", "purple-500", "pink-500"],
         "to-r",
-      )} bg-clip-text text-2xl font-semibold text-transparent`}
+      )} bg-clip-text text-3xl font-semibold text-transparent`}
     >
       {children}
     </h2>
