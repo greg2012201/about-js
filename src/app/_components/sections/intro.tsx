@@ -19,7 +19,7 @@ function Intro() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="h-[650px]"
+      className="relative h-[650px]"
     >
       <div>
         <h1 className=" text-slogan font-light leading-tight ">
@@ -62,7 +62,7 @@ function Intro() {
           />{" "}
         </motion.div>
       </div>
-      <BaseText className="mt-[400px]">
+      <BaseText className="absolute top-[550px] ">
         👋 My name is Greg and I am here to help you to keep up with the fresh
         news from JS land.
       </BaseText>
