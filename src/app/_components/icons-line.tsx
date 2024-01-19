@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import generateRandomGradient from "@/utils/generate-random-gradient";
 
 type Props = {
   iconSrc: string;
@@ -27,11 +26,7 @@ function IconsLine({ iconSrc }: Props) {
         initial={{ scaleY: 0 }}
         whileInView={{ scaleY: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
-        className={`h-full w-1 origin-top rounded-md ${generateRandomGradient([
-          "indigo-500",
-          "purple-500",
-          "pink-500",
-        ])}`}
+        className={`h-full w-1 origin-top rounded-md bg-gradient-to-t from-pink-500 via-purple-500 to-indigo-500`}
       />
     </div>
   );
