@@ -16,7 +16,7 @@ function SectionWrapper({ children, className, renderIconLine = null }: Props) {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
         className={twMerge(
-          "align-center h-[300px] w-full space-y-6  pt-20",
+          "align-center z-20 h-[300px] w-full  space-y-6 pt-20",
           className,
         )}
       >
