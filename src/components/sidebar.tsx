@@ -1,5 +1,5 @@
 import { ReactNode, forwardRef } from "react";
-import { twMerge } from "tailwind-merge";
+import { ClassNameValue, twMerge } from "tailwind-merge";
 import Logo from "./logo";
 import { IoCloseSharp } from "react-icons/io5";
 
@@ -7,10 +7,11 @@ type Props = {
   open: boolean;
   handleClose: VoidFunction;
   navList: ReactNode;
+  className?: ClassNameValue;
 };
 
 const Sidebar = forwardRef<HTMLDivElement, Props>(
-  ({ open, handleClose, navList }, ref) => {
+  ({ open, handleClose, navList, className }, ref) => {
     const openClass = open ? "translate-x-[-300px]" : "translate-x-0";
     return (
       <nav
@@ -18,6 +19,7 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(
         className={twMerge(
           "fixed right-[-300px] top-0 z-20 bg-gradient-to-b from-[#141e30] via-[#243b55] to-[#243b55] shadow-lg duration-150",
           openClass,
+          className,
         )}
       >
         <div className="flex h-screen w-[300px] flex-col gap-4 bg-[rgba(0,0,0,0.47)] px-4 py-2 pr-2">

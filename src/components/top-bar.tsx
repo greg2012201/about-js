@@ -6,7 +6,6 @@ import Sidebar from "./sidebar";
 import useClickOutside from "@/hooks/use-click-outside";
 import Logo from "./logo";
 import NavList from "./nav-list";
-import useWindowSize from "@/hooks/use-window-size";
 
 const NAV_CONFIG = [
   { label: "about author", href: "/about-author" },
@@ -17,14 +16,8 @@ const NAV_CONFIG = [
 
 function TopBar() {
   const [navOpen, setNavOpen] = useState(false);
-  const windowSize = useWindowSize();
   const ref = useClickOutside<HTMLDivElement>(() => setNavOpen(false));
   const handleClose = useCallback(() => setNavOpen(false), []);
-
-  if (!windowSize) {
-    return null;
-  }
-  const BREAKPOINT_REACHED = windowSize.width > 640;
 
   return (
     <>
@@ -35,28 +28,27 @@ function TopBar() {
             setNavOpen((prevState) => !prevState);
           }}
         >
-          {!BREAKPOINT_REACHED && (
-            <CgMenu className={`text-[25px] text-purple-500`} />
-          )}
-        </button>
-        {BREAKPOINT_REACHED && (
-          <NavList
-            handleItemClick={handleClose}
-            navConfig={NAV_CONFIG}
-            horizontal
+          <CgMenu
+            className={`block text-[25px] text-purple-500 [@media(min-width:640px)]:hidden`}
           />
-        )}
-      </div>
-      {!BREAKPOINT_REACHED && (
-        <Sidebar
-          ref={ref}
-          open={navOpen}
-          handleClose={handleClose}
-          navList={
-            <NavList handleItemClick={handleClose} navConfig={NAV_CONFIG} />
-          }
+        </button>
+
+        <NavList
+          handleItemClick={handleClose}
+          navConfig={NAV_CONFIG}
+          className="hidden [@media(min-width:640px)]:flex"
+          horizontal
         />
-      )}
+      </div>
+      <Sidebar
+        ref={ref}
+        open={navOpen}
+        handleClose={handleClose}
+        className="block [@media(min-width:640px)]:hidden"
+        navList={
+          <NavList handleItemClick={handleClose} navConfig={NAV_CONFIG} />
+        }
+      />
     </>
   );
 }
