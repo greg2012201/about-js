@@ -46,7 +46,11 @@ function TopBar() {
         handleClose={handleClose}
         className="block [@media(min-width:640px)]:hidden"
         navList={
-          <NavList handleItemClick={handleClose} navConfig={NAV_CONFIG} />
+          <NavList
+            isAnimated={navOpen}
+            handleItemClick={handleClose}
+            navConfig={NAV_CONFIG}
+          />
         }
       />
     </>
