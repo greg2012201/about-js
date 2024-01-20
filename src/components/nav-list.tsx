@@ -26,11 +26,11 @@ function NavList({
         const isActive = pathname.includes(href);
 
         const activeClass = isActive
-          ? "text-accent border-accent"
-          : "text-white hover:text-accent border-transparent";
+          ? "text-purple-500 border-accent"
+          : "text-white hover:text-purple-500 border-transparent";
         return (
           <Link key={label} onClick={handleItemClick} href={href}>
-            <li className={twMerge(" border-b-2 p-1", activeClass)}>{label}</li>
+            <li className={twMerge("p-1", activeClass)}>{label}</li>
           </Link>
         );
       })}
