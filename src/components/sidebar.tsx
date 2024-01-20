@@ -29,6 +29,7 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(
               <IoCloseSharp className="h-[25px] w-[25px] text-purple-500" />
             </button>
           </div>
+          <hr className="w-full border-purple-400" />
           {navList}
         </div>
       </nav>
