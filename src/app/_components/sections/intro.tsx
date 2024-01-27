@@ -39,8 +39,8 @@ function Intro() {
           <Image
             className="z-10 translate-y-[40px] rounded-md"
             alt="javascript logo"
-            width={150}
-            height={150}
+            width={250}
+            height={250}
             src="./logo-javascript.svg"
           />
         </motion.div>
@@ -56,8 +56,8 @@ function Intro() {
           <Image
             className="translate-x-[-40px] rounded-md"
             alt="typescript logo"
-            width={150}
-            height={150}
+            width={250}
+            height={250}
             src="./logo-typescript.svg"
           />{" "}
         </motion.div>
