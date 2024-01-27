@@ -27,7 +27,7 @@ function Intro() {
         </h1>
         <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-2xl text-transparent md:text-3xl">{`JavaScript Blog's Code Hub.`}</p>
       </div>
-      <div className="fixed left-0 top-[200px] z-0 flex h-[350px] w-full items-center justify-center p-8">
+      <div className="fixed left-0 top-[250px] z-0 flex h-[350px] w-full items-center justify-center p-8">
         <motion.div
           style={{
             y: jsY,
