@@ -22,7 +22,7 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(
           className,
         )}
       >
-        <div className="flex h-screen w-[300px] flex-col gap-4 bg-[rgba(0,0,0,0.47)] px-4 py-2 pr-2">
+        <div className="flex h-screen w-screen flex-col gap-4 bg-[rgba(0,0,0,0.47)] px-4 py-2 pr-2 [@media(min-width:300px)]:w-[300px]">
           <div className="flex items-center justify-between">
             <Logo handleClick={handleClose} />
             <button type="button" onClick={handleClose}>
