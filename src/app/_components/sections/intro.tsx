@@ -21,11 +21,11 @@ function Intro() {
       viewport={{ once: true }}
       className="relative h-[650px] w-full"
     >
-      <div className="space-y-[2px]">
-        <h1 className=" text-slogan leading-tight ">
+      <div className="space-y-2">
+        <h1 className="text-5xl leading-tight md:text-7xl lg:text-8xl ">
           What the hack is about.js?
         </h1>
-        <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-2xl text-transparent">{`JavaScript Blog's Code Hub.`}</p>
+        <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-2xl text-transparent md:text-3xl">{`JavaScript Blog's Code Hub.`}</p>
       </div>
       <div className="fixed top-[200px] z-0 flex h-[350px] items-center p-8">
         <motion.div

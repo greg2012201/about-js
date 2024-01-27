@@ -7,7 +7,9 @@ type Props = {
 
 function BaseText({ children, className }: Props) {
   return (
-    <p className={twMerge(`text-xl  text-slate-300`, className)}>{children}</p>
+    <p className={twMerge(`text-xl text-slate-300  md:text-2xl`, className)}>
+      {children}
+    </p>
   );
 }
 
