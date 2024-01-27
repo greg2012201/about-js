@@ -10,7 +10,7 @@ type Props = {
 
 function SectionWrapper({ children, className, renderIconLine = null }: Props) {
   return (
-    <div className="flex ">
+    <div className="flex w-full">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

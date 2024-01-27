@@ -4,7 +4,7 @@ import React from "./_components/sections/react";
 
 export default function Home() {
   return (
-    <div className="w-full p-4 text-white">
+    <div className="mx-auto flex w-full flex-col items-center p-4 text-white sm:w-9/12">
       <Intro />
       <Next />
       <React />

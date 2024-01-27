@@ -19,7 +19,7 @@ function Intro() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="relative h-[650px]"
+      className="relative h-[650px] w-full"
     >
       <div className="space-y-[2px]">
         <h1 className=" text-slogan leading-tight ">
