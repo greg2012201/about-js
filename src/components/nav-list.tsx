@@ -51,7 +51,7 @@ function NavList({
     ? "flex flex-row gap-x-8 text-xl"
     : "flex flex-col text-2xl";
   return (
-    <ul className={twMerge("space-y-2", layoutClass, className)}>
+    <ul className={twMerge("space-y-2 sm:space-y-0", layoutClass, className)}>
       {navConfig.map(({ label, href }, index) => {
         const isActive = pathname.includes(href);
 
