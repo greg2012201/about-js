@@ -21,7 +21,7 @@ function TopBar() {
 
   return (
     <>
-      <div className="flex h-[40px] w-full items-center justify-between bg-[rgba(0,0,0,0.47)] p-2 shadow-md sm:h-[60px]">
+      <div className="flex h-[50px] w-full items-center justify-between bg-[rgba(0,0,0,0.47)] p-2 shadow-md sm:h-[60px]">
         <Logo />
         <button
           onClick={() => {
@@ -29,7 +29,7 @@ function TopBar() {
           }}
         >
           <CgMenu
-            className={`block text-[25px] text-purple-500 [@media(min-width:640px)]:hidden`}
+            className={`block text-[34px] text-purple-500 [@media(min-width:640px)]:hidden`}
           />
         </button>
 
