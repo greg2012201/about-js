@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lato.className}>
-        <main className="relative  min-h-screen bg-gradient-to-b from-[#141e30] via-[#243b55] to-[#243b55]">
+        <main className="relative  min-h-screen overflow-hidden bg-gradient-to-b from-[#141e30] via-[#243b55] to-[#243b55]">
           <TopBar />
           {children}
         </main>
