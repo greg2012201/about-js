@@ -2,24 +2,82 @@
 
 import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import BaseText from "../base-text";
+import type { Prettify } from "@/types";
+
+type AnimationTuple = Record<
+  "jsY" | "jsX" | "tsY" | "tsX" | "jsRotate" | "tsRotate",
+  [number[], number[]]
+>;
+type Variants = Prettify<Record<"sm", AnimationTuple>>;
+
+const TRANSFORM_VARIANTS: Variants = {
+  sm: {
+    jsY: [
+      [0, 400],
+      [0, 150],
+    ],
+    jsX: [
+      [0, 400],
+      [0, -100],
+    ],
+    tsY: [
+      [0, 400],
+      [0, 201],
+    ],
+    tsX: [
+      [0, 400],
+      [0, 90],
+    ],
+    jsRotate: [
+      [0, 400],
+      [0, -20],
+    ],
+    tsRotate: [
+      [0, 400],
+      [0, 20],
+    ],
+  },
+};
+
+type TransformVariantsKeyType = keyof typeof TRANSFORM_VARIANTS;
 
 function Intro() {
+  const [currVariant, setCurrVariant] =
+    useState<TransformVariantsKeyType>("sm");
   const { scrollY } = useScroll();
-  const jsY = useTransform(scrollY, [0, 300], [0, 0]);
-  const jsX = useTransform(scrollY, [0, 200], [0, -100]);
-  const jsRotate = useTransform(scrollY, [0, 200], [0, -20]);
-  const tsY = useTransform(scrollY, [0, 300], [0, 0]);
-  const tsX = useTransform(scrollY, [0, 200], [0, 100]);
-  const trRotate = useTransform(scrollY, [0, 200], [0, 20]);
+  const jsY = useTransform(
+    scrollY,
+    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].jsY,
+  );
+  const jsX = useTransform(
+    scrollY,
+    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].jsX,
+  );
+  const jsRotate = useTransform(
+    scrollY,
+    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].jsRotate,
+  );
+  const tsY = useTransform(
+    scrollY,
+    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].tsY,
+  );
+  const tsX = useTransform(
+    scrollY,
+    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].tsX,
+  );
+  const tsRotate = useTransform(
+    scrollY,
+    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].tsRotate,
+  );
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="relative h-[650px] w-full"
+      className="h-[650px] w-full"
     >
       <div className="space-y-2">
         <h1 className="text-5xl leading-tight md:text-7xl xl:text-8xl ">
@@ -27,13 +85,13 @@ function Intro() {
         </h1>
         <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-2xl text-transparent md:text-3xl">{`JavaScript Blog's Code Hub.`}</p>
       </div>
-      <div className="fixed left-0 top-[250px] z-0 flex h-[350px] w-full items-center justify-center p-8">
+      <div className="z-0 flex h-[300px] w-full justify-center  p-8">
         <motion.div
           style={{
             y: jsY,
             x: jsX,
             rotate: jsRotate,
-            opacity: useTransform(scrollY, [0, 100], [1, 0.2]),
+            opacity: useTransform(scrollY, [0, 400], [1, 0.2]),
           }}
         >
           <Image
@@ -49,8 +107,8 @@ function Intro() {
           style={{
             y: tsY,
             x: tsX,
-            rotate: trRotate,
-            opacity: useTransform(scrollY, [0, 100], [1, 0.2]),
+            rotate: tsRotate,
+            opacity: useTransform(scrollY, [0, 400], [1, 0.2]),
           }}
         >
           <Image
@@ -62,7 +120,7 @@ function Intro() {
           />{" "}
         </motion.div>
       </div>
-      <BaseText className="absolute top-[550px] ">
+      <BaseText className="z-50">
         👋 My name is Greg and I am here to help you to keep up with the fresh
         news from JS land.
       </BaseText>
