@@ -10,10 +10,10 @@ type AnimationTuple = Record<
   "jsY" | "jsX" | "tsY" | "tsX" | "jsRotate" | "tsRotate",
   [number[], number[]]
 >;
-type Variants = Prettify<Record<"sm", AnimationTuple>>;
+type Variants = Prettify<Record<number, AnimationTuple>>;
 
 const TRANSFORM_VARIANTS: Variants = {
-  sm: {
+  300: {
     jsY: [
       [0, 400],
       [0, 150],
@@ -44,32 +44,19 @@ const TRANSFORM_VARIANTS: Variants = {
 type TransformVariantsKeyType = keyof typeof TRANSFORM_VARIANTS;
 
 function Intro() {
-  const [currVariant, setCurrVariant] =
-    useState<TransformVariantsKeyType>("sm");
+  const [currVariant, setCurrVariant] = useState(300);
   const { scrollY } = useScroll();
-  const jsY = useTransform(
-    scrollY,
-    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].jsY,
-  );
-  const jsX = useTransform(
-    scrollY,
-    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].jsX,
-  );
+  const jsY = useTransform(scrollY, ...TRANSFORM_VARIANTS[currVariant].jsY);
+  const jsX = useTransform(scrollY, ...TRANSFORM_VARIANTS[currVariant].jsX);
   const jsRotate = useTransform(
     scrollY,
-    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].jsRotate,
+    ...TRANSFORM_VARIANTS[currVariant].jsRotate,
   );
-  const tsY = useTransform(
-    scrollY,
-    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].tsY,
-  );
-  const tsX = useTransform(
-    scrollY,
-    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].tsX,
-  );
+  const tsY = useTransform(scrollY, ...TRANSFORM_VARIANTS[currVariant].tsY);
+  const tsX = useTransform(scrollY, ...TRANSFORM_VARIANTS[currVariant].tsX);
   const tsRotate = useTransform(
     scrollY,
-    ...TRANSFORM_VARIANTS[currVariant as TransformVariantsKeyType].tsRotate,
+    ...TRANSFORM_VARIANTS[currVariant].tsRotate,
   );
 
   return (
