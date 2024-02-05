@@ -1,4 +1,4 @@
-import Intro from "./_components/sections/intro";
+import Intro from "./_components/sections/intro/intro";
 import Next from "./_components/sections/next";
 import React from "./_components/sections/react";
 
