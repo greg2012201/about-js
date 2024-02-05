@@ -13,7 +13,7 @@ function Intro() {
       className="h-[650px] w-full"
     >
       <div className="space-y-2">
-        <h1 className="text-5xl leading-tight md:text-7xl xl:text-8xl ">
+        <h1 className="text-5xl leading-tight md:text-7xl xl:text-[80px] ">
           What the hack is about.js?
         </h1>
         <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-2xl text-transparent md:text-3xl">{`JavaScript Blog's Code Hub.`}</p>
