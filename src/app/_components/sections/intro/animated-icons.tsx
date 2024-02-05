@@ -8,9 +8,13 @@ type AnimationTuple = Record<
   "jsY" | "jsX" | "tsY" | "tsX" | "jsRotate" | "tsRotate",
   [number[], number[]]
 >;
-type Variants = Prettify<Record<number, AnimationTuple>>;
+type TransformVariants = Prettify<Record<number, AnimationTuple>>;
 
-const TRANSFORM_VARIANTS: Variants = {
+type IconSizeVariants = Prettify<
+  Record<number, { height: number; width: number }>
+>;
+
+const TRANSFORM_VARIANTS: TransformVariants = {
   0: {
     jsY: [
       [0, 400],
@@ -18,7 +22,7 @@ const TRANSFORM_VARIANTS: Variants = {
     ],
     jsX: [
       [0, 400],
-      [0, -50],
+      [0, -90],
     ],
     tsY: [
       [0, 400],
@@ -26,7 +30,7 @@ const TRANSFORM_VARIANTS: Variants = {
     ],
     tsX: [
       [0, 400],
-      [0, 50],
+      [0, 100],
     ],
     jsRotate: [
       [0, 400],
@@ -63,28 +67,207 @@ const TRANSFORM_VARIANTS: Variants = {
       [0, 20],
     ],
   },
+  550: {
+    jsY: [
+      [0, 400],
+      [0, 150],
+    ],
+    jsX: [
+      [0, 400],
+      [0, -200],
+    ],
+    tsY: [
+      [0, 400],
+      [0, 201],
+    ],
+    tsX: [
+      [0, 400],
+      [0, 220],
+    ],
+    jsRotate: [
+      [0, 400],
+      [0, -20],
+    ],
+    tsRotate: [
+      [0, 400],
+      [0, 20],
+    ],
+  },
+  900: {
+    jsY: [
+      [0, 400],
+      [0, 150],
+    ],
+    jsX: [
+      [0, 400],
+      [0, -250],
+    ],
+    tsY: [
+      [0, 400],
+      [0, 201],
+    ],
+    tsX: [
+      [0, 400],
+      [0, 270],
+    ],
+    jsRotate: [
+      [0, 400],
+      [0, -20],
+    ],
+    tsRotate: [
+      [0, 400],
+      [0, 20],
+    ],
+  },
+  950: {
+    jsY: [
+      [0, 400],
+      [0, 150],
+    ],
+    jsX: [
+      [0, 400],
+      [0, -250],
+    ],
+    tsY: [
+      [0, 400],
+      [0, 201],
+    ],
+    tsX: [
+      [0, 400],
+      [0, 270],
+    ],
+    jsRotate: [
+      [0, 400],
+      [0, -20],
+    ],
+    tsRotate: [
+      [0, 400],
+      [0, 20],
+    ],
+  },
+  1000: {
+    jsY: [
+      [0, 400],
+      [0, 150],
+    ],
+    jsX: [
+      [0, 400],
+      [0, -320],
+    ],
+    tsY: [
+      [0, 400],
+      [0, 201],
+    ],
+    tsX: [
+      [0, 400],
+      [0, 340],
+    ],
+    jsRotate: [
+      [0, 400],
+      [0, -20],
+    ],
+    tsRotate: [
+      [0, 400],
+      [0, 20],
+    ],
+  },
+  1100: {
+    jsY: [
+      [0, 400],
+      [0, 150],
+    ],
+    jsX: [
+      [0, 400],
+      [0, -350],
+    ],
+    tsY: [
+      [0, 400],
+      [0, 201],
+    ],
+    tsX: [
+      [0, 400],
+      [0, 340],
+    ],
+    jsRotate: [
+      [0, 400],
+      [0, -20],
+    ],
+    tsRotate: [
+      [0, 400],
+      [0, 20],
+    ],
+  },
+  1230: {
+    jsY: [
+      [0, 400],
+      [0, 150],
+    ],
+    jsX: [
+      [0, 400],
+      [0, -500],
+    ],
+    tsY: [
+      [0, 400],
+      [0, 201],
+    ],
+    tsX: [
+      [0, 400],
+      [0, 520],
+    ],
+    jsRotate: [
+      [0, 400],
+      [0, -20],
+    ],
+    tsRotate: [
+      [0, 400],
+      [0, 20],
+    ],
+  },
 };
 
-const IMAGE_VARIANTS = {};
+const IMAGE_VARIANTS: IconSizeVariants = {
+  0: {
+    height: 180,
+    width: 180,
+  },
+  890: {
+    height: 210,
+    width: 210,
+  },
+};
 
 function AnimatedIcons() {
-  const currVariant = useBreakpoints(Object.keys(TRANSFORM_VARIANTS));
+  const transformVariant = useBreakpoints(Object.keys(TRANSFORM_VARIANTS));
+  const imageSizeVariant = useBreakpoints(Object.keys(IMAGE_VARIANTS));
+  console.log("🚀 ~ AnimatedIcons ~ imageSizeVariant:", imageSizeVariant);
   const { scrollY } = useScroll();
-  const jsY = useTransform(scrollY, ...TRANSFORM_VARIANTS[currVariant].jsY);
-  const jsX = useTransform(scrollY, ...TRANSFORM_VARIANTS[currVariant].jsX);
+  const jsY = useTransform(
+    scrollY,
+    ...TRANSFORM_VARIANTS[transformVariant].jsY,
+  );
+  const jsX = useTransform(
+    scrollY,
+    ...TRANSFORM_VARIANTS[transformVariant].jsX,
+  );
   const jsRotate = useTransform(
     scrollY,
-    ...TRANSFORM_VARIANTS[currVariant].jsRotate,
+    ...TRANSFORM_VARIANTS[transformVariant].jsRotate,
   );
-  const tsY = useTransform(scrollY, ...TRANSFORM_VARIANTS[currVariant].tsY);
-  const tsX = useTransform(scrollY, ...TRANSFORM_VARIANTS[currVariant].tsX);
+  const tsY = useTransform(
+    scrollY,
+    ...TRANSFORM_VARIANTS[transformVariant].tsY,
+  );
+  const tsX = useTransform(
+    scrollY,
+    ...TRANSFORM_VARIANTS[transformVariant].tsX,
+  );
   const tsRotate = useTransform(
     scrollY,
-    ...TRANSFORM_VARIANTS[currVariant].tsRotate,
+    ...TRANSFORM_VARIANTS[transformVariant].tsRotate,
   );
 
   return (
-    <div className="z-0 mt-8 flex h-[220px] w-full justify-center sm:px-8 [@media(min-width:330px)]:h-[300px] ">
+    <div className="z-0 flex  h-[520px] w-full items-center justify-center pb-10 sm:px-8 [@media(min-width:1200px)]:h-[450px] ">
       <motion.div
         style={{
           y: jsY,
@@ -96,8 +279,8 @@ function AnimatedIcons() {
         <Image
           className="z-10 translate-y-[40px] rounded-md"
           alt="javascript logo"
-          width={180}
-          height={180}
+          width={IMAGE_VARIANTS[imageSizeVariant].width}
+          height={IMAGE_VARIANTS[imageSizeVariant].height}
           src="./logo-javascript.svg"
         />
       </motion.div>
@@ -113,8 +296,8 @@ function AnimatedIcons() {
         <Image
           className="translate-x-[-40px] rounded-md"
           alt="typescript logo"
-          width={180}
-          height={180}
+          width={IMAGE_VARIANTS[imageSizeVariant].width}
+          height={IMAGE_VARIANTS[imageSizeVariant].height}
           src="./logo-typescript.svg"
         />{" "}
       </motion.div>
