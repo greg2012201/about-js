@@ -48,7 +48,7 @@ function NavList({
 }: Props) {
   const pathname = usePathname();
   const layoutClass = horizontal
-    ? "flex flex-row gap-x-8 text-xl"
+    ? "flex flex-row gap-x-8 text-xl font-bold"
     : "flex flex-col text-2xl";
   return (
     <ul className={twMerge("space-y-2 sm:space-y-0", layoutClass, className)}>
