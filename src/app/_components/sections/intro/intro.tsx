@@ -10,7 +10,7 @@ function Intro() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="flex h-[calc(100vh-55px)] flex-col justify-items-end pb-4 [@media(min-width:660px)]:h-[calc(100vh-75px)]"
+      className="flex h-[calc(100dvh-55px)] flex-col justify-items-end pb-4 [@media(min-width:660px)]:h-[calc(100vh-75px)]"
     >
       <div className="space-y-2">
         <h1 className="text-5xl leading-tight md:text-7xl xl:text-[80px] ">
