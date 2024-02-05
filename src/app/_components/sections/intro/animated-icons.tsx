@@ -239,7 +239,6 @@ const IMAGE_VARIANTS: IconSizeVariants = {
 function AnimatedIcons() {
   const transformVariant = useBreakpoints(Object.keys(TRANSFORM_VARIANTS));
   const imageSizeVariant = useBreakpoints(Object.keys(IMAGE_VARIANTS));
-  console.log("🚀 ~ AnimatedIcons ~ imageSizeVariant:", imageSizeVariant);
   const { scrollY } = useScroll();
   const jsY = useTransform(
     scrollY,
