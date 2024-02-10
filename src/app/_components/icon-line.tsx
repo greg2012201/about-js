@@ -10,9 +10,9 @@ type Props = {
 
 function IconLine({ iconSrc, title }: Props) {
   return (
-    <div className="bg-red flex h-full  w-[40px] flex-col items-center justify-start space-y-2 pb-2">
+    <div className="bg-red flex h-full  w-[40px] flex-col items-center justify-between space-y-2 pb-2 md:space-y-4 lg:space-y-6">
       <motion.div
-        className="z-20"
+        className="z-20 h-[30px] w-[30px] md:w-[40px] lg:w-[45px]"
         initial={{ opacity: 0 }}
         transition={{ delay: 0.3, duration: 0.4 }}
         whileInView={{ opacity: 1 }}
@@ -21,6 +21,7 @@ function IconLine({ iconSrc, title }: Props) {
           alt={`a logo of ${title}`}
           width={30}
           height={30}
+          layout="responsive"
           src={iconSrc}
         />
       </motion.div>
