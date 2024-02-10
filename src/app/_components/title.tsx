@@ -4,9 +4,7 @@ type Props = {
 
 function Title({ children }: Props) {
   return (
-    <h2
-      className={` bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-3xl font-semibold text-transparent md:text-5xl`}
-    >
+    <h2 className={`text-3xl font-semibold text-indigo-400  md:text-5xl`}>
       {children}
     </h2>
   );
