@@ -152,7 +152,7 @@ const TRANSFORM_VARIANTS: TransformVariants = {
     ],
     jsX: [
       [0, 400],
-      [0, -320],
+      [0, -370],
     ],
     tsY: [
       [0, 400],
@@ -160,7 +160,7 @@ const TRANSFORM_VARIANTS: TransformVariants = {
     ],
     tsX: [
       [0, 400],
-      [0, 340],
+      [0, 380],
     ],
     jsRotate: [
       [0, 400],
@@ -225,20 +225,8 @@ const TRANSFORM_VARIANTS: TransformVariants = {
   },
 };
 
-const IMAGE_VARIANTS: IconSizeVariants = {
-  0: {
-    height: 180,
-    width: 180,
-  },
-  890: {
-    height: 210,
-    width: 210,
-  },
-};
-
 function AnimatedIcons() {
   const transformVariant = useBreakpoints(Object.keys(TRANSFORM_VARIANTS));
-  const imageSizeVariant = useBreakpoints(Object.keys(IMAGE_VARIANTS));
   const { scrollY } = useScroll();
   const jsY = useTransform(
     scrollY,
@@ -275,13 +263,16 @@ function AnimatedIcons() {
           opacity: useTransform(scrollY, [0, 400], [1, 0.2]),
         }}
       >
-        <Image
-          className="z-10 translate-y-[40px] rounded-md"
-          alt="javascript logo"
-          width={IMAGE_VARIANTS[imageSizeVariant].width}
-          height={IMAGE_VARIANTS[imageSizeVariant].height}
-          src="./logo-javascript.svg"
-        />
+        <div className="w-[120px] [@media(min-width:350px)]:w-[160px] [@media(min-width:450px)]:w-[180px] [@media(min-width:890px)]:w-[210px]">
+          <Image
+            className="z-10 translate-y-[40px] rounded-md"
+            alt="javascript logo"
+            layout="responsive"
+            width={120}
+            height={120}
+            src="./logo-javascript.svg"
+          />
+        </div>
       </motion.div>
 
       <motion.div
@@ -292,13 +283,16 @@ function AnimatedIcons() {
           opacity: useTransform(scrollY, [0, 400], [1, 0.2]),
         }}
       >
-        <Image
-          className="translate-x-[-40px] rounded-md"
-          alt="typescript logo"
-          width={IMAGE_VARIANTS[imageSizeVariant].width}
-          height={IMAGE_VARIANTS[imageSizeVariant].height}
-          src="./logo-typescript.svg"
-        />{" "}
+        <div className="w-[120px] [@media(min-width:350px)]:w-[160px] [@media(min-width:450px)]:w-[180px] [@media(min-width:890px)]:w-[210px]">
+          <Image
+            className="translate-x-[-40px] rounded-md"
+            alt="typescript logo"
+            width={120}
+            height={120}
+            layout="responsive"
+            src="./logo-typescript.svg"
+          />
+        </div>
       </motion.div>
     </div>
   );
