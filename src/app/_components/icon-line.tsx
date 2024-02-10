@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 
 type Props = {
   iconSrc: string;
+  title: string;
 };
 
-function IconLine({ iconSrc }: Props) {
+function IconLine({ iconSrc, title }: Props) {
   return (
     <div className="bg-red flex h-full  w-[40px] flex-col items-center justify-start space-y-2 pb-2">
       <motion.div
@@ -17,7 +18,7 @@ function IconLine({ iconSrc }: Props) {
         whileInView={{ opacity: 1 }}
       >
         <Image
-          alt="next.js framework logo"
+          alt={`a logo of ${title}`}
           width={30}
           height={30}
           src={iconSrc}

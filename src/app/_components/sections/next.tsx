@@ -8,7 +8,9 @@ import IconLine from "../icon-line";
 
 function Next() {
   return (
-    <SectionWrapper renderIconLine={<IconLine iconSrc="./next-js-logo.svg" />}>
+    <SectionWrapper
+      renderIconLine={<IconLine title="Next.js" iconSrc="./next-js-logo.svg" />}
+    >
       <Title>Fresh news about Next.js</Title>
       <BaseText>News and outstanding toturials, guides and insights.</BaseText>
     </SectionWrapper>

@@ -7,7 +7,9 @@ import Title from "../title";
 
 function React() {
   return (
-    <SectionWrapper renderIconLine={<IconsLine iconSrc="./react-2.svg" />}>
+    <SectionWrapper
+      renderIconLine={<IconsLine title="React" iconSrc="./react-2.svg" />}
+    >
       <Title>Stay up to date with React</Title>
       <BaseText>
         I usually say that now we have third generation of react.
