@@ -1,6 +1,6 @@
 "use client";
 
-import IconsLine from "../icons-line";
+import IconsLine from "../icon-line";
 import BaseText from "../base-text";
 import SectionWrapper from "../section-wrapper";
 import Title from "../title";

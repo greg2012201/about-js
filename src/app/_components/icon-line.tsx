@@ -7,7 +7,7 @@ type Props = {
   iconSrc: string;
 };
 
-function IconsLine({ iconSrc }: Props) {
+function IconLine({ iconSrc }: Props) {
   return (
     <div className="bg-red flex h-full  w-[40px] flex-col items-center justify-start space-y-2 pb-2">
       <motion.div
@@ -33,4 +33,4 @@ function IconsLine({ iconSrc }: Props) {
   );
 }
 
-export default IconsLine;
+export default IconLine;
