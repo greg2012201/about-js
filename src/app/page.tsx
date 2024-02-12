@@ -1,5 +1,6 @@
 import Intro from "./_components/sections/intro/intro";
 import Next from "./_components/sections/next";
+import NodeJS from "./_components/sections/node-js";
 import React from "./_components/sections/react";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Intro />
       <Next />
       <React />
+      <NodeJS />
     </div>
   );
 }
