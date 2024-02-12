@@ -16,8 +16,8 @@ function AndMore() {
       <Title>Something missing?</Title>
       <BaseText className="max-w-3xl">
         No worries! JS world moves really fast and there are more interesting
-        stuff to talk about. Like: css, other frontend frameworks, backend
-        frameworks, news, packages and open source.
+        stuff to talk about. Like: test projects, css, other frontend
+        frameworks, backend frameworks, news, packages and open source.
       </BaseText>
     </SectionWrapper>
   );
