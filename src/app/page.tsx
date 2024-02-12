@@ -1,3 +1,4 @@
+import AndMore from "./_components/sections/and-more";
 import Intro from "./_components/sections/intro/intro";
 import Next from "./_components/sections/next";
 import NodeJS from "./_components/sections/node-js";
@@ -10,6 +11,7 @@ export default function Home() {
       <Next />
       <React />
       <NodeJS />
+      <AndMore />
     </div>
   );
 }
