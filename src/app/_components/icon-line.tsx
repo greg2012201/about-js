@@ -10,7 +10,7 @@ type Props = {
 
 function IconLine({ iconSrc, title }: Props) {
   return (
-    <div className="bg-red flex h-full  w-[40px] flex-col items-center justify-between space-y-2 pb-2 md:space-y-4 lg:space-y-6">
+    <div className="flex h-full  w-[40px] flex-col items-center justify-between space-y-2 pb-2 md:space-y-4 lg:space-y-6">
       <motion.div
         className="z-20 h-[30px] w-[30px] md:w-[40px] lg:w-[45px]"
         initial={{ opacity: 0 }}
