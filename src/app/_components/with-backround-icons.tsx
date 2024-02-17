@@ -28,12 +28,17 @@ function WithBackgroundIcons({ children }: Props) {
             src="/nodejs-icon.svg"
           />
         </motion.div>
-        <Image
-          alt="big react icon"
-          width={800}
-          height={800}
-          src="/react-2.svg"
-        />
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 100, repeat: Infinity }}
+        >
+          <Image
+            alt="big react icon"
+            width={800}
+            height={800}
+            src="/react-2.svg"
+          />
+        </motion.div>
       </div>
       {children}
     </div>
