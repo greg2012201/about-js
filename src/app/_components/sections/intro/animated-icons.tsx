@@ -1,4 +1,3 @@
-import React, { useCallback, useEffect, useState } from "react";
 import useBreakpoints from "@/hooks/use-breakpoints";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { Prettify } from "@/types";
