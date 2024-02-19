@@ -30,7 +30,7 @@ function WithBackgroundIcons({ children }: Props) {
         </motion.div>
         <motion.div
           animate={{ rotate: 360 }}
-          transition={{ duration: 100, repeat: Infinity }}
+          transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
         >
           <Image
             alt="big react icon"
