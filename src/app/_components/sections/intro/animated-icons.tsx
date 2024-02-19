@@ -262,16 +262,13 @@ function AnimatedIcons() {
           opacity: useTransform(scrollY, [0, 400], [1, 0.2]),
         }}
       >
-        <div className="w-[120px] [@media(min-width:350px)]:w-[160px] [@media(min-width:450px)]:w-[180px] [@media(min-width:890px)]:w-[210px]">
-          <Image
-            className="z-10 translate-y-[40px] rounded-md"
-            alt="javascript logo"
-            layout="responsive"
-            width={120}
-            height={120}
-            src="./logo-javascript.svg"
-          />
-        </div>
+        <Image
+          className="z-10 w-[120px] translate-y-[40px] rounded-md [@media(min-width:350px)]:w-[160px] [@media(min-width:450px)]:w-[180px] [@media(min-width:890px)]:w-[210px]"
+          alt="javascript logo"
+          width={120}
+          height={120}
+          src="./logo-javascript.svg"
+        />
       </motion.div>
 
       <motion.div
@@ -282,16 +279,13 @@ function AnimatedIcons() {
           opacity: useTransform(scrollY, [0, 400], [1, 0.2]),
         }}
       >
-        <div className="w-[120px] [@media(min-width:350px)]:w-[160px] [@media(min-width:450px)]:w-[180px] [@media(min-width:890px)]:w-[210px]">
-          <Image
-            className="translate-x-[-40px] rounded-md"
-            alt="typescript logo"
-            width={120}
-            height={120}
-            layout="responsive"
-            src="./logo-typescript.svg"
-          />
-        </div>
+        <Image
+          className="w-[120px] translate-x-[-40px] rounded-md [@media(min-width:350px)]:w-[160px] [@media(min-width:450px)]:w-[180px] [@media(min-width:890px)]:w-[210px]"
+          alt="typescript logo"
+          width={120}
+          height={120}
+          src="./logo-typescript.svg"
+        />
       </motion.div>
     </div>
   );
