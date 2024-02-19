@@ -19,9 +19,9 @@ function IconLine({ iconSrc, title }: Props) {
       >
         <Image
           alt={`a logo of ${title}`}
+          className="w-full"
           width={30}
           height={30}
-          layout="responsive"
           src={iconSrc}
         />
       </motion.div>
