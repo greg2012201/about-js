@@ -16,13 +16,13 @@ function SectionWrapper({ children, className, renderIconLine = null }: Props) {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
         className={twMerge(
-          "z-20 flex h-[600px] w-full flex-col justify-center  space-y-6 ",
+          "z-20 flex h-[600px] w-full flex-col justify-center space-y-6  sm:h-[700px] ",
           className,
         )}
       >
         {children}
       </motion.div>
-      <div className="h-[600px] w-[40px]">{renderIconLine}</div>
+      <div className="h-[600px] w-[40px] sm:h-[700px]">{renderIconLine}</div>
     </div>
   );
 }
