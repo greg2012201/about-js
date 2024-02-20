@@ -11,33 +11,56 @@ type Props = {
 function WithBackgroundIcons({ children }: Props) {
   return (
     <div className="relative w-screen">
-      <div className="absolute left-0 top-0 flex w-screen flex-col space-y-40 pt-20 opacity-10 sm:space-y-60 sm:pt-48 lg:pl-40 lg:pr-60 ">
+      <div className="absolute left-0 top-0 flex w-screen flex-col space-y-[300px] pt-20 opacity-10 sm:space-y-20 sm:pt-8 lg:pl-40 lg:pr-60 ">
         <motion.div
-          animate={{ x: 50, scale: 1.2 }}
+          className="mx-w-full self-start"
+          initial={{ scale: 0.8 }}
+          animate={{ x: 10, scale: 1.1 }}
           transition={{
             ease: "easeOut",
-            duration: 28,
+            duration: 20,
             repeatType: "reverse",
             repeat: Infinity,
           }}
         >
           <Image
-            alt="big node.js icon"
-            width={900}
-            height={900}
-            src="/nodejs-icon.svg"
+            className="max-w-full"
+            alt="big css icon"
+            width={650}
+            height={650}
+            src="/next-js-logo.svg"
           />
         </motion.div>
+
         <motion.div
           className="max-w-[1000px] self-end"
           animate={{ rotate: 360 }}
-          transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
         >
           <Image
             alt="big react icon"
-            width={1000}
-            height={1000}
+            width={650}
+            height={650}
             src="/react-2.svg"
+          />
+        </motion.div>
+        <motion.div
+          className="mx-w-full self-start"
+          initial={{ scale: 0.8 }}
+          animate={{ x: 20, scale: 1.1 }}
+          transition={{
+            ease: "easeOut",
+            duration: 10,
+            repeatType: "reverse",
+            repeat: Infinity,
+          }}
+        >
+          <Image
+            className="max-w-full"
+            alt="big node.js icon"
+            width={650}
+            height={650}
+            src="/nodejs-icon.svg"
           />
         </motion.div>
       </div>
