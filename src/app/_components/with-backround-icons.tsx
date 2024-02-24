@@ -66,7 +66,7 @@ function WithBackgroundIcons({ children }: Props) {
         <motion.div className="mx-w-full self-center text-[600px]">
           <Image
             className="max-w-full"
-            alt="big node.js icon"
+            alt="big eyes icon"
             width={650}
             height={650}
             src="/eyes.svg"
