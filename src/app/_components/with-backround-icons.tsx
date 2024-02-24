@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ReactNode } from "react";
+import EyesIcon from "./eyes-icon";
 
 type Props = {
   children: ReactNode;
@@ -63,14 +64,8 @@ function WithBackgroundIcons({ children }: Props) {
             src="/nodejs-icon.svg"
           />
         </motion.div>
-        <motion.div className="mx-w-full self-end text-[600px]">
-          <Image
-            className="max-w-full"
-            alt="big eyes icon"
-            width={650}
-            height={650}
-            src="/eyes.svg"
-          />
+        <motion.div className="h-full max-h-[600px] w-full max-w-[600px] self-end">
+          <EyesIcon />
         </motion.div>
       </div>
       {children}
