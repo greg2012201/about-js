@@ -43,7 +43,6 @@ function useEyesIconAnimation({
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      console.log(e.pageX);
       x.set(e.pageX);
       y.set(e.pageY);
     };
