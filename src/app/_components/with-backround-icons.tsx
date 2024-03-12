@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ReactNode } from "react";
-import EyesIcon from "./eyes-icon";
 
 type Props = {
   children: ReactNode;
