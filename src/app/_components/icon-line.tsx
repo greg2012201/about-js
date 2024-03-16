@@ -14,9 +14,10 @@ function IconLine({ iconSrc, title }: Props) {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
+    offset: ["start start", "end end"],
   });
   const scaleY = useSpring(useTransform(scrollYProgress, [1, 0], [0, 1]), {
-    stiffness: 400,
+    stiffness: 200,
     damping: 120,
   });
 
