@@ -11,17 +11,22 @@ type Props = {
 function SectionWrapper({ children, className, renderIconLine = null }: Props) {
   return (
     <div className="flex w-full">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
+      <div
         className={twMerge(
           "z-20 flex h-[600px] w-full flex-col justify-center space-y-6  sm:h-[700px] ",
           className,
         )}
       >
-        {children}
-      </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          viewport={{ once: true }}
+          className="space-y-6"
+        >
+          {children}
+        </motion.div>
+      </div>
       <div className="h-[600px] w-[40px] sm:h-[700px]">{renderIconLine}</div>
     </div>
   );
