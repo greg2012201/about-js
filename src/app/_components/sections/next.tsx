@@ -12,7 +12,7 @@ function Next() {
       renderIconLine={<IconLine title="Next.js" iconSrc="./next-js-logo.svg" />}
     >
       <Title>Fresh news about Next.js</Title>
-      <BaseText>News and outstanding toturials, guides and insights.</BaseText>
+      <BaseText>News and outstanding tutorials, guides and insights.</BaseText>
     </SectionWrapper>
   );
 }
