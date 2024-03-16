@@ -17,8 +17,8 @@ function IconLine({ iconSrc, title }: Props) {
     offset: ["start start", "end end"],
   });
   const scaleY = useSpring(useTransform(scrollYProgress, [1, 0], [0, 1]), {
-    stiffness: 200,
-    damping: 120,
+    stiffness: 500,
+    damping: 100,
   });
 
   return (
