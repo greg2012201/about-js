@@ -13,7 +13,7 @@ function SectionWrapper({ children, className, renderIconLine = null }: Props) {
     <div className="flex w-full">
       <div
         className={twMerge(
-          "z-20 flex h-[600px] w-full flex-col justify-center space-y-6  sm:h-[700px] ",
+          "z-20 flex h-[600px] w-full flex-col  space-y-6  sm:h-[700px] ",
           className,
         )}
       >
