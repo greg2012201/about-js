@@ -18,6 +18,9 @@ export default async function Code({
   });
 
   return (
-    <div className="[&>pre]:p-4" dangerouslySetInnerHTML={{ __html: html }} />
+    <div
+      className="text-sm [&>pre]:overflow-x-auto [&>pre]:p-4 [&>pre]:leading-snug [&_code]:block [&_code]:w-fit"
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   );
 }
