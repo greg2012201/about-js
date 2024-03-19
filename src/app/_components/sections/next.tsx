@@ -1,23 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { ReactElement } from "react";
 import Title from "../title";
 import BaseText from "../base-text";
 import SectionWrapper from "../section-wrapper";
 import IconLine from "../icon-line";
 import Card from "../card";
 
-function Next() {
+type Props = { renderContent: ReactElement };
+
+function Next({ renderContent }: Props) {
   return (
     <SectionWrapper
       renderIconLine={<IconLine title="Next.js" iconSrc="./next-js-logo.svg" />}
     >
       <Title>Fresh news about Next.js</Title>
-      <Card className="max-w-[1000px]">
+      <Card className="flex max-w-[1000px] flex-col space-y-8">
         <BaseText className="text-2xl  md:text-[28px]">
           There are many new things out there. It is good to know what&apos;s
           going on in the new API&apos;s 😉
         </BaseText>
+        {renderContent}
       </Card>
     </SectionWrapper>
   );
