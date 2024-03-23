@@ -19,7 +19,9 @@ export default async function Code({
 
   return (
     <div
-      className="text-sm [&>pre]:overflow-x-auto [&>pre]:p-4 [&>pre]:leading-snug [&_code]:block [&_code]:w-fit"
+      className={
+        "text-sm [&>pre]:overflow-x-auto [&>pre]:p-4 [&>pre]:leading-snug [&_code]:block [&_code]:max-w-[100px]"
+      }
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );

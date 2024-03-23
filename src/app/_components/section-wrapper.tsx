@@ -10,7 +10,7 @@ type Props = {
 
 function SectionWrapper({ children, className, renderIconLine = null }: Props) {
   return (
-    <div className="flex w-full sm:pr-6">
+    <div className="flex w-full ">
       <div
         className={twMerge(
           "z-20 flex h-[600px] w-full flex-col  space-y-6  sm:h-[700px] ",
