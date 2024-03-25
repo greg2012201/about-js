@@ -7,11 +7,7 @@ type Props = {
   theme?: BundledTheme;
 };
 
-export default async function Code({
-  code,
-  lang = "javascript",
-  theme = "nord",
-}: Props) {
+async function Code({ code, lang = "javascript", theme = "nord" }: Props) {
   const html = await codeToHtml(code, {
     lang,
     theme,
@@ -33,3 +29,4 @@ export default async function Code({
     </div>
   );
 }
+export default Code;
