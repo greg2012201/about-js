@@ -1,6 +1,6 @@
 import Code from "./_components/code";
 import AndMore from "./_components/sections/and-more";
-import Intro from "./_components/sections/intro/intro";
+import Intro from "./_components/sections/intro";
 import Next from "./_components/sections/next";
 import NodeJS from "./_components/sections/node-js";
 import React from "./_components/sections/react";
