@@ -3,7 +3,6 @@
 import { BundledLanguage } from "shiki";
 import { FiTerminal } from "react-icons/fi";
 import { BiLogoTypescript } from "react-icons/bi";
-import { IconType } from "react-icons";
 import React, { ReactElement } from "react";
 import { Prettify } from "@/types";
 
