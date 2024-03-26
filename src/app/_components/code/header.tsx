@@ -42,7 +42,7 @@ function Header({ lang, textToCopy }: HeaderProps) {
         "flex items-center border-b-[1px] border-slate-500 px-6 py-4 text-neutral-400"
       }
     >
-      <div className="flex flex-grow items-center space-x-1 ">
+      <div className="flex flex-grow items-center space-x-1">
         {renderIcon}
         <p className="text-sm font-semibold capitalize ">
           {["console", "powershell"].includes(lang) ? "terminal" : lang}
