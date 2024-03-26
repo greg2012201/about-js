@@ -5,6 +5,7 @@ import Next from "./_components/sections/next";
 import NodeJS from "./_components/sections/node-js";
 import React from "./_components/sections/react";
 import WithBackgroundIcons from "./_components/with-backround-icons";
+import dedent from "dedent";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
               <Code
                 theme="material-theme-ocean"
                 lang="powershell"
-                code={`npx create-next-app@latest
+                code={dedent`
+npx create-next-app@latest
 What is your project named? cool-project 🤔
 Would you like to use TypeScript? No / Yes
 Which blog about Next.js would you like to read? ***about-js*** 😎`}
