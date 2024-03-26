@@ -6,14 +6,20 @@ type Props = {
   children: ReactNode;
   className?: ClassNameValue;
   renderIconLine?: ReactElement | null;
+  iconsLineWrapperClassName?: ClassNameValue;
 };
 
-function SectionWrapper({ children, className, renderIconLine = null }: Props) {
+function SectionWrapper({
+  children,
+  className,
+  renderIconLine = null,
+  iconsLineWrapperClassName,
+}: Props) {
   return (
-    <div className="flex w-full ">
+    <div className="flex w-full max-w-[930px]">
       <div
         className={twMerge(
-          "z-20 flex h-[600px] w-full flex-col  space-y-6  sm:h-[700px] ",
+          "z-20 flex h-[600px] w-full flex-col space-y-6 sm:h-[700px] ",
           className,
         )}
       >
@@ -27,7 +33,14 @@ function SectionWrapper({ children, className, renderIconLine = null }: Props) {
           {children}
         </motion.div>
       </div>
-      <div className="h-[600px] w-[40px] sm:h-[700px]">{renderIconLine}</div>
+      <div
+        className={twMerge(
+          `h-[600px] w-[40px] sm:h-[700px]`,
+          iconsLineWrapperClassName,
+        )}
+      >
+        {renderIconLine}
+      </div>
     </div>
   );
 }
