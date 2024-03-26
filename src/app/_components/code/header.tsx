@@ -15,6 +15,7 @@ type HeaderProps = {
 
 const LANG_ICONS: Prettify<Partial<Record<BundledLanguage, ReactElement>>> = {
   console: <FiTerminal />,
+  powershell: <FiTerminal />,
   typescript: <BiLogoTypescript />,
 };
 
@@ -44,7 +45,7 @@ function Header({ lang, textToCopy }: HeaderProps) {
       <div className="flex flex-grow items-center space-x-1 ">
         {renderIcon}
         <p className="text-sm font-semibold capitalize ">
-          {lang === "console" ? "terminal" : lang}
+          {["console", "powershell"].includes(lang) ? "terminal" : lang}
         </p>
       </div>
       <button className="h-[30px]" onClick={handleCopy} type="button">
