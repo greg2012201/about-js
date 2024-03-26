@@ -16,15 +16,11 @@ export default function Home() {
             renderContent={
               <Code
                 theme="material-theme-ocean"
-                lang="console"
-                code={`What is your project named? my-app
+                lang="powershell"
+                code={`npx create-next-app@latest
+What is your project named? cool-project 🤔
 Would you like to use TypeScript? No / Yes
-Would you like to use ESLint? No / Yes
-Would you like to use Tailwind CSS? No / Yes
-Would you like to use "src/"" directory? No / Yes
-Would you like to use App Router? (recommended) No / Yes
-Would you like to customize the default import alias (@/*)? No / Yes
-What import alias would you like configured? @/*`}
+Which blog about Next.js would you like to read? ***about-js*** 😎`}
               />
             }
           />
