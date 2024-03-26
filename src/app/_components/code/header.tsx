@@ -39,7 +39,7 @@ function Header({ lang, textToCopy }: HeaderProps) {
   return (
     <div
       className={
-        "flex border-b-[1px] border-slate-500 px-6 py-4 text-neutral-400"
+        "flex items-center border-b-[1px] border-slate-500 px-6 py-4 text-neutral-400"
       }
     >
       <div className="flex flex-grow items-center space-x-1 ">
@@ -50,7 +50,7 @@ function Header({ lang, textToCopy }: HeaderProps) {
       </div>
       <button className="h-[30px]" onClick={handleCopy} type="button">
         {copySuccess ? (
-          <MdOutlineDone className="text-green-500" size={28} />
+          <MdOutlineDone className="text-green-500" size={24} />
         ) : (
           <FaCopy size={24} />
         )}
