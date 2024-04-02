@@ -15,7 +15,10 @@ function Next({ renderContent }: Props) {
       renderIconLine={<IconLine title="Next.js" iconSrc="./next-js-logo.svg" />}
     >
       <Title>Fresh news about Next.js</Title>
-      <Card className="flex max-w-[1000px] flex-col space-y-8">
+      <Card
+        wrapperClassName="mt-auto mb-auto"
+        contentClassName="flex max-w-[1000px] flex-col space-y-8"
+      >
         <BaseText className="text-xl  md:text-[26px]">
           There are many new things out there. It is good to know what&apos;s
           going on in the new API&apos;s 😉
