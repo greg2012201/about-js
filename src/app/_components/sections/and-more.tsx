@@ -10,7 +10,11 @@ function AndMore() {
   return (
     <SectionWrapper
       renderIconLine={
-        <IconLine title="question" iconSrc="./question-circle.svg" />
+        <IconLine
+          title="question"
+          iconSrc="./question-circle.svg"
+          lineAnimationDisabled
+        />
       }
     >
       <Title>Something missing?</Title>

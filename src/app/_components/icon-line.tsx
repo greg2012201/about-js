@@ -7,9 +7,10 @@ import { useRef } from "react";
 type Props = {
   iconSrc: string;
   title: string;
+  lineAnimationDisabled?: boolean;
 };
 
-function IconLine({ iconSrc, title }: Props) {
+function IconLine({ iconSrc, title, lineAnimationDisabled }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -41,10 +42,12 @@ function IconLine({ iconSrc, title }: Props) {
           src={iconSrc}
         />
       </motion.div>
-      <motion.div
-        style={{ scaleY }}
-        className={`z-20 h-full w-1 origin-top rounded-md bg-gradient-to-t from-pink-500 via-purple-500 to-indigo-500`}
-      />
+      {!lineAnimationDisabled && (
+        <motion.div
+          style={{ scaleY }}
+          className={`z-20 h-full w-1 origin-top rounded-md bg-gradient-to-t from-pink-500 via-purple-500 to-indigo-500`}
+        />
+      )}
     </div>
   );
 }
