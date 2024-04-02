@@ -28,7 +28,7 @@ function SectionWrapper({
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
           viewport={{ once: true }}
-          className="space-y-6"
+          className="flex h-full flex-col"
         >
           {children}
         </motion.div>
