@@ -9,7 +9,7 @@ import dedent from "dedent";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex w-full flex-col items-center p-4 text-white sm:w-[fit-content]">
+    <div className="mx-auto flex w-full flex-col items-center p-4 pb-0 text-white sm:w-[fit-content]">
       <Intro />
       <WithBackgroundIcons>
         <div className="mx-auto flex w-full flex-col items-center p-4 text-white sm:w-[fit-content]">
