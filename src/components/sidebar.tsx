@@ -14,7 +14,7 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(
   ({ open, handleClose, navList, className }, ref) => {
     const openClass = open ? "translate-x-[-300px]" : "translate-x-0";
     return (
-      <nav
+      <div
         ref={ref}
         className={twMerge(
           "fixed right-[-300px] top-0 z-50 bg-gradient-to-b from-[#141e30] via-[#243b55] to-[#243b55] shadow-lg duration-150",
@@ -32,7 +32,7 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(
           <hr className="w-full border-purple-300" />
           {navList}
         </div>
-      </nav>
+      </div>
     );
   },
 );

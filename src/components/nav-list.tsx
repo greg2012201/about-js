@@ -35,7 +35,7 @@ type Props = Prettify<{
   navConfig: Record<"label" | "href", string>[];
   handleItemClick: VoidFunction;
   horizontal?: boolean;
-  className?: ClassNameValue;
+  className?: string;
   isAnimated?: boolean;
 }>;
 
@@ -50,27 +50,30 @@ function NavList({
   const layoutClass = horizontal
     ? "flex flex-row gap-x-8 text-xl font-bold"
     : "flex flex-col text-2xl";
-  return (
-    <ul className={twMerge("space-y-2 sm:space-y-0", layoutClass, className)}>
-      {navConfig.map(({ label, href }, index) => {
-        const isActive = pathname.includes(href);
 
-        const activeClass = isActive
-          ? "text-purple-500 border-accent"
-          : "text-white hover:text-purple-500 border-transparent";
-        return (
-          <Link key={label} onClick={handleItemClick} href={href}>
-            <ListItemWrapper
-              order={index}
-              isMotion={isAnimated}
-              className={twMerge("p-1", activeClass)}
-            >
-              {label}
-            </ListItemWrapper>
-          </Link>
-        );
-      })}
-    </ul>
+  return (
+    <nav className={className}>
+      <ul className={twMerge("space-y-2 sm:space-y-0", layoutClass)}>
+        {navConfig.map(({ label, href }, index) => {
+          const isActive = pathname.includes(href);
+
+          const activeClass = isActive
+            ? "text-purple-500 border-accent"
+            : "text-white hover:text-purple-500 border-transparent";
+          return (
+            <Link key={label} onClick={handleItemClick} href={href}>
+              <ListItemWrapper
+                order={index}
+                isMotion={isAnimated}
+                className={twMerge("p-1", activeClass)}
+              >
+                {label}
+              </ListItemWrapper>
+            </Link>
+          );
+        })}
+      </ul>
+    </nav>
   );
 }
 
