@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { CgMenu } from "react-icons/cg";
 import Sidebar from "./sidebar";
 import useClickOutside from "@/hooks/use-click-outside";
@@ -18,6 +18,21 @@ function TopBar() {
   const [navOpen, setNavOpen] = useState(false);
   const ref = useClickOutside<HTMLDivElement>(() => setNavOpen(false));
   const handleClose = useCallback(() => setNavOpen(false), []);
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setNavOpen(false);
+      }
+    };
+    if (navOpen) {
+      document.addEventListener("keyup", handleEscape);
+    }
+
+    return () => {
+      document.removeEventListener("keyup", handleEscape);
+    };
+  }, [navOpen]);
 
   return (
     <>
