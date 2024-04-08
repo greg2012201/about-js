@@ -26,7 +26,28 @@ Which blog about Next.js would you like to read? ***about-js*** 😎`}
               />
             }
           />
-          <React />
+          <React
+            renderContent={
+              <Code
+                theme="material-theme-ocean"
+                lang="jsx"
+                code={dedent`
+                'use what!?'
+                
+                 function AboutJS() {
+                  return (
+                    <div>
+                      <h1>Greetings!</h1>
+                      <p>let's see what we got here.</p>
+                    </div>
+                  );
+                }
+                
+                export default AboutJS;
+                `}
+              />
+            }
+          />
           <NodeJS />
           <AndMore />
         </div>
