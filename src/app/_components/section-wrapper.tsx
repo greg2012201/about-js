@@ -19,7 +19,7 @@ function SectionWrapper({
     <div className="flex w-full max-w-[930px]">
       <div
         className={twMerge(
-          "z-20 flex h-[600px] w-full flex-col space-y-6",
+          "z-20 flex h-[650px] w-full flex-col space-y-6",
           className,
         )}
       >
@@ -34,7 +34,7 @@ function SectionWrapper({
         </motion.div>
       </div>
       <div
-        className={twMerge(`h-[600px] w-[40px] `, iconsLineWrapperClassName)}
+        className={twMerge(`h-[650px] w-[40px] `, iconsLineWrapperClassName)}
       >
         {renderIconLine}
       </div>
