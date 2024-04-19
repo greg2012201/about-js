@@ -32,7 +32,7 @@ function ListItemWrapper({
 }
 
 type Props = Prettify<{
-  navConfig: Record<"label" | "href", string>[];
+  navConfig: Record<"label" | "path", string>[];
   handleItemClick: VoidFunction;
   horizontal?: boolean;
   className?: string;
@@ -54,14 +54,14 @@ function NavList({
   return (
     <nav className={className}>
       <ul className={twMerge("space-y-2 sm:space-y-0", layoutClass)}>
-        {navConfig.map(({ label, href }, index) => {
-          const isActive = pathname.includes(href);
+        {navConfig.map(({ label, path }, index) => {
+          const isActive = pathname === path;
 
           const activeClass = isActive
             ? "text-purple-500 border-accent"
             : "text-white hover:text-purple-500 border-transparent";
           return (
-            <Link key={label} onClick={handleItemClick} href={href}>
+            <Link key={label} onClick={handleItemClick} href={path}>
               <ListItemWrapper
                 order={index}
                 isMotion={isAnimated}

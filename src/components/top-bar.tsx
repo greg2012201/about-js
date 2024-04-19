@@ -8,10 +8,11 @@ import Logo from "./logo";
 import NavList from "./nav-list";
 
 const NAV_CONFIG = [
-  { label: "about", href: "/about" },
-  { label: "posts", href: "/posts" },
-  { label: "guides", href: "/guides" },
-  { label: "news", href: "/news" },
+  { label: "home", path: "/" },
+  { label: "about", path: "/about" },
+  { label: "posts", path: "/posts" },
+  { label: "guides", path: "/guides" },
+  { label: "news", path: "/news" },
 ];
 
 function TopBar() {
