@@ -8,7 +8,7 @@ import Logo from "./logo";
 import NavList from "./nav-list";
 
 const NAV_CONFIG = [
-  { label: "about author", href: "/about-author" },
+  { label: "about", href: "/about" },
   { label: "posts", href: "/posts" },
   { label: "guides", href: "/guides" },
   { label: "news", href: "/news" },
