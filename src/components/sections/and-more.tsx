@@ -21,7 +21,7 @@ type FeatureListitemProps = {
 
 function FeatureListsItem({ children, icon }: FeatureListitemProps) {
   return (
-    <li className="flex items-center space-x-2">
+    <li className="flex items-center space-x-2 [&>svg]:text-indigo-300">
       {icon}
       <p className="text-xl  italic">{children}</p>
     </li>
@@ -49,7 +49,7 @@ function AndMore() {
           stuff to talk about, like:
         </BaseText>
 
-        <ul className="space-y-1 pl-8 ">
+        <ul className="space-y-1 pl-8 text-slate-300">
           <FeatureListsItem icon={<GrTest />}>test projects</FeatureListsItem>
           <FeatureListsItem icon={<FaCss3 />}>CSS</FeatureListsItem>
           <FeatureListsItem icon={<FaCode />}>
