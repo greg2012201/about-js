@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ReactElement } from "react";
-import SectionWrapper from "../section-wrapper";
+import SectionWrapper from "../../../components/section-wrapper";
 import Title from "../title";
 import IconLine from "../icon-line";
 import BaseText from "../base-text";
