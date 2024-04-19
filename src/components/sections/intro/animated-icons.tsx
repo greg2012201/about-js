@@ -9,10 +9,6 @@ type AnimationTuple = Record<
 >;
 type TransformVariants = Prettify<Record<number, AnimationTuple>>;
 
-type IconSizeVariants = Prettify<
-  Record<number, { height: number; width: number }>
->;
-
 const TRANSFORM_VARIANTS: TransformVariants = {
   0: {
     jsY: [
