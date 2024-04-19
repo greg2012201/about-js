@@ -17,12 +17,18 @@ function NodeJS() {
       <Card
         wrapperClassName="mt-auto mb-auto"
         contentClassName="flex max-w-[1000px] flex-col space-y-8"
-        >      
+      >
         <BaseText>
           In the world of new glowing technologies we remember about good old
           node.
         </BaseText>
-      <Image className="mt-auto mb-auto self-center" alt="node js terminal gif" width={720} height={400} src='/node-js-demo.gif'  />
+        <Image
+          className="mb-auto mt-auto self-center"
+          alt="node js terminal gif"
+          width={720}
+          height={400}
+          src="/node-js-demo.gif"
+        />
       </Card>
     </SectionWrapper>
   );
