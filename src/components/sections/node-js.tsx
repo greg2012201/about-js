@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import SectionWrapper from "../../../components/section-wrapper";
 import IconLine from "../icon-line";
 import Title from "../title";
 import BaseText from "../base-text";
 import Image from "next/image";
 import Card from "../card";
+import SectionWrapper from "../section-wrapper";
 
 function NodeJS() {
   return (

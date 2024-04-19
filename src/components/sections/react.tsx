@@ -2,10 +2,10 @@
 
 import IconsLine from "../icon-line";
 import BaseText from "../base-text";
-import SectionWrapper from "../../../components/section-wrapper";
 import Title from "../title";
 import { ReactElement } from "react";
 import Card from "../card";
+import SectionWrapper from "../section-wrapper";
 
 type Props = { renderContent: ReactElement };
 

@@ -1,10 +1,7 @@
 "use client";
 
 import React, { ReactElement } from "react";
-import SectionWrapper from "../../../components/section-wrapper";
-import Title from "../title";
-import IconLine from "../icon-line";
-import BaseText from "../base-text";
+
 import { GrTest } from "react-icons/gr";
 import { FaCss3 } from "react-icons/fa";
 import { FaCode } from "react-icons/fa";
@@ -12,6 +9,10 @@ import { IoServerSharp } from "react-icons/io5";
 import { GrSend } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";
 import Card from "../card";
+import SectionWrapper from "../section-wrapper";
+import IconLine from "../icon-line";
+import BaseText from "../base-text";
+import Title from "../title";
 
 type FeatureListitemProps = {
   children: string;

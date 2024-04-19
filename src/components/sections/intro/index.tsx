@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import BaseText from "../../base-text";
+
 import AnimatedIcons from "./animated-icons";
+import BaseText from "@/components/base-text";
 
 function Intro() {
   return (

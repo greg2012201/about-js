@@ -1,10 +1,10 @@
-import Code from "./_components/code";
-import AndMore from "./_components/sections/and-more";
-import Intro from "./_components/sections/intro";
-import Next from "./_components/sections/next";
-import NodeJS from "./_components/sections/node-js";
-import React from "./_components/sections/react";
-import WithBackgroundIcons from "./_components/with-backround-icons";
+import Code from "@/components/code";
+import AndMore from "@/components/sections/and-more";
+import Intro from "@/components/sections/intro";
+import Next from "@/components/sections/next";
+import NodeJS from "@/components/sections/node-js";
+import React from "@/components/sections/react";
+import WithBackgroundIcons from "@/components/with-backround-icons";
 import dedent from "dedent";
 
 export default function Home() {
