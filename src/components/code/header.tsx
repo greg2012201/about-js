@@ -7,16 +7,29 @@ import React, { ReactElement, useState } from "react";
 import { Prettify } from "@/types";
 import { FaCopy } from "react-icons/fa6";
 import { MdOutlineDone } from "react-icons/md";
+import { FaCode } from "react-icons/fa6";
 
 type HeaderProps = {
   lang: BundledLanguage;
   textToCopy: string;
 };
 
+function transformLang(lang: string) {
+  if (["console", "powershell"].includes(lang)) {
+    return "terminal";
+  }
+  if (lang.toLocaleLowerCase() === "jsx") {
+    return "JSX";
+  }
+
+  return lang;
+}
+
 const LANG_ICONS: Prettify<Partial<Record<BundledLanguage, ReactElement>>> = {
   console: <FiTerminal />,
   powershell: <FiTerminal />,
   typescript: <BiLogoTypescript />,
+  jsx: <FaCode />,
 };
 
 const LANG_ICONS_MAP = new Map<string, ReactElement>(
@@ -45,7 +58,7 @@ function Header({ lang, textToCopy }: HeaderProps) {
       <div className="flex flex-grow items-center space-x-1">
         {renderIcon}
         <p className="text-sm font-semibold capitalize ">
-          {["console", "powershell"].includes(lang) ? "terminal" : lang}
+          {transformLang(lang)}
         </p>
       </div>
       <button className="h-[30px]" onClick={handleCopy} type="button">
