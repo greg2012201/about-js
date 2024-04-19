@@ -2,7 +2,7 @@ import type { Prettify } from "@/types";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ClassNameValue, twMerge } from "tailwind-merge";
+import { twMerge } from "tailwind-merge";
 
 type ListItemWrapperProps = {
   className?: string;
