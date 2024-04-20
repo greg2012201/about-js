@@ -1,15 +1,18 @@
 import Code from "@/components/code";
+import AboutAuthor from "@/components/sections/about-author";
 import AndMore from "@/components/sections/and-more";
 import Next from "@/components/sections/next";
 import NodeJS from "@/components/sections/node-js";
+import Profile from "@/components/sections/profile";
 import React from "@/components/sections/react";
 import WithBackgroundIcons from "@/components/with-backround-icons";
 import dedent from "dedent";
 
-function AboutAuthor() {
+function About() {
   return (
-    <div>
-      {" "}
+    <>
+      <Profile />
+      <AboutAuthor />
       <WithBackgroundIcons>
         <div className="mx-auto flex w-full flex-col items-center p-4 text-white ">
           <Next
@@ -51,8 +54,8 @@ Which blog about Next.js would you like to read? ***about-js*** 😎`}
           <AndMore />
         </div>
       </WithBackgroundIcons>
-    </div>
+    </>
   );
 }
 
-export default AboutAuthor;
+export default About;
