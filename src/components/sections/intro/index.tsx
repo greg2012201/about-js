@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import AnimatedIcons from "./animated-icons";
 import BaseText from "@/components/base-text";
+import { Subtitle, Title } from "@/components/brand-title";
 
 function Intro() {
   return (
@@ -14,8 +15,8 @@ function Intro() {
       className="mb-20 flex h-[calc(100vh-55px)] max-w-[930px] flex-col justify-around pb-4 [@media(min-width:660px)]:h-[calc(100vh-75px)]"
     >
       <div className="space-y-2">
-        <BrandTitle> What the hack is about.js?</BrandTitle>
-        <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-2xl text-transparent md:text-3xl">{`JavaScript Blog's Code Hub`}</p>
+        <Title> What the hack is about.js?</Title>
+        <Subtitle>{`JavaScript Blog's Code Hub`}</Subtitle>
       </div>
       <AnimatedIcons />
       <BaseText className="z-50">
