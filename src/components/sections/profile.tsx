@@ -2,8 +2,6 @@ import Image from "next/image";
 import React from "react";
 import { Subtitle, Title } from "../brand-title";
 import { ClassNameValue, twMerge } from "tailwind-merge";
-import BaseText from "../base-text";
-import dedent from "dedent";
 
 type AvatarProps = { className?: ClassNameValue };
 
