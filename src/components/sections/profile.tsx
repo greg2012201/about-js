@@ -25,7 +25,7 @@ function Profile() {
   return (
     <div className="flex w-full max-w-[930px] items-center space-x-6 py-8">
       <div className="">
-        <Avatar className="hidden min-w-[300px] sm:block" />
+        <Avatar className="hidden sm:block" />
       </div>
       <div className="flex flex-col space-y-1">
         <Title>Hello👋</Title>
