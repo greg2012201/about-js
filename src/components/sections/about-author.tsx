@@ -1,9 +1,17 @@
+"use client";
+
 import BaseText from "../base-text";
 import Title from "../title";
+import { motion } from "framer-motion";
 
 function AboutAuthor() {
   return (
-    <div className="flex min-h-[400px] w-full max-w-[930px] flex-col space-y-6 py-4">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="flex min-h-[400px] w-full max-w-[930px] flex-col space-y-6 py-4"
+    >
       <Title>Who am I?</Title>
       <BaseText>
         {`
@@ -16,7 +24,7 @@ function AboutAuthor() {
         I'm a big fan of Next.js with React Server Components. I like taking on
         difficult programming challenges.`}
       </BaseText>
-    </div>
+    </motion.div>
   );
 }
 
