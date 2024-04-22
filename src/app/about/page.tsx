@@ -5,6 +5,7 @@ import Next from "@/components/sections/next";
 import NodeJS from "@/components/sections/node-js";
 import Profile from "@/components/sections/profile";
 import React from "@/components/sections/react";
+import Separator from "@/components/sections/separator";
 import WithBackgroundIcons from "@/components/with-backround-icons";
 import dedent from "dedent";
 
@@ -13,6 +14,7 @@ function About() {
     <>
       <Profile />
       <AboutAuthor />
+      <Separator />
       <WithBackgroundIcons>
         <div className="mx-auto flex w-full flex-col items-center p-4 text-white ">
           <Next
