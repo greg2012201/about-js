@@ -12,8 +12,8 @@ function Avatar({ className }: AvatarProps) {
     <div>
       <Image
         className={twMerge(className, `rounded-full`)}
-        width={300}
-        height={300}
+        width={250}
+        height={250}
         alt="profile picture"
         src="/profile.png"
       />{" "}
