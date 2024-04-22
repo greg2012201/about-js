@@ -3,9 +3,10 @@ import Title from "../title";
 
 function AboutAuthor() {
   return (
-    <div className="flex w-full max-w-[930px] flex-col space-y-4">
+    <div className="flex min-h-[400px] w-full max-w-[930px] flex-col space-y-6 py-4">
       <Title>Who am I?</Title>
-      <BaseText>{`
+      <BaseText>
+        {`
         I love creating new things by coding. I have always liked "front side"
         of the cyber world. I have been coding since march of 2020. Before, I've
         always been curious about how user interfaces work behind the scenes and
