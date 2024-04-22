@@ -27,10 +27,10 @@ function Profile() {
       <div className="">
         <Avatar className="hidden sm:block" />
       </div>
-      <div className="flex flex-col space-y-1">
+      <div className="flex flex-col sm:space-y-1">
         <Title>Greetings👋</Title>
-        <Avatar className="sm:hidden" />
         <Subtitle>I am Grzegorz Dubiel</Subtitle>
+        <Avatar className="mt-6 sm:hidden" />
       </div>
     </div>
   );
