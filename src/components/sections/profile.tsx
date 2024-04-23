@@ -28,13 +28,13 @@ function Profile() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="flex w-full max-w-[930px] items-center space-x-6 py-8"
+      className="mx-auto flex w-full max-w-[930px] items-center justify-center space-x-6 py-8 sm:justify-start"
     >
-      <Avatar className="hidden sm:block" />
+      <Avatar className="hidden self-start sm:block" />
       <div className="flex flex-col sm:space-y-1">
         <Title>Welcome👋</Title>
         <Subtitle>I am Grzegorz Dubiel</Subtitle>
-        <Avatar className="mt-6 sm:hidden" />
+        <Avatar className="mx-auto mt-6 sm:hidden" />
       </div>
     </motion.div>
   );
