@@ -10,7 +10,7 @@ type Props = {
 
 function WithBackgroundIcons({ children }: Props) {
   return (
-    <div className="mx-h-full relative w-screen">
+    <div className="mx-h-full mx-w-full relative w-full overflow-hidden">
       <div className=" absolute bottom-[0px] left-0 top-0 flex w-screen flex-col space-y-[300px] overflow-hidden pb-0 pt-20 opacity-10 sm:space-y-20 sm:pt-8 lg:pl-40 lg:pr-60 ">
         <motion.div
           className="mx-w-full self-start"
