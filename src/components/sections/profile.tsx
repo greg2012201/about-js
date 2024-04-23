@@ -30,9 +30,7 @@ function Profile() {
       viewport={{ once: true }}
       className="flex w-full max-w-[930px] items-center space-x-6 py-8"
     >
-      <div className="">
-        <Avatar className="hidden sm:block" />
-      </div>
+      <Avatar className="hidden sm:block" />
       <div className="flex flex-col sm:space-y-1">
         <Title>Welcome👋</Title>
         <Subtitle>I am Grzegorz Dubiel</Subtitle>
