@@ -10,7 +10,7 @@ function AboutAuthor() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="flex min-h-[400px] w-full max-w-[930px] flex-col space-y-6 py-4"
+      className="flex min-h-[400px] w-full max-w-[930px] flex-col space-y-6 px-4 py-4"
     >
       <Title>Who am I?</Title>
       <BaseText>
