@@ -19,10 +19,10 @@ function Separator() {
       transition={{ delay: 0.3 }}
       viewport={{ once: true }}
       ref={ref}
-      className="flex h-[1000px] min-h-screen flex-col items-center justify-between pb-20"
+      className="flex h-[1000px] min-h-screen flex-col items-center justify-between py-4 pb-20"
     >
       <div className="sticky top-20 z-10">
-        <p className="text-center text-5xl leading-tight  md:text-7xl xl:text-[80px]">
+        <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text pb-2 text-center text-5xl  text-transparent  md:text-7xl xl:text-[80px]">
           Here is what you will find on this blog
         </p>
       </div>
