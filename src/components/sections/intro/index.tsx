@@ -19,7 +19,7 @@ function Intro() {
         <Subtitle>{`JavaScript Blog's Code Hub`}</Subtitle>
       </div>
       <AnimatedIcons />
-      <BaseText className="z-50">
+      <BaseText>
         👋 My name is Greg and I am here to help you to keep up with the fresh
         news from JS land.
       </BaseText>
