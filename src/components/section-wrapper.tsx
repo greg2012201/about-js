@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactElement, ReactNode } from "react";
 import { motion } from "framer-motion";
 import { ClassNameValue, twMerge } from "tailwind-merge";
