@@ -13,12 +13,16 @@ function Separator() {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0]);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
+      viewport={{ once: true }}
       ref={ref}
       className="flex h-[1000px] min-h-screen flex-col items-center justify-between pb-20"
     >
       <div className="sticky top-20 z-10">
-        <p className="text-center text-5xl leading-tight md:text-7xl xl:text-[80px]">
+        <p className="text-center text-5xl leading-tight  md:text-7xl xl:text-[80px]">
           Here is what you will find on this blog
         </p>
       </div>
@@ -29,7 +33,7 @@ function Separator() {
       >
         <TbArrowBigDownFilled />
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 
