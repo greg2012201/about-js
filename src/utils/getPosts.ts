@@ -5,8 +5,8 @@ import GithubSlugger from "github-slugger";
 
 const POSTS_DIR = "public/posts";
 
-type Post = {
-  data: { title: string; slug: string };
+export type Post = {
+  data: { title: string; slug: string; image: string };
   content: string;
   excerpt?: string;
 };
