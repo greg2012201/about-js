@@ -17,7 +17,7 @@ function sanitize(slug: string) {
 
 function getExcerpt(content: string) {
   content = content.replace(/^#.*(\n.*\n)+?/gm, "");
-  const excerpt = content.slice(0, 60).split(" ");
+  const excerpt = content.slice(0, 200).split(" ");
   excerpt.pop();
   return excerpt.join(" ") + "...";
 }
