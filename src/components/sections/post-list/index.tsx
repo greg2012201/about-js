@@ -2,7 +2,7 @@ import getPosts from "@/utils/getPosts";
 import React from "react";
 import { Title } from "@/components/brand-title";
 import SectionWrapper from "@/components/section-wrapper";
-import PostListCardItem from "./post-list-item";
+import PostListCardItem from "./post-list-card-item";
 
 async function PostList() {
   const posts = await getPosts();
