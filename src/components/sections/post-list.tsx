@@ -25,9 +25,12 @@ function PostListCardItem({ data, excerpt, index }: PostListCardItemProps) {
         alt="post image"
         src={image}
       />
-      <div className="flex-grow p-3">
-        <h5 className="text-3xl font-bold">{title}</h5>
-        {excerpt ?? ""}
+      <div className="flex flex-grow flex-col space-y-2 p-3">
+        <header className="flex flex-col">
+          <h5 className="text-3xl font-bold">{title}</h5>
+          <span className="mt-1 h-[7px] max-w-[80px] bg-purple-500 -skew-x-12" />
+        </header>
+        <p>{excerpt ?? ""}</p>
       </div>
     </li>
   );
