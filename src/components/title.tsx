@@ -10,7 +10,7 @@ function Title({ children, className }: Props) {
     <h2
       className={twMerge(
         className,
-        `text-3xl font-semibold text-indigo-400  md:text-5xl`,
+        `text-3xl font-semibold text-purple-500 md:text-5xl`,
       )}
     >
       {children}
