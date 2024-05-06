@@ -11,13 +11,13 @@ function PostListCardItem({ data, excerpt, index }: PostListCardItemProps) {
   const { title, slug, image } = data;
   const isEven = index % 2 === 0;
   const imageDynamicClassName = isEven
-    ? "md:rounded-none md:rounded-bl-md md:rounded-tl-md"
-    : "md:rounded-none md:rounded-br-md md:rounded-tr-md md:order-last";
+    ? "sm:rounded-none sm:rounded-bl-md sm:rounded-tl-md"
+    : "sm:rounded-none sm:rounded-br-md sm:rounded-tr-md sm:order-last";
   return (
-    <li className="flex min-h-[225px] rounded-md bg-slate-800 shadow">
+    <li className="mx-auto flex min-h-[225px] max-w-[400px] flex-col rounded-md bg-slate-800 shadow sm:max-w-none sm:flex-row">
       <Image
         className={twMerge(
-          `rounded-tl-md rounded-tr-md`,
+          `w-full rounded-tl-md rounded-tr-md sm:max-w-[360px]`,
           imageDynamicClassName,
         )}
         width={300}
@@ -36,10 +36,10 @@ function PostListCardItem({ data, excerpt, index }: PostListCardItemProps) {
 async function PostList() {
   const posts = await getPosts();
   return (
-    <SectionWrapper>
+    <SectionWrapper className="h-[1100px]">
       <Title className="pb-5">Posts</Title>
       <div className="flex flex-col">
-        <ul className="max-h-[500px] space-y-3 overflow-auto">
+        <ul className="max-h-[1000px] justify-center  space-y-3 overflow-auto sm:max-h-[500px]">
           {posts.map((post, index) => (
             <PostListCardItem key={post.data.slug} index={index} {...post} />
           ))}
