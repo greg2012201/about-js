@@ -8,7 +8,6 @@ type AuthorProps = Pick<
 > & { className?: ClassNameValue };
 
 function Author({ author, authorAvatar, createdAt, className }: AuthorProps) {
-  console.log("author", author);
   return (
     <div className={twMerge(`flex items-start space-x-2 py-2`, className)}>
       <Image
