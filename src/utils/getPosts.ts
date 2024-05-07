@@ -50,7 +50,6 @@ async function getPost(slug: string) {
   if (!data?.createdAt) {
     throw new Error(`Missing createdAt for post ${data.slug}`);
   }
-  console.log("date", data?.createdAt);
   const isCratedAtValid = dayjs(
     dayjs(data?.createdAt),
     "DD-MM-YYYY",
@@ -69,7 +68,19 @@ async function getPosts() {
     slugger.slug(sanitize(postPath)),
   );
 
-  const posts = await Promise.all(postSlugs.map((slug) => getPost(slug)));
+  const postsResults = await Promise.allSettled(
+    postSlugs.map((slug) => getPost(slug)),
+  );
+
+  const posts: Post[] = [];
+
+  postsResults.forEach((result) => {
+    if (result.status === "fulfilled") {
+      posts.push(result.value);
+      return;
+    }
+    console.error(result.reason);
+  });
 
   return posts;
 }
