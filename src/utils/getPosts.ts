@@ -2,11 +2,22 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import GithubSlugger from "github-slugger";
+import customParseFormat from "dayjs/plugin/customParseFormat";
+import dayjs from "dayjs";
+
+dayjs.extend(customParseFormat);
 
 const POSTS_DIR = "public/posts";
 
 export type Post = {
-  data: { title: string; slug: string; image: string };
+  data: {
+    title: string;
+    slug: string;
+    image: string;
+    author: string;
+    createdAt: string;
+    authorAvatar: string;
+  };
   content: string;
   excerpt?: string;
 };
@@ -30,6 +41,24 @@ async function getPost(slug: string) {
 
   data.slug = slug;
 
+  if (data?.author) {
+    data.author = "Grzegorz Dubiel";
+  }
+  if (!data?.authorAvatar) {
+    data.authorAvatar = "/profile.png";
+  }
+  if (!data?.createdAt) {
+    throw new Error(`Missing createdAt for post ${data.slug}`);
+  }
+  console.log("date", data?.createdAt);
+  const isCratedAtValid = dayjs(
+    dayjs(data?.createdAt),
+    "DD-MM-YYYY",
+    true,
+  ).isValid();
+  if (isCratedAtValid) {
+    throw new Error(`Invalid createdAt for post ${data.slug}`);
+  }
   return { data, content, excerpt: getExcerpt(content) } as Post;
 }
 
