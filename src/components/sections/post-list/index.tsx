@@ -1,6 +1,6 @@
 import getPosts from "@/utils/getPosts";
 import React from "react";
-import { Title } from "@/components/brand-title";
+import Title from "@/components/title";
 import SectionWrapper from "@/components/section-wrapper";
 import PostListCardItem from "./post-list-card-item";
 
