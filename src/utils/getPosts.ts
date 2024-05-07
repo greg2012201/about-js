@@ -41,7 +41,7 @@ async function getPost(slug: string) {
 
   data.slug = slug;
 
-  if (data?.author) {
+  if (!data?.author) {
     data.author = "Grzegorz Dubiel";
   }
   if (!data?.authorAvatar) {
