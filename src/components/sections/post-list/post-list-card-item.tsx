@@ -61,7 +61,7 @@ function PostListCardItem({ data, excerpt, index }: PostListCardItemProps) {
           authorAvatar={authorAvatar}
           createdAt={createdAt}
         />
-        <p>{excerpt ?? ""}</p>
+        <p className="font-light italic text-pink-100">{excerpt ?? ""}</p>
         <Link className=" self-end text-pink-300 hover:underline" href={slug}>
           Read more...
         </Link>
