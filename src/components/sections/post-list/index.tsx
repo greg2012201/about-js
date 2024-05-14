@@ -10,7 +10,7 @@ async function PostList() {
     <SectionWrapper className="h-[1100px]">
       <Title className="pb-5">Posts</Title>
       <div className="flex flex-col">
-        <ul className="max-h-[1000px] justify-center  space-y-3 overflow-auto sm:max-h-[500px]">
+        <ul className=" max-h-full  justify-center space-y-3 overflow-auto">
           {posts.map((post, index) => (
             <PostListCardItem key={post.data.slug} index={index} {...post} />
           ))}
