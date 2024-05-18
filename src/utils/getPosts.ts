@@ -61,12 +61,18 @@ async function getPost(slug: string) {
   return { data, content, excerpt: getExcerpt(content) } as Post;
 }
 
-async function getPosts() {
+export async function getAllPostSlugs() {
   const slugger = new GithubSlugger();
   const postPaths = await fs.promises.readdir(POSTS_DIR);
   const postSlugs = postPaths.map((postPath) =>
     slugger.slug(sanitize(postPath)),
   );
+
+  return postSlugs;
+}
+
+async function getPosts() {
+  const postSlugs = await getAllPostSlugs();
 
   const postsResults = await Promise.allSettled(
     postSlugs.map((slug) => getPost(slug)),
