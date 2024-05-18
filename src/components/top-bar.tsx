@@ -11,8 +11,6 @@ const NAV_CONFIG = [
   { label: "home", path: "/" },
   { label: "about", path: "/about" },
   { label: "posts", path: "/posts" },
-  { label: "guides", path: "/guides" },
-  { label: "news", path: "/news" },
 ];
 
 function TopBar() {
