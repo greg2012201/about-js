@@ -48,7 +48,7 @@ function PostListCardItem({ data, excerpt, index }: PostListCardItemProps) {
       />
       <div className="flex flex-grow flex-col space-y-2 p-3 pr-4">
         <header className="flex flex-col">
-          <Link href={slug}>
+          <Link href={`posts/${slug}`}>
             <h5 className="text-3xl font-bold text-slate-300 transition-opacity hover:cursor-pointer hover:opacity-80">
               {title}
             </h5>
