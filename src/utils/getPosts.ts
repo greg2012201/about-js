@@ -33,7 +33,7 @@ function getExcerpt(content: string) {
   return excerpt.join(" ") + "...";
 }
 
-async function getPost(slug: string) {
+export async function getPost(slug: string) {
   const postPath = `${slug}.md`;
   const itemPath = path.join(POSTS_DIR, postPath);
   const postFile = await fs.promises.readFile(itemPath, "utf8");
