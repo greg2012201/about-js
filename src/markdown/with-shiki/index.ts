@@ -1,4 +1,4 @@
-import { getHighlighter } from "shiki";
+import { BundledLanguage, getHighlighter } from "shiki";
 import { visit } from "unist-util-visit";
 import { fromHtml } from "hast-util-from-html";
 import { Node } from "unist";
@@ -9,6 +9,7 @@ import {
   sanitizeCodeBlock,
 } from "./utils";
 import { ALLOWED_LANGUAGES } from "./const";
+import { headerTemplate, wrapperTemplate } from "./templates";
 
 interface HastNode extends Node {
   type: string;
@@ -39,17 +40,24 @@ function withShiki() {
           return;
         }
         const language = extractLanguage(safeString(textNode.value));
-        console.log("language", language);
-        const codeHtml = highliter.codeToHtml(
-          sanitizeCodeBlock(safeString(textNode.value)),
-          {
-            lang: isAllowedLanguage(safeString(language), ALLOWED_LANGUAGES)
-              ? language
-              : ALLOWED_LANGUAGES[0],
-            theme: "material-theme-ocean",
-          },
-        );
-        const hastTree = fromHtml(codeHtml, { fragment: true });
+        const languageToSet = isAllowedLanguage(
+          safeString(language),
+          ALLOWED_LANGUAGES,
+        )
+          ? language
+          : ALLOWED_LANGUAGES[0];
+        const codeText = sanitizeCodeBlock(safeString(textNode.value));
+        const codeHtml = highliter.codeToHtml(codeText, {
+          lang: languageToSet,
+          theme: "material-theme-ocean",
+        });
+        const wrapper = wrapperTemplate({
+          children: codeHtml,
+          lang: languageToSet as BundledLanguage,
+          code: codeText,
+        });
+
+        const hastTree = fromHtml(wrapper, { fragment: true });
         highlitedNode = hastTree?.children[0];
       }
     });

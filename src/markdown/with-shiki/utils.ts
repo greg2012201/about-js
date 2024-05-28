@@ -1,3 +1,5 @@
+import { BundledLanguage } from "shiki";
+
 export function safeString(maybeString: string | null | undefined) {
   return maybeString ?? "";
 }
@@ -17,6 +19,9 @@ export function extractLanguage(input: string) {
   return match ? match[1] : "";
 }
 
-export function isAllowedLanguage(input: string, allowedLanguages: string[]) {
+export function isAllowedLanguage(
+  input: string,
+  allowedLanguages: string[],
+): input is BundledLanguage {
   return allowedLanguages.includes(input);
 }

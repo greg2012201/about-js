@@ -1,5 +1,6 @@
 import transformPost from "@/markdown/transform-post";
 import { getAllPostSlugs, getPost } from "@/utils/getPosts";
+import Script from "next/script";
 import React from "react";
 
 type Props = {
@@ -7,7 +8,6 @@ type Props = {
     post: string;
   };
 };
-const higlhliterClassName = `p-2 text-sm [&>pre]:overflow-x-auto [&>pre]:p-4 [&>pre]:leading-snug  [&_code]:block [&_code]:max-w-[100px] [&_code>span::before]:content-[counter(step)]`;
 export async function generateStaticParams() {
   const allPostSlugs = await getAllPostSlugs();
 
@@ -18,10 +18,26 @@ async function Post({ params: { post } }: Props) {
   const postData = await getPost(post);
   const postHTML = await transformPost(postData.content);
   return (
-    <div
-      className={higlhliterClassName}
-      dangerouslySetInnerHTML={{ __html: postHTML }}
-    />
+    <>
+      <div dangerouslySetInnerHTML={{ __html: postHTML }} />
+      <Script
+        id="markdown"
+        dangerouslySetInnerHTML={{
+          __html: `
+          function handleCopy(textToCopy) {
+            navigator.clipboard
+            .writeText(textToCopy)
+            .then(() => {
+            setTimeout(() => console.log('success'), 2000);
+            })
+            .catch((err) => console.error("Failed to copy:", err));
+
+          }
+        
+        `,
+        }}
+      />
+    </>
   );
 }
 
