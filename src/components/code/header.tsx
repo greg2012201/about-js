@@ -8,22 +8,12 @@ import { Prettify } from "@/types";
 import { FaCopy } from "react-icons/fa6";
 import { MdOutlineDone } from "react-icons/md";
 import { FaCode } from "react-icons/fa6";
+import transformLang from "@/utils/transfrom-lang";
 
 type HeaderProps = {
   lang: BundledLanguage;
   textToCopy: string;
 };
-
-function transformLang(lang: string) {
-  if (["console", "powershell"].includes(lang)) {
-    return "terminal";
-  }
-  if (lang.toLocaleLowerCase() === "jsx") {
-    return "JSX";
-  }
-
-  return lang;
-}
 
 const LANG_ICONS: Prettify<Partial<Record<BundledLanguage, ReactElement>>> = {
   console: <FiTerminal />,
