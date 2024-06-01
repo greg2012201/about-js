@@ -2,12 +2,14 @@ import transformPost from "@/markdown/transform-post";
 import { getAllPostSlugs, getPost } from "@/utils/getPosts";
 import Script from "next/script";
 import React from "react";
+import handleCopy from "@/markdown/handleCopy";
 
 type Props = {
   params: {
     post: string;
   };
 };
+
 export async function generateStaticParams() {
   const allPostSlugs = await getAllPostSlugs();
 
@@ -23,18 +25,7 @@ async function Post({ params: { post } }: Props) {
       <Script
         id="markdown"
         dangerouslySetInnerHTML={{
-          __html: `
-          function handleCopy(textToCopy) {
-            navigator.clipboard
-            .writeText(textToCopy)
-            .then(() => {
-            setTimeout(() => console.log('success'), 2000);
-            })
-            .catch((err) => console.error("Failed to copy:", err));
-
-          }
-        
-        `,
+          __html: handleCopy.toString(),
         }}
       />
     </>
