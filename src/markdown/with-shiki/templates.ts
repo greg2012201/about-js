@@ -53,7 +53,6 @@ type Props = {
 
 export const wrapperTemplate = ({
   children,
-  code,
   lang = "javascript",
 }: Props): string => {
   const lineNumbersClassName = ["powershell", "bash", "console"].includes(lang)
