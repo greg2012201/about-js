@@ -3,22 +3,24 @@ import dedent from "dedent";
 import { BundledLanguage, BundledTheme } from "shiki";
 import transformLang from "@/utils/transfrom-lang";
 import { twMerge } from "tailwind-merge";
+import { faCopy, mdOutlineDone } from "./icons";
 
 type HeaderProps = {
   lang: BundledLanguage;
   codeBlockId: string;
 };
 export const headerTemplate = ({ lang, codeBlockId }: HeaderProps) => {
+  const buttonId = short.generate();
   return dedent`
-  <div className="flex items-center border-b-[1px] border-slate-500 px-6 py-4 text-neutral-400">
+  <div className="header flex items-center border-b-[1px] border-slate-500 px-6 py-4 text-neutral-400">
     <div className="flex flex-grow items-center space-x-1">
       {renderIcon}
       <p className="text-sm font-semibold capitalize ">
           ${transformLang(lang)}
       </p>    
     </div>
-    <button className="h-[30px]" onclick="handleCopy('${codeBlockId}')" type="button">
-      Copy
+    <button id="${buttonId}" className="copy-button h-[30px]" onclick="handleCopy('${codeBlockId}', '${buttonId}')" type="button">
+      ${mdOutlineDone}${faCopy}
     </button>
   </div>
   `;

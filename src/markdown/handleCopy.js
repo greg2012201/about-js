@@ -1,19 +1,25 @@
-function handleCopy(codeBlockId) {
+function handleCopy(codeBlockId, buttonId) {
   const parentElement = document.getElementById(codeBlockId);
+  const copyButton = document.getElementById(buttonId);
+  const codeBlock = parentElement.querySelector("pre code");
+  const doneIcon = document.querySelector("#done");
+  const copyIcon = document.querySelector("#copy");
 
-  if (!parentElement) {
-    return;
-  }
+  doneIcon.classList.remove("hidden");
+  copyIcon.classList.add("hidden");
 
-  const nestedChild = parentElement.querySelector("pre code");
+  console.log("copyButton", copyButton);
   let codeText = "";
-  [...(nestedChild?.children || [])].forEach((line) => {
+  [...(codeBlock?.children || [])].forEach((line) => {
     codeText += `\n${line.textContent}`;
   });
   navigator.clipboard
     .writeText(codeText)
     .then(() => {
-      setTimeout(() => console.log("success"), 2000);
+      setTimeout(() => {
+        doneIcon.classList.add("hidden");
+        copyIcon.classList.remove("hidden");
+      }, 2000);
     })
     .catch((err) => console.error("Failed to copy:", err));
 }
