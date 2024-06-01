@@ -3,18 +3,36 @@ import dedent from "dedent";
 import { BundledLanguage, BundledTheme } from "shiki";
 import transformLang from "@/utils/transfrom-lang";
 import { twMerge } from "tailwind-merge";
-import { faCopy, mdOutlineDone } from "./icons";
+import {
+  biLogoTypescript,
+  faCode,
+  faCopy,
+  fiTerminal,
+  mdOutlineDone,
+} from "./icons";
+import { Prettify } from "@/types";
 
 type HeaderProps = {
   lang: BundledLanguage;
   codeBlockId: string;
 };
+
+const LANG_ICONS: Prettify<Partial<Record<BundledLanguage, string>>> = {
+  console: fiTerminal,
+  powershell: fiTerminal,
+  typescript: biLogoTypescript,
+  jsx: faCode,
+};
+
+const LANG_ICONS_MAP = new Map<string, string>(Object.entries(LANG_ICONS));
+
 export const headerTemplate = ({ lang, codeBlockId }: HeaderProps) => {
+  const renderIcon = LANG_ICONS_MAP.get(lang);
   const buttonId = short.generate();
   return dedent`
   <div className="header flex items-center border-b-[1px] border-slate-500 px-6 py-4 text-neutral-400">
     <div className="flex flex-grow items-center space-x-1">
-      {renderIcon}
+      ${renderIcon}
       <p className="text-sm font-semibold capitalize ">
           ${transformLang(lang)}
       </p>    
