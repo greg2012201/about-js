@@ -1,7 +1,11 @@
-import React from "react";
+import PostList from "@/components/sections/post-list";
 
 function Posts() {
-  return <div>Posts</div>;
+  return (
+    <div className="flex w-full justify-center pt-6">
+      <PostList />
+    </div>
+  );
 }
 
 export default Posts;
