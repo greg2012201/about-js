@@ -20,6 +20,11 @@ createdAt: 20-05-2024
 
 Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem lorem ipsum dolor sit ametlorem ipsum dolor sit amet
 Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem lorem ipsum dolor sit ametlorem ipsum dolor sit amet
+
+    ```javascript
+    const props = {};
+    ```
+
 Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem lorem ipsum dolor sit ametlorem ipsum dolor sit amet
 Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem lorem ipsum dolor sit ametlorem ipsum dolor sit amet
 Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem lorem ipsum dolor sit ametlorem ipsum dolor sit amet
