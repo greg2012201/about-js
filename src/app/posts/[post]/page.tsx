@@ -2,7 +2,6 @@ import transformPost from "@/markdown/transform-post";
 import { getAllPostSlugs, getPost } from "@/utils/getPosts";
 import Script from "next/script";
 import React from "react";
-import handleCopy from "@/markdown/handleCopy";
 
 type Props = {
   params: {
@@ -22,12 +21,7 @@ async function Post({ params: { post } }: Props) {
   return (
     <>
       <div dangerouslySetInnerHTML={{ __html: postHTML }} />
-      <Script
-        id="markdown"
-        dangerouslySetInnerHTML={{
-          __html: handleCopy.toString(),
-        }}
-      />
+      <Script id="markdown" src="/handle-copy.js" />
     </>
   );
 }
