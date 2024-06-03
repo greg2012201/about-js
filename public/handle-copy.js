@@ -1,6 +1,5 @@
 function handleCopy(codeBlockId, buttonId) {
   const parentElement = document.getElementById(codeBlockId);
-  const copyButton = document.getElementById(buttonId);
   const codeBlock = parentElement.querySelector("pre code");
   const doneIcon = document.querySelector("#done");
   const copyIcon = document.querySelector("#copy");
