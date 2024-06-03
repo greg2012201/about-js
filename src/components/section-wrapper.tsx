@@ -35,11 +35,13 @@ function SectionWrapper({
           {children}
         </motion.div>
       </div>
-      <div
-        className={twMerge(`h-[650px] w-[40px] `, iconsLineWrapperClassName)}
-      >
-        {renderIconLine}
-      </div>
+      {renderIconLine && (
+        <div
+          className={twMerge(`h-[650px] w-[40px] `, iconsLineWrapperClassName)}
+        >
+          {renderIconLine}
+        </div>
+      )}
     </div>
   );
 }
