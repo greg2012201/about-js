@@ -30,11 +30,13 @@ function withShiki() {
       themes: ["material-theme-ocean"],
     });
 
-    let highlitedNode: null | HastNode = null;
-
-    visit(tree, (node: HastNode, _, parent: HastNode) => {
-      if (node.tagName === "code" && parent.tagName === "pre") {
-        const textNode = node?.children?.[0];
+    visit(tree, (node: HastNode, index, parent: HastNode) => {
+      if (node.tagName === "pre") {
+        const codeNode = node?.children?.[0];
+        if (!codeNode) {
+          return;
+        }
+        const textNode = codeNode?.children?.[0];
 
         if (!textNode) {
           return;
@@ -58,17 +60,7 @@ function withShiki() {
         });
 
         const hastTree = fromHtml(wrapper, { fragment: true });
-        highlitedNode = hastTree?.children[0];
-      }
-    });
-
-    if (!highlitedNode) {
-      return;
-    }
-
-    visit(tree, (node: HastNode, index, parent: HastNode) => {
-      if (node.tagName === "pre" && parent?.children?.[index ?? 0]) {
-        (parent?.children || [])[index ?? 0] = highlitedNode as HastNode;
+        (parent?.children || [])[index ?? 0] = hastTree?.children[0];
       }
     });
   };
