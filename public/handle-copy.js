@@ -8,7 +8,6 @@ function handleCopy(codeBlockId, buttonId) {
   doneIcon.classList.remove("hidden");
   copyIcon.classList.add("hidden");
 
-  console.log("copyButton", copyButton);
   let codeText = "";
   [...(codeBlock?.children || [])].forEach((line) => {
     codeText += `\n${line.textContent}`;
