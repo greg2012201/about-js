@@ -62,7 +62,10 @@ function PostListCardItem({ data, excerpt, index }: PostListCardItemProps) {
           createdAt={createdAt}
         />
         <p className="font-light italic text-pink-100">{excerpt ?? ""}</p>
-        <Link className=" self-end text-pink-300 hover:underline" href={slug}>
+        <Link
+          className=" self-end text-pink-300 hover:underline"
+          href={`posts/${slug}`}
+        >
           Read more...
         </Link>
       </div>
