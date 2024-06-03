@@ -1,9 +1,15 @@
 function handleCopy(codeBlockId, buttonId) {
   const parentElement = document.getElementById(codeBlockId);
+  if (!parentElement) {
+    return;
+  }
   const codeBlock = parentElement.querySelector("pre code");
   const doneIcon = document.querySelector("#done");
   const copyIcon = document.querySelector("#copy");
 
+  if (!doneIcon || !copyIcon) {
+    return;
+  }
   doneIcon.classList.remove("hidden");
   copyIcon.classList.add("hidden");
 
