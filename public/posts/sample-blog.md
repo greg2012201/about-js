@@ -7,15 +7,13 @@ createdAt: 20-05-2024
 # Hello I am first post 2
 
 ```typescript
-    type Props {
-      name: string;
-    }
+type Props = {
+  name: string;
+};
 
-
-    function something() {
-
-      console.log('hello')
-    }
+function something() {
+  console.log("hello");
+}
 ```
 
 ```javascript
