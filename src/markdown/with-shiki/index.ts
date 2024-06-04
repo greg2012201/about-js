@@ -2,12 +2,7 @@ import { BundledLanguage, getHighlighter } from "shiki";
 import { visit } from "unist-util-visit";
 import { fromHtml } from "hast-util-from-html";
 import { Node } from "unist";
-import {
-  extractLanguage,
-  isAllowedLanguage,
-  safeString,
-  sanitizeCodeBlock,
-} from "./utils";
+import { extractLanguage, isAllowedLanguage, safeString } from "./utils";
 import { ALLOWED_LANGUAGES } from "./const";
 import { headerTemplate, wrapperTemplate } from "./templates";
 
@@ -22,6 +17,8 @@ interface HastNode extends Node {
     end: { line: number; column: number; offset?: number };
   };
 }
+
+const FALLBACK_LANGUAGE = ALLOWED_LANGUAGES[0];
 
 function withShiki() {
   return async (tree: HastNode) => {
@@ -41,14 +38,18 @@ function withShiki() {
         if (!textNode) {
           return;
         }
-        const language = extractLanguage(safeString(textNode.value));
+
+        const language = extractLanguage(
+          codeNode?.properties?.className || [],
+          FALLBACK_LANGUAGE,
+        );
         const languageToSet = isAllowedLanguage(
           safeString(language),
           ALLOWED_LANGUAGES,
         )
           ? language
-          : ALLOWED_LANGUAGES[0];
-        const codeText = sanitizeCodeBlock(safeString(textNode.value));
+          : FALLBACK_LANGUAGE;
+        const codeText = safeString(textNode.value);
         const codeHtml = highliter.codeToHtml(codeText, {
           lang: languageToSet,
           theme: "material-theme-ocean",
