@@ -9,6 +9,10 @@ type Props = {
   };
 };
 
+function hasCodeBlock(content: string) {
+  return content.includes("pre");
+}
+
 export async function generateStaticParams() {
   const allPostSlugs = await getAllPostSlugs();
 
@@ -18,10 +22,11 @@ export async function generateStaticParams() {
 async function Post({ params: { post } }: Props) {
   const postData = await getPost(post);
   const postHTML = await transformPost(postData.content);
+
   return (
     <>
       <div dangerouslySetInnerHTML={{ __html: postHTML }} />
-      <Script id="markdown" src="/handle-copy.js" />
+      {hasCodeBlock(postHTML) && <Script id="markdown" src="/handle-copy.js" />}
     </>
   );
 }
