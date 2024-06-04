@@ -6,7 +6,7 @@ createdAt: 20-05-2024
 
 # Hello I am first post 2
 
-    ```typescript
+```typescript
     type Props {
       name: string;
     }
@@ -16,14 +16,14 @@ createdAt: 20-05-2024
 
       console.log('hello')
     }
-    ```
+```
+
+```javascript
+const props = {};
+```
 
 Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem lorem ipsum dolor sit ametlorem ipsum dolor sit amet
 Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem lorem ipsum dolor sit ametlorem ipsum dolor sit amet
-
-    ```javascript
-    const props = {};
-    ```
 
 Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem lorem ipsum dolor sit ametlorem ipsum dolor sit amet
 Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem lorem ipsum dolor sit ametlorem ipsum dolor sit amet
