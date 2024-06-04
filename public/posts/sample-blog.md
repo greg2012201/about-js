@@ -16,11 +16,22 @@ function something() {
 }
 ```
 
-```javascript
-const props = {};
+```jsx
+"use what!?";
+
+function AboutJS() {
+  return (
+    <div>
+      <h1>Greetings!</h1>
+      <p>let's see what we got here.</p>
+    </div>
+  );
+}
+
+export default AboutJS;
 ```
 
-```bash
+```console
 npm install --save something
 ```
 
