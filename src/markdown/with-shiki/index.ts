@@ -4,7 +4,7 @@ import { fromHtml } from "hast-util-from-html";
 import { Node } from "unist";
 import { extractLanguage, isAllowedLanguage, safeString } from "./utils";
 import { ALLOWED_LANGUAGES } from "./const";
-import { headerTemplate, wrapperTemplate } from "./templates";
+import { wrapperTemplate } from "./templates";
 
 interface HastNode extends Node {
   type: string;
