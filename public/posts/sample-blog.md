@@ -20,6 +20,10 @@ function something() {
 const props = {};
 ```
 
+```bash
+npm install --save something
+```
+
 Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem lorem ipsum dolor sit ametlorem ipsum dolor sit amet
 Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem lorem ipsum dolor sit ametlorem ipsum dolor sit amet
 
