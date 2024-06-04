@@ -1,9 +1,14 @@
-import PostList from "@/components/sections/post-list";
+import { Title } from "@/components/brand-title";
+import PostList from "@/components/post-list";
+import SectionWrapper from "@/components/section-wrapper";
 
 function Posts() {
   return (
-    <div className="flex w-full justify-center px-4 pt-6">
-      <PostList />
+    <div className="flex flex-col items-center space-y-4">
+      <Title className="mb-12 mt-8">📖 Posts 📖</Title>
+      <SectionWrapper>
+        <PostList />
+      </SectionWrapper>
     </div>
   );
 }
