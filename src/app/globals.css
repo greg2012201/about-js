@@ -83,5 +83,6 @@
       counter-increment: step;
       @apply mr-6 inline-block w-4 border-transparent text-right text-neutral-600;
     }
+    font-size: 16px;
   }
 }
