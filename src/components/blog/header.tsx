@@ -1,6 +1,7 @@
 import type { Post } from "@/utils/getPosts";
 import Title from "./title";
 import Image from "next/image";
+import Profile from "./profile";
 
 type Data = Post["data"];
 
@@ -12,6 +13,11 @@ function Header({ author, authorAvatar, createdAt, title, image }: Props) {
       <Title asChild size="large">
         <h1>{title}</h1>
       </Title>
+      <Profile
+        author={author}
+        authorAvatar={authorAvatar}
+        createdAt={createdAt}
+      />
       {!!image && (
         <div className="flex w-full justify-center">
           <Image
