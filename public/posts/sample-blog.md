@@ -1,5 +1,5 @@
 ---
-title: Hello
+title: Talking about Javacript
 image: https://picsum.photos/534/345
 createdAt: 20-05-2024
 ---
