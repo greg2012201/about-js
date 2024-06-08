@@ -21,13 +21,6 @@ function Slot({
   return null;
 }
 
-type TitleProps = {
-  asChild?: boolean;
-  className?: ClassNameValue;
-  slug?: string;
-  children: ReactElement;
-};
-
 function DefaultTitle({
   children,
   className,
@@ -47,25 +40,40 @@ function MaybeWithLink({
 }) {
   return slug ? <Link href={`posts/${slug}`}>{children}</Link> : children;
 }
+type TitleProps = {
+  asChild?: boolean;
+  className?: ClassNameValue;
+  slug?: string;
+  size?: "default" | "large";
+  children: ReactElement;
+};
 
-function Title({ asChild, children, slug }: TitleProps) {
+function Title({ asChild, children, slug, size = "default" }: TitleProps) {
   const TitleComponent = asChild ? Slot : DefaultTitle;
   const hoverClass = slug
     ? "hover:cursor-pointer hover:opacity-8"
     : "hover:cursor-auto";
+
+  const fontSizeClass = size === "default" ? "text-3xl" : "text-5xl";
+  const underlineClass =
+    size === "default"
+      ? "mt-1 h-[7px] max-w-[80px]"
+      : "mt-2 h-[12px] max-w-[180px]";
+
   return (
     <header className="flex flex-col">
       <MaybeWithLink slug={slug}>
         <TitleComponent
           className={twMerge(
-            `text-3xl font-bold text-slate-300 transition-opacity`,
+            `font-bold text-slate-300 transition-opacity`,
             hoverClass,
+            fontSizeClass,
           )}
         >
           {children}
         </TitleComponent>
       </MaybeWithLink>
-      <span className="mt-1 h-[7px] max-w-[80px] -skew-x-12 bg-purple-500" />
+      <span className={twMerge(`-skew-x-12 bg-purple-500`, underlineClass)} />
     </header>
   );
 }
