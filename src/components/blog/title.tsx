@@ -54,11 +54,12 @@ function Title({ asChild, children, slug, size = "default" }: TitleProps) {
     ? "hover:cursor-pointer hover:opacity-80"
     : "hover:cursor-auto";
 
-  const fontSizeClass = size === "default" ? "text-3xl" : "text-5xl";
+  const fontSizeClass =
+    size === "default" ? "text-3xl" : "text-4xl md:text-5xl";
   const underlineClass =
     size === "default"
       ? "mt-1 h-[7px] max-w-[80px]"
-      : "mt-2 h-[12px] max-w-[180px]";
+      : "mt-2 h-[10px] max-w-[100px] md:h-[12px] md:max-w-[120px]";
 
   return (
     <header className="flex flex-col">
