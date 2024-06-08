@@ -51,7 +51,7 @@ type TitleProps = {
 function Title({ asChild, children, slug, size = "default" }: TitleProps) {
   const TitleComponent = asChild ? Slot : DefaultTitle;
   const hoverClass = slug
-    ? "hover:cursor-pointer hover:opacity-8"
+    ? "hover:cursor-pointer hover:opacity-80"
     : "hover:cursor-auto";
 
   const fontSizeClass = size === "default" ? "text-3xl" : "text-5xl";
