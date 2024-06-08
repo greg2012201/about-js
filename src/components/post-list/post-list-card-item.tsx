@@ -1,31 +1,9 @@
 import { Post } from "@/utils/getPosts";
 import Image from "next/image";
 import Link from "next/link";
-import { ClassNameValue, twMerge } from "tailwind-merge";
+import { twMerge } from "tailwind-merge";
 import Title from "@/components/blog/title";
-
-type AuthorProps = Pick<
-  Post["data"],
-  "author" | "createdAt" | "authorAvatar"
-> & { className?: ClassNameValue };
-
-function Author({ author, authorAvatar, createdAt, className }: AuthorProps) {
-  return (
-    <div className={twMerge(`flex items-start space-x-2 py-2`, className)}>
-      <Image
-        src={authorAvatar}
-        width={50}
-        height={50}
-        alt="author avatar"
-        className="rounded-full"
-      />
-      <div className="flex flex-col">
-        <p className="text-xl font-bold text-pink-400">{author}</p>
-        <p className="text-xs italic text-slate-300">{createdAt}</p>
-      </div>
-    </div>
-  );
-}
+import Profile from "../blog/profile";
 
 type PostListCardItemProps = Pick<Post, "data" | "excerpt"> & { index: number };
 
@@ -49,7 +27,7 @@ function PostListCardItem({ data, excerpt, index }: PostListCardItemProps) {
       />
       <div className="flex flex-grow flex-col space-y-2 p-3 pr-4">
         <Title slug={slug}>{title}</Title>
-        <Author
+        <Profile
           author={author}
           authorAvatar={authorAvatar}
           createdAt={createdAt}
