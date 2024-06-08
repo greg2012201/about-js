@@ -25,7 +25,7 @@ function DefaultTitle({
   children,
   className,
 }: {
-  children: ReactElement;
+  children: ReactElement | string;
   className?: string;
 }) {
   return <h5 className={className}>{children}</h5>;
@@ -45,7 +45,7 @@ type TitleProps = {
   className?: ClassNameValue;
   slug?: string;
   size?: "default" | "large";
-  children: ReactElement;
+  children: ReactElement | string;
 };
 
 function Title({ asChild, children, slug, size = "default" }: TitleProps) {
