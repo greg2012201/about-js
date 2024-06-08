@@ -1,3 +1,4 @@
+import Header from "@/components/blog/header";
 import transformPost from "@/markdown/transform-post";
 import { getAllPostSlugs, getPost } from "@/utils/getPosts";
 import Script from "next/script";
@@ -20,11 +21,20 @@ export async function generateStaticParams() {
 }
 
 async function Post({ params: { post } }: Props) {
-  const postData = await getPost(post);
-  const postHTML = await transformPost(postData.content);
-
+  const {
+    content,
+    data: { author, authorAvatar, createdAt, image, title },
+  } = await getPost(post);
+  const postHTML = await transformPost(content);
   return (
     <>
+      <Header
+        author={author}
+        authorAvatar={authorAvatar}
+        createdAt={createdAt}
+        title={title}
+        image={image}
+      />
       <div dangerouslySetInnerHTML={{ __html: postHTML }} />
       {hasCodeBlock(postHTML) && <Script id="markdown" src="/handle-copy.js" />}
     </>
