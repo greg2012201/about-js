@@ -14,10 +14,10 @@ function Intro() {
       viewport={{ once: true }}
       className="mb-20 flex h-[calc(100vh-55px)] max-w-[930px] flex-col justify-around pb-4 [@media(min-width:660px)]:h-[calc(100vh-75px)]"
     >
-      <div className="space-y-2">
+      <header className="space-y-2">
         <Title> What the hack is about.js?</Title>
         <Subtitle>{`JavaScript Blog's Code Hub`}</Subtitle>
-      </div>
+      </header>
       <AnimatedIcons />
       <BaseText>
         👋 My name is Greg and I am here to help you to keep up with the fresh
