@@ -5,7 +5,9 @@ type Props = {
 };
 
 function Layout({ children }: Props) {
-  return <div className="mx-auto max-w-[950px] pt-4">{children}</div>;
+  return (
+    <div className="mx-auto flex max-w-[950px] flex-col pt-4">{children}</div>
+  );
 }
 
 export default Layout;
