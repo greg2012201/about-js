@@ -36,7 +36,7 @@ async function Post({ params: { post } }: Props) {
         image={image}
       />
       <div
-        className="markdown mx-auto max-w-[680px]"
+        className="markdown prose prose-invert prose-slate prose-headings:text-slate-300 prose-img:mx-auto prose-img:w-full mx-auto max-w-[680px] py-8"
         dangerouslySetInnerHTML={{ __html: postHTML }}
       />
       {hasCodeBlock(postHTML) && <Script id="markdown" src="/handle-copy.js" />}
