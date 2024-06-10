@@ -1,5 +1,5 @@
 ---
-title: Talking about TypeScript
+title: Talkin' About TypeScript
 // image: https://picsum.photos/534/345
 createdAt: 20-05-2024
 ---
