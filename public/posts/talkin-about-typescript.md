@@ -6,6 +6,9 @@ createdAt: 20-05-2024
 
 # Talkin' About TypeScript
 
+![Random generated image](https://picsum.photos/534/345)
+[See playground](https://www.typescriptlang.org/play/) 👈
+
 TypeScript has been gaining immense popularity in the web development community, and for good reason. It brings static typing to JavaScript, making it easier to write and maintain large-scale applications. In this blog post, we will dive into what TypeScript is, why you should consider using it, and provide some practical examples to get you started.
 
 ## What is TypeScript?
@@ -26,11 +29,6 @@ To start using TypeScript, you need to install it via npm (Node Package Manager)
 ```console
 npm install -g typescript
 ```
-
-markdown
-Copy code
-
-# Talkin' About TypeScript
 
 TypeScript has been gaining immense popularity in the web development community, and for good reason. It brings static typing to JavaScript, making it easier to write and maintain large-scale applications. In this blog post, we will dive into what TypeScript is, why you should consider using it, and provide some practical examples to get you started.
 
@@ -79,7 +77,6 @@ console.log(greet("Alice")); // Output: Hello, Alice!
 TypeScript allows you to define interfaces to describe the shape of objects. This is particularly useful for defining contracts in your code.
 
 ```typescript
-Copy code
 interface User {
   id: number;
   name: string;
