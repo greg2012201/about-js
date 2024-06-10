@@ -14,19 +14,29 @@ function Profile({
   className,
   size = "default",
 }: ProfileProps) {
+  const wrapperClassName =
+    size === "default"
+      ? "grid grid-cols-[50px_1fr] grid-rows-2"
+      : "flex flex-col items-center";
+  const authorTextSize = size === "default" ? "text-xl" : "text-2xl";
   return (
-    <div className={twMerge(`flex items-start space-x-2 py-2`, className)}>
+    <div className={twMerge(`space-x-2 py-2`, wrapperClassName, className)}>
       <Image
         src={authorAvatar}
-        width={50}
-        height={50}
+        width={size === "default" ? 50 : 80}
+        height={size === "default" ? 50 : 80}
         alt="author avatar"
-        className="rounded-full"
+        className="row-span-2 rounded-full"
       />
-      <div className="flex flex-col">
-        <p className="text-xl font-bold text-pink-400">{author}</p>
-        <p className="text-xs italic text-slate-300">{createdAt}</p>
-      </div>
+      <p
+        className={twMerge(
+          `row-span-1 font-bold text-pink-400`,
+          authorTextSize,
+        )}
+      >
+        {author}
+      </p>
+      <p className="row-span-2 text-xs italic text-slate-300">{createdAt}</p>
     </div>
   );
 }
