@@ -18,6 +18,28 @@ const config = {
       },
     },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              fontSize: "36px",
+              width: "fit-content",
+              margin: "0 auto",
+              /*   textAlign: "center", */
+              fontWeight: "bold",
+              "@media(min-width:770px)": { fontSize: "48px" },
+              "&::after": {
+                content: `""`,
+                display: "block",
+                width: "102px",
+                height: "10px",
+                background: "rgb(168, 85, 247)",
+                transform: "skewX(-12deg)",
+              },
+            },
+          },
+        },
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -32,7 +32,6 @@ async function Post({ params: { post } }: Props) {
         author={author}
         authorAvatar={authorAvatar}
         createdAt={createdAt}
-        title={title}
         image={image}
       />
       <div
