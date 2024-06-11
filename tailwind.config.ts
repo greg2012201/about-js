@@ -25,16 +25,31 @@ const config = {
               fontSize: "36px",
               width: "fit-content",
               margin: "0 auto",
-              /*   textAlign: "center", */
               fontWeight: "bold",
-              "@media(min-width:770px)": { fontSize: "48px" },
               "&::after": {
                 content: `""`,
+                "margin-top": "5px",
                 display: "block",
-                width: "102px",
-                height: "10px",
+                width: "90px",
+                height: "7px",
                 background: "rgb(168, 85, 247)",
                 transform: "skewX(-12deg)",
+              },
+              "@media(min-width:770px)": {
+                fontSize: "48px",
+                "&::after": {
+                  content: `""`,
+                  "margin-top": "4px",
+                  display: "block",
+                  width: "102px",
+                  height: "10px",
+                  background: "rgb(168, 85, 247)",
+                  transform: "skewX(-12deg)",
+                  /*   "@media(min-width:770px)": {
+                  width: "90px",
+                  height: "6px",
+                }, */
+                },
               },
             },
           },
