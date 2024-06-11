@@ -45,10 +45,6 @@ const config = {
                   height: "10px",
                   background: "rgb(168, 85, 247)",
                   transform: "skewX(-12deg)",
-                  /*   "@media(min-width:770px)": {
-                  width: "90px",
-                  height: "6px",
-                }, */
                 },
               },
             },
