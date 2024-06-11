@@ -30,7 +30,7 @@ const config = {
                 content: `""`,
                 "margin-top": "5px",
                 display: "block",
-                width: "90px",
+                width: "80px",
                 height: "7px",
                 background: "rgb(168, 85, 247)",
                 transform: "skewX(-12deg)",
