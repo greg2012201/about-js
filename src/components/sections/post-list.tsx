@@ -6,7 +6,6 @@ import PostListComponent from "@/components/post-list";
 async function PostList() {
   return (
     <SectionWrapper className="h-[1100px]">
-      <Title className="pb-5">Posts</Title>
       <PostListComponent />
     </SectionWrapper>
   );
