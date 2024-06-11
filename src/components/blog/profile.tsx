@@ -30,7 +30,7 @@ function Profile({
       />
       <p
         className={twMerge(
-          `row-span-1 font-bold text-pink-400`,
+          `row-span-1 text-center font-bold text-pink-400`,
           authorTextSize,
         )}
       >
