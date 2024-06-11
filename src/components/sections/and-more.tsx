@@ -39,7 +39,7 @@ function AndMore() {
         />
       }
     >
-      <Title>Something missing?</Title>
+      <Title size="large">Something missing?</Title>
       <Card
         wrapperClassName="mt-auto mb-auto"
         contentClassName="flex max-w-[1000px] flex-col space-y-8"

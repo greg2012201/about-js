@@ -13,7 +13,7 @@ function NodeJS() {
     <SectionWrapper
       renderIconLine={<IconLine title="Node.js" iconSrc="./nodejs-icon.svg" />}
     >
-      <Title>Keep up with node.js</Title>
+      <Title size="large">Keep up with node.js</Title>
       <Card
         wrapperClassName="mt-auto mb-auto"
         contentClassName="flex max-w-[1000px] flex-col space-y-8"

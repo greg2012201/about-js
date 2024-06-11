@@ -2,8 +2,8 @@ import { Post } from "@/utils/getPosts";
 import Image from "next/image";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
-import Title from "@/components/blog/title";
 import Profile from "../blog/profile";
+import Title from "../title";
 
 type PostListCardItemProps = Pick<Post, "data" | "excerpt"> & { index: number };
 

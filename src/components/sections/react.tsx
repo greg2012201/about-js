@@ -14,7 +14,7 @@ function React({ renderContent }: Props) {
     <SectionWrapper
       renderIconLine={<IconsLine title="React" iconSrc="./react-2.svg" />}
     >
-      <Title>Stay up to date with React</Title>
+      <Title size="large">Stay up to date with React</Title>
       <Card
         wrapperClassName="mt-auto mb-auto"
         contentClassName="flex max-w-[1000px] flex-col space-y-8"
