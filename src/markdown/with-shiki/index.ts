@@ -50,7 +50,7 @@ function withShiki() {
           ? language
           : FALLBACK_LANGUAGE;
         const codeText = safeString(textNode.value);
-        const codeHtml = highliter.codeToHtml(codeText, {
+        const codeHtml = highliter.codeToHtml(codeText.trim(), {
           lang: languageToSet,
           theme: "material-theme-ocean",
         });
