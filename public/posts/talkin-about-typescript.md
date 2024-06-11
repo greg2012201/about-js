@@ -8,8 +8,9 @@ createdAt: 20-05-2024
 
 ![Random generated image](https://picsum.photos/534/345)
 [See playground](https://www.typescriptlang.org/play/) 👈
+[link to my anchored heading](#my-anchor)
 
-TypeScript has been gaining immense popularity in the web development community, and for good reason. It brings static typing to JavaScript, making it easier to write and maintain large-scale applications. In this blog post, we will dive into what TypeScript is, why you should consider using it, and provide some practical examples to get you started.
+> TypeScript has been gaining immense popularity in the web development community, and for good reason. It brings static typing to JavaScript, making it easier to write and maintain large-scale applications. In this blog post, we will dive into what TypeScript is, why you should consider using it, and provide some practical examples to get you started.
 
 ## What is TypeScript?
 
