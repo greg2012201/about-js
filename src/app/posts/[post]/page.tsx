@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 async function Post({ params: { post } }: Props) {
   const {
     content,
-    data: { author, authorAvatar, createdAt, image, title },
+    data: { author, authorAvatar, createdAt },
   } = await getPost(post);
   const postHTML = await transformPost(content);
   return (
@@ -32,10 +32,9 @@ async function Post({ params: { post } }: Props) {
         author={author}
         authorAvatar={authorAvatar}
         createdAt={createdAt}
-        image={image}
       />
       <div
-        className="markdown prose prose-invert prose-slate prose-headings:text-slate-300 prose-img:mx-auto prose-img:w-full mx-auto max-w-[680px] py-8"
+        className="markdown prose prose-slate prose-invert mx-auto max-w-[680px] py-8 prose-headings:text-slate-300 prose-img:mx-auto prose-img:w-full"
         dangerouslySetInnerHTML={{ __html: postHTML }}
       />
       {hasCodeBlock(postHTML) && <Script id="markdown" src="/handle-copy.js" />}
