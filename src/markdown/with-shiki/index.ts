@@ -10,7 +10,7 @@ const FALLBACK_LANGUAGE = ALLOWED_LANGUAGES[0];
 
 function withShiki() {
   return async (tree: HastNode) => {
-    const highliter = await getHighlighter({
+    const highlighter = await getHighlighter({
       langs: ALLOWED_LANGUAGES,
       themes: ["material-theme-ocean"],
     });
@@ -38,7 +38,7 @@ function withShiki() {
           ? language
           : FALLBACK_LANGUAGE;
         const codeText = safeString(textNode.value);
-        const codeHtml = highliter.codeToHtml(codeText.trim(), {
+        const codeHtml = highlighter.codeToHtml(codeText.trim(), {
           lang: languageToSet,
           theme: "material-theme-ocean",
         });
