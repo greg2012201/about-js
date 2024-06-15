@@ -1,22 +1,10 @@
 import { BundledLanguage, getHighlighter } from "shiki";
 import { visit } from "unist-util-visit";
 import { fromHtml } from "hast-util-from-html";
-import { Node } from "unist";
 import { extractLanguage, isAllowedLanguage, safeString } from "./utils";
 import { ALLOWED_LANGUAGES } from "./const";
 import { wrapperTemplate } from "./templates";
-
-interface HastNode extends Node {
-  type: string;
-  tagName?: string;
-  properties?: Record<string, any>;
-  children?: HastNode[];
-  value?: string;
-  position?: {
-    start: { line: number; column: number; offset?: number };
-    end: { line: number; column: number; offset?: number };
-  };
-}
+import type { HastNode } from "../types";
 
 const FALLBACK_LANGUAGE = ALLOWED_LANGUAGES[0];
 
