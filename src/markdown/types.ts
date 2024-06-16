@@ -11,3 +11,10 @@ export interface HastNode extends Node {
     end: { line: number; column: number; offset?: number };
   };
 }
+
+export type TableOfContentsItem = {
+  title: string;
+  href: string;
+  level: number;
+  children?: TableOfContentsItem[];
+};
