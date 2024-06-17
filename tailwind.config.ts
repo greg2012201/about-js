@@ -48,6 +48,22 @@ const config = {
                 },
               },
             },
+            ["h1, h2, h3, h4, h5"]: {
+              cursor: "pointer",
+              "&>a": {
+                textDecoration: "none",
+                fontSize: "0.8em",
+                color: "rgb(148 163 184)",
+                textAlign: "top",
+                paddingLeft: "0.2em",
+                visibility: "hidden",
+              },
+              "&:hover": {
+                "&>a": {
+                  visibility: "visible",
+                },
+              },
+            },
           },
         },
       },
