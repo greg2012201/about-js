@@ -1,4 +1,6 @@
 import Header from "@/components/blog/header";
+import Share from "@/components/blog/share";
+import getTableOfContentsData from "@/markdown/get-table-of-contents-data";
 import transformPost from "@/markdown/transform-post";
 import { getAllPostSlugs, getPost } from "@/utils/getPosts";
 import Script from "next/script";
@@ -26,6 +28,8 @@ async function Post({ params: { post } }: Props) {
     data: { author, authorAvatar, createdAt },
   } = await getPost(post);
   const postHTML = await transformPost(content);
+  const { list: tocList } = getTableOfContentsData(postHTML);
+
   return (
     <>
       <Header
@@ -38,6 +42,7 @@ async function Post({ params: { post } }: Props) {
         dangerouslySetInnerHTML={{ __html: postHTML }}
       />
       {hasCodeBlock(postHTML) && <Script id="markdown" src="/handle-copy.js" />}
+      <Share tocList={tocList} />
     </>
   );
 }

@@ -3,6 +3,7 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/top-bar";
 import Footer from "@/components/footer";
+import { Toaster } from "@/components/ui/toaster";
 
 type Props = {
   children: React.ReactNode;
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: Props) {
           {children}
           <Footer />
         </main>
+        <Toaster />
       </body>
     </html>
   );
