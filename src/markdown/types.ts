@@ -16,5 +16,8 @@ export type TableOfContentsItem = {
   title: string;
   href: string;
   level: number;
-  children?: TableOfContentsItem[];
+};
+
+export type TableOfContentsNode = TableOfContentsItem & {
+  children?: TableOfContentsNode[];
 };

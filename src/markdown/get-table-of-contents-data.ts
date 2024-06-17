@@ -1,8 +1,12 @@
 import { fromHtml } from "hast-util-from-html";
-import type { HastNode, TableOfContentsItem } from "./types";
+import type {
+  HastNode,
+  TableOfContentsItem,
+  TableOfContentsNode,
+} from "./types";
 import { visit } from "unist-util-visit";
 
-function pushToChildren(tree: TableOfContentsItem, node: TableOfContentsItem) {
+function pushToChildren(tree: TableOfContentsNode, node: TableOfContentsNode) {
   if (node.level - 1 === tree.level) {
     tree.children?.push(node);
     return;
@@ -12,8 +16,8 @@ function pushToChildren(tree: TableOfContentsItem, node: TableOfContentsItem) {
     pushToChildren(newTree, node);
   }
 }
-function buildTableOfContentsTree(headings: TableOfContentsItem[]) {
-  const tableOfContentsData: TableOfContentsItem[] = [];
+function buildTableOfContentsTree(headings: TableOfContentsNode[]) {
+  const tableOfContentsData: TableOfContentsNode[] = [];
 
   headings.forEach((heading) => {
     if (heading.level - 1 === 0) {
@@ -32,7 +36,7 @@ const tagNames = ["h1", "h2", "h3", "h4", "h5"];
 
 function getTableOfContentsData(postHtml: string) {
   const hastTree = fromHtml(postHtml, { fragment: true }) as HastNode;
-  const headings: TableOfContentsItem[] = [];
+  const headings: TableOfContentsNode[] = [];
   visit(hastTree, (node: HastNode) => {
     if (typeof node.tagName === "string" && tagNames.includes(node.tagName)) {
       const title = node.children?.find((child) => child.type === "text")
@@ -50,7 +54,7 @@ function getTableOfContentsData(postHtml: string) {
   });
   return {
     tree: buildTableOfContentsTree(headings),
-    list: headings as Omit<TableOfContentsItem, "children">[],
+    list: headings as TableOfContentsItem[],
   };
 }
 
