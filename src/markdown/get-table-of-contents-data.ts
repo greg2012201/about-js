@@ -48,8 +48,10 @@ function getTableOfContentsData(postHtml: string) {
       });
     }
   });
-
-  return buildTableOfContentsTree(headings);
+  return {
+    tree: buildTableOfContentsTree(headings),
+    list: headings as Omit<TableOfContentsItem, "children">[],
+  };
 }
 
 export default getTableOfContentsData;
