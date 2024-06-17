@@ -11,7 +11,10 @@ async function transformPost(content: string) {
     .use(remarkParse)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeSlug)
-    .use(rehypeAutolinkHeadings)
+    .use(rehypeAutolinkHeadings, {
+      content: [{ type: "text", value: "#" }],
+      behavior: "append",
+    })
     .use(withShiki)
     .use(rehypeStringify)
     .process(content);
