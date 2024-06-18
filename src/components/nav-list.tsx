@@ -7,12 +7,11 @@ import { twMerge } from "tailwind-merge";
 
 type Props = Prettify<{
   navConfig: Record<"label" | "path", string>[];
-  horizontal?: boolean;
   className?: string;
   isAnimated?: boolean;
 }>;
 
-function NavList({ navConfig, horizontal = false, className }: Props) {
+function NavList({ navConfig, className }: Props) {
   const pathname = usePathname();
 
   return (
