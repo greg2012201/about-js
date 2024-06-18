@@ -3,7 +3,7 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/top-bar";
 import Footer from "@/components/footer";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/sonner";
 
 type Props = {
   children: React.ReactNode;

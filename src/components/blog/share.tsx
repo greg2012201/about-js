@@ -1,13 +1,13 @@
 "use client";
 
 import type { TableOfContentsItem } from "@/markdown/types";
-import { MouseEvent, useCallback, useEffect } from "react";
-import { useToast } from "../ui/use-toast";
+import { useCallback, useEffect } from "react";
+import { toast } from "sonner";
 
 type Props = { tocList: TableOfContentsItem[] };
 
 function Share({ tocList }: Props) {
-  const { toast } = useToast();
+  // const { toast } = useToast();
   const handleHeadingClick = useCallback((event: Event) => {
     const target = event.target as HTMLElement;
     navigator.clipboard
@@ -15,11 +15,7 @@ function Share({ tocList }: Props) {
         `${window.location.origin}${window.location.pathname}#${target.id}`,
       )
       .then(() => {
-        toast({
-          title: "Link copied",
-          description: "Thanks for sharing!",
-          duration: 1500,
-        });
+        toast("Link coopied");
       })
       .catch((err) => console.error("Failed to copy:", err));
   }, []);
