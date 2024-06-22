@@ -28,7 +28,7 @@ function DefaultTitle({
   children: ReactElement | string;
   className?: string;
 }) {
-  return <h5 className={className}>{children}</h5>;
+  return <h2 className={className}>{children}</h2>;
 }
 
 function MaybeWithLink({
