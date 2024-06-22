@@ -45,10 +45,17 @@ type TitleProps = {
   className?: ClassNameValue;
   slug?: string;
   size?: "default" | "large";
+
   children: ReactElement | string;
 };
 
-function Title({ asChild, children, slug, size = "default" }: TitleProps) {
+function Title({
+  asChild,
+  children,
+  slug,
+  size = "default",
+  className,
+}: TitleProps) {
   const TitleComponent = asChild ? Slot : DefaultTitle;
   const hoverClass = slug
     ? "hover:cursor-pointer hover:opacity-80"
@@ -62,7 +69,7 @@ function Title({ asChild, children, slug, size = "default" }: TitleProps) {
       : "mt-2 h-[10px] max-w-[100px] md:h-[12px] md:max-w-[120px]";
 
   return (
-    <header className="flex flex-col">
+    <header className={twMerge(`flex flex-col`, className)}>
       <MaybeWithLink slug={slug}>
         <TitleComponent
           className={twMerge(
