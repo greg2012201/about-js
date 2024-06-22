@@ -12,7 +12,7 @@ function AboutAuthor() {
       viewport={{ once: true }}
       className="flex min-h-[400px] w-full max-w-[930px] flex-col space-y-6 px-4 py-4"
     >
-      <Title>Who am I?</Title>
+      <Title size="large">Who am I?</Title>
       <BaseText>
         {`
         I love creating new things by coding. I have always liked "front side"
