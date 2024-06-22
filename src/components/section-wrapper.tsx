@@ -18,7 +18,7 @@ function SectionWrapper({
   iconsLineWrapperClassName,
 }: Props) {
   return (
-    <div className="flex w-full max-w-[930px]">
+    <section className="flex w-full max-w-[930px]">
       <div
         className={twMerge(
           "z-20 flex h-[650px] w-full flex-col space-y-6",
@@ -42,7 +42,7 @@ function SectionWrapper({
           {renderIconLine}
         </div>
       )}
-    </div>
+    </section>
   );
 }
 
