@@ -1,8 +1,9 @@
 import React from "@/components/sections/react";
-import ViewWithSnippets from "./_views/view-with-snippets";
+
+import SimpleView from "./_views/simple-view";
 
 function About() {
-  return <ViewWithSnippets />;
+  return <SimpleView />;
 }
 
 export default About;
