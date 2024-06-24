@@ -12,6 +12,7 @@ type Props = { renderContent: ReactElement };
 function React({ renderContent }: Props) {
   return (
     <SectionWrapper
+      className="h-[750px] [@media(min-width:310px)]:h-[700px]"
       renderIconLine={<IconsLine title="React" iconSrc="./react-2.svg" />}
     >
       <Title size="large">Stay up to date with React</Title>
