@@ -11,7 +11,7 @@ type Props = {
 function WithBackgroundIcons({ children }: Props) {
   return (
     <div className="mx-h-full mx-w-full relative w-full overflow-hidden">
-      <div className=" absolute bottom-[0px] left-0 top-0 flex w-screen flex-col space-y-[300px] overflow-hidden pb-0 pt-20 opacity-10 sm:space-y-20 sm:pt-8 lg:pl-40 lg:pr-60 ">
+      <div className=" absolute bottom-[0px] left-0 top-0 flex w-screen flex-col space-y-[260px] overflow-hidden pb-0 pt-20 opacity-10 sm:space-y-20 sm:pt-8 lg:pl-10 lg:pr-6 ">
         <motion.div
           className="mx-w-full self-start"
           animate={{ x: 10, scale: 1.1 }}
@@ -60,15 +60,6 @@ function WithBackgroundIcons({ children }: Props) {
             width={650}
             height={650}
             src="/nodejs-icon.svg"
-          />
-        </motion.div>
-        <motion.div className="h-full max-h-[600px] w-full max-w-[600px] self-end">
-          <Image
-            className="max-w-full"
-            alt="big node.js icon"
-            width={650}
-            height={650}
-            src="/eyes.svg"
           />
         </motion.div>
       </div>
