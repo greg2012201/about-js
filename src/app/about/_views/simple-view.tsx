@@ -20,7 +20,7 @@ function SimpleView() {
           date."
             orientation="left"
             imageConfig={{
-              src: "./react-2.svg",
+              src: "./frontend.svg",
               alt: "logos of the frontend technologies",
             }}
           />
