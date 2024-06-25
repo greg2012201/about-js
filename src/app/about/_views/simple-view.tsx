@@ -31,7 +31,7 @@ function SimpleView() {
           date."
             orientation="right"
             imageConfig={{
-              src: "./nodejs-icon.svg",
+              src: "./backend.svg",
               alt: "logos of the frontend technologies",
             }}
           />
