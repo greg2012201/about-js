@@ -16,7 +16,7 @@ function SimpleView() {
           <ContentContainer
             title="Frontend"
             content="Fresh new about frameworks tooling. We all know that a new library pop
-          out every day. You can be sure that with this blog you will be up to
+          out every day. If you're looking for news about React, Next.js, Tailwind etc. You can be sure that with this blog you will be up to
           date."
             orientation="left"
             imageConfig={{
