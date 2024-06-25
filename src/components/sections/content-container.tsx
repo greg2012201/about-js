@@ -28,16 +28,16 @@ function ContentContainer({
       <Card contentClassName="flex max-w-[1000px] space-y-8">
         <div
           className={twMerge(
-            `flex flex-col space-y-2 sm:grid  sm:grid-rows-2 sm:space-x-4 sm:space-y-0`,
+            `flex flex-col space-y-2 md:grid  md:grid-rows-2 md:space-x-4 md:space-y-0`,
             orientation === "left"
-              ? "sm:grid-cols-[400px_1fr]"
-              : "sm:grid-cols-[1fr_400px]",
+              ? "md:grid-cols-[400px_1fr]"
+              : "md:grid-cols-[1fr_400px]",
           )}
         >
           <Image
             src={src}
             className={twMerge(
-              `row-span-2 self-center sm:w-full`,
+              `row-span-2 self-center md:w-full`,
               orientation === "left" ? "col-start-1" : "col-start-2",
             )}
             alt={alt}
@@ -55,7 +55,7 @@ function ContentContainer({
           </Title>
           <BaseText
             className={twMerge(
-              "row-start-2",
+              "row-start-2 md:pr-6",
               orientation === "left" ? "col-start-2" : "col-start-1",
             )}
           >
