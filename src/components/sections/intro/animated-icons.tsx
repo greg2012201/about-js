@@ -249,8 +249,9 @@ function AnimatedIcons() {
   );
 
   return (
-    <div className="z-0 flex  h-[520px] w-full items-center justify-center pb-10 sm:px-8 [@media(min-width:1200px)]:h-[450px] ">
+    <div className="z-10 flex  h-[520px] w-full items-center justify-center pb-10 sm:px-8 [@media(min-width:1200px)]:h-[450px] ">
       <motion.div
+        className="z-10"
         style={{
           y: jsY,
           x: jsX,
@@ -276,7 +277,7 @@ function AnimatedIcons() {
         }}
       >
         <Image
-          className="w-[120px] translate-x-[-40px] rounded-md [@media(min-width:350px)]:w-[160px] [@media(min-width:450px)]:w-[180px] [@media(min-width:890px)]:w-[210px]"
+          className="w-[120px] translate-x-[-36px] rounded-md [@media(min-width:350px)]:w-[160px] [@media(min-width:350px)]:translate-x-[-46px] [@media(min-width:450px)]:w-[180px]  [@media(min-width:450px)]:translate-x-[-50px] [@media(min-width:890px)]:w-[210px] [@media(min-width:890px)]:translate-x-[-60px]"
           alt="typescript logo"
           width={120}
           height={120}
