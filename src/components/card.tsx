@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import BaseText from "./base-text";
 import { ClassNameValue, twMerge } from "tailwind-merge";
 
 type Props = {
