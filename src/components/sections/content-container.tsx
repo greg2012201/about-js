@@ -30,8 +30,8 @@ function ContentContainer({
           className={twMerge(
             `flex flex-col space-y-2 md:grid  md:grid-rows-2 md:space-x-4 md:space-y-0`,
             orientation === "left"
-              ? "md:grid-cols-[400px_1fr]"
-              : "md:grid-cols-[1fr_400px]",
+              ? "md:grid-cols-[300px_1fr]"
+              : "md:grid-cols-[1fr_300px]",
           )}
         >
           <Image
