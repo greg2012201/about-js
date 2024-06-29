@@ -41,7 +41,7 @@ function ContentContainer({
               orientation === "left" ? "col-start-1" : "col-start-2",
             )}
             alt={alt}
-            width={200}
+            width={175}
             height={100}
           />
           <Title
@@ -56,7 +56,7 @@ function ContentContainer({
           <BaseText
             className={twMerge(
               "row-start-2 md:pr-6",
-              orientation === "left" ? "col-start-2" : "col-start-1",
+              orientation === "left" ? "col-start-2" : "col-start-1 md:pr-20",
             )}
           >
             {content}
