@@ -11,9 +11,9 @@ async function PostList({ className }: Props) {
   const posts = await getPosts();
   return (
     <div className={twMerge(`flex flex-col`, className)}>
-      <ul className="max-h-full  justify-center space-y-3 overflow-auto">
-        {posts.map((post, index) => (
-          <PostListCardItem key={post.data.slug} index={index} {...post} />
+      <ul className="max-h-full  justify-center space-y-3 overflow-y-auto">
+        {posts.map((post) => (
+          <PostListCardItem key={post.data.slug} {...post} />
         ))}
       </ul>
     </div>
