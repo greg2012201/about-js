@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 import colors from "tailwindcss";
 import svgToDataUri from "mini-svg-data-uri";
 
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";// @ts-ignore
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
