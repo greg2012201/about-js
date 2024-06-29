@@ -37,7 +37,7 @@ function ContentContainer({
           <Image
             src={src}
             className={twMerge(
-              `row-span-2 self-center md:w-full`,
+              `row-span-2 self-center md:w-full md:pr-4`,
               orientation === "left" ? "col-start-1" : "col-start-2",
             )}
             alt={alt}
