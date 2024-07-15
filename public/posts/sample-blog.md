@@ -1,6 +1,7 @@
 ---
 title: Talking about Javacript
 // image: https://picsum.photos/534/345
+description: Lorem ipsum dolor sit amet, consectet 2 lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum
 createdAt: 20-05-2024
 ---
 

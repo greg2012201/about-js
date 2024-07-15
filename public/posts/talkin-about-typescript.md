@@ -2,6 +2,7 @@
 title: Talkin' About TypeScript
 // image: https://picsum.photos/534/345
 createdAt: 20-05-2024
+description: TypeScript offers advanced types like union types, intersection types, and type guards, providing powerful tools to handle complex type scenarios
 ---
 
 # Talkin' About TypeScript
