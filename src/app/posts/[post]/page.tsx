@@ -37,7 +37,7 @@ async function Post({ params: { post } }: Props) {
         authorAvatar={authorAvatar}
         createdAt={createdAt}
       />
-      <div
+      <article
         className="markdown prose prose-slate prose-invert mx-auto max-w-[680px] py-8 prose-headings:text-slate-300 prose-img:mx-auto prose-img:w-full"
         dangerouslySetInnerHTML={{ __html: postHTML }}
       />
