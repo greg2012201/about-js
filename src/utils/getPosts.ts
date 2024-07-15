@@ -17,9 +17,10 @@ export type Post = {
     author: string;
     createdAt: string;
     authorAvatar: string;
+    description: string;
   };
   content: string;
-  excerpt?: string;
+  excerpt: string;
 };
 
 function sanitize(slug: string) {

@@ -7,7 +7,7 @@ import BaseText from "../base-text";
 type PostListCardItemProps = Pick<Post, "data" | "excerpt">;
 
 function PostListCardItem({ data, excerpt }: PostListCardItemProps) {
-  const { title, slug, author, authorAvatar, createdAt } = data;
+  const { title, slug, author, authorAvatar, createdAt, description } = data;
 
   return (
     <li className="mx-auto flex min-h-[225px] max-w-[400px] flex-col rounded-md bg-slate-800 shadow sm:max-w-[650px] sm:flex-row">
@@ -18,7 +18,9 @@ function PostListCardItem({ data, excerpt }: PostListCardItemProps) {
           authorAvatar={authorAvatar}
           createdAt={createdAt}
         />
-        <BaseText className="text-base md:text-base">{excerpt ?? ""}</BaseText>
+        <BaseText className="text-base md:text-base">
+          {description ?? excerpt ?? ""}
+        </BaseText>
         <Link
           className=" self-end text-pink-300 hover:underline"
           href={`posts/${slug}`}
