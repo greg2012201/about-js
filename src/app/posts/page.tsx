@@ -1,7 +1,7 @@
 import { Title } from "@/components/brand-title";
 import PostList from "@/components/post-list";
 import SectionWrapper from "@/components/section-wrapper";
-import { PAGES_META } from "@/constants/landing";
+import { PAGES_META } from "@/constants/website";
 
 export async function generateMetadata() {
   return PAGES_META.get("posts");
