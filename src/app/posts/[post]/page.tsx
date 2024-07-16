@@ -16,6 +16,16 @@ function hasCodeBlock(content: string) {
   return content.includes("pre");
 }
 
+export async function generateMetadata({ params }: Props) {
+  const { post: slug } = params;
+  const post = await getPost(slug);
+
+  return {
+    title: post.data.title,
+    description: post.data.description,
+  };
+}
+
 export async function generateStaticParams() {
   const allPostSlugs = await getAllPostSlugs();
 
