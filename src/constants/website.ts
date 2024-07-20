@@ -1,7 +1,14 @@
 export const PAGES_META = new Map<
-  string,
+  "home" | "about" | "posts",
   { title: string; description: string }
 >([
+  [
+    "home",
+    {
+      title: "Home",
+      description: "Welcome to the about-js blog.",
+    },
+  ],
   [
     "about",
     {
