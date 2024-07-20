@@ -1,12 +1,13 @@
-export const NAV_CONFIG = [
+type NavLabels = "home" | "about" | "posts";
+
+export const NAV_CONFIG: { label: NavLabels; path: string }[] = [
   { label: "home", path: "/" },
   { label: "about", path: "/about" },
   { label: "posts", path: "/posts" },
 ];
 
-
 export const PAGES_META = new Map<
-  "home" | "about" | "posts",
+  NavLabels,
   { title: string; description: string }
 >([
   [
