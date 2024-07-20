@@ -1,3 +1,10 @@
+export const NAV_CONFIG = [
+  { label: "home", path: "/" },
+  { label: "about", path: "/about" },
+  { label: "posts", path: "/posts" },
+];
+
+
 export const PAGES_META = new Map<
   "home" | "about" | "posts",
   { title: string; description: string }
