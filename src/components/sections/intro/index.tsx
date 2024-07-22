@@ -16,7 +16,7 @@ function Intro() {
     >
       <header className="space-y-2">
         <Title> What the hack is about.js?</Title>
-        <Subtitle>{`JavaScript Blog's Code Hub`}</Subtitle>
+        <Subtitle>{`Tech blog about:`}</Subtitle>
       </header>
       <AnimatedIcons />
       <BaseText>
