@@ -1,4 +1,4 @@
-import { Post } from "@/utils/getPosts";
+import { Post } from "@/lib/posts";
 import Image from "next/image";
 import Link from "next/link";
 import { ClassNameValue, twMerge } from "tailwind-merge";

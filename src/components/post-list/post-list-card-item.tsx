@@ -1,8 +1,8 @@
-import { Post } from "@/utils/getPosts";
 import Link from "next/link";
 import Profile from "../blog/profile";
 import Title from "../title";
 import BaseText from "../base-text";
+import { Post } from "@/lib/posts";
 
 type PostListCardItemProps = Pick<Post, "data" | "excerpt">;
 

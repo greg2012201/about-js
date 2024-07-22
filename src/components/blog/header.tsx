@@ -1,4 +1,4 @@
-import type { Post } from "@/utils/getPosts";
+import type { Post } from "@/lib/posts";
 import Profile from "./profile";
 
 type Data = Post["data"];

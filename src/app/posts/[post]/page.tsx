@@ -1,8 +1,8 @@
 import Header from "@/components/blog/header";
 import Share from "@/components/blog/share";
+import { getAllPostSlugs, getPost } from "@/lib/posts";
 import getTableOfContentsData from "@/markdown/get-table-of-contents-data";
 import transformPost from "@/markdown/transform-post";
-import { getAllPostSlugs, getPost } from "@/utils/getPosts";
 import Script from "next/script";
 import React from "react";
 
