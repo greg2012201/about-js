@@ -1,5 +1,6 @@
 type Props = {
   children: React.ReactNode;
+  params: { locale: string };
 };
 
 function Layout({ children }: Props) {
