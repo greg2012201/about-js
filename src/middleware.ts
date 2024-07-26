@@ -8,8 +8,6 @@ export default createMiddleware({
   // Used when no locale matches
   defaultLocale: "en",
 });
-
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ["/", "/(about|posts)", "/(pl|en)/:path*, /posts"], // add rest of path somehow
+  matcher: ["/", "/(about|posts|home)/:path*", "/(pl|en)/:path*"],
 };
