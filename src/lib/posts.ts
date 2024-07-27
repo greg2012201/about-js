@@ -4,6 +4,8 @@ import matter from "gray-matter";
 import GithubSlugger from "github-slugger";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import dayjs from "dayjs";
+import { DEFAULT_LOCALE } from "@/constants/translations";
+import { Locale } from "@/types";
 
 dayjs.extend(customParseFormat);
 
@@ -34,8 +36,8 @@ function getExcerpt(content: string) {
   return excerpt.join(" ") + "...";
 }
 
-export async function getPost(slug: string) {
-  const postPath = `${slug}.md`;
+export async function getPost(slug: string, locale: Locale = DEFAULT_LOCALE) {
+  const postPath = `${locale}/${slug}.md`;
   const itemPath = path.join(POSTS_DIR, postPath);
   const postFile = await fs.promises.readFile(itemPath, "utf8");
   const { data, content } = matter(postFile);
@@ -62,9 +64,9 @@ export async function getPost(slug: string) {
   return { data, content, excerpt: getExcerpt(content) } as Post;
 }
 
-export async function getAllPostSlugs() {
+export async function getAllPostSlugs(locale: Locale) {
   const slugger = new GithubSlugger();
-  const postPaths = await fs.promises.readdir(POSTS_DIR);
+  const postPaths = await fs.promises.readdir(`${POSTS_DIR}/${locale}`);
   const postSlugs = postPaths.map((postPath) =>
     slugger.slug(sanitize(postPath)),
   );
@@ -72,11 +74,10 @@ export async function getAllPostSlugs() {
   return postSlugs;
 }
 
-async function getPosts() {
-  const postSlugs = await getAllPostSlugs();
-
+async function getPosts(locale: Locale = DEFAULT_LOCALE) {
+  const postSlugs = await getAllPostSlugs(locale);
   const postsResults = await Promise.allSettled(
-    postSlugs.map((slug) => getPost(slug)),
+    postSlugs.map((slug) => getPost(slug, locale)),
   );
 
   const posts: Post[] = [];
