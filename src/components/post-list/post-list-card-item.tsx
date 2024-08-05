@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Profile from "../blog/profile";
 import Title from "../title";
 import BaseText from "../base-text";

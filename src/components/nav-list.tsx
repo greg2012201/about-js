@@ -1,8 +1,7 @@
 "use client";
 
-import { usePathname } from "@/navigation";
+import { Link, usePathname } from "@/navigation";
 import type { Prettify } from "@/types";
-import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
 type Props = Prettify<{

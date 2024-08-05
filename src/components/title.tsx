@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { Children, ReactElement, cloneElement, isValidElement } from "react";
 import { ClassNameValue, twMerge } from "tailwind-merge";
 
