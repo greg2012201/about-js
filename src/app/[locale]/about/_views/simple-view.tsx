@@ -20,7 +20,7 @@ function SimpleView() {
           date."
             orientation="left"
             imageConfig={{
-              src: "./frontend.svg",
+              src: "/frontend.svg",
               alt: "logos of the frontend technologies",
             }}
           />
@@ -31,7 +31,7 @@ function SimpleView() {
           date."
             orientation="right"
             imageConfig={{
-              src: "./backend.svg",
+              src: "/backend.svg",
               alt: "logos of the frontend technologies",
             }}
           />
@@ -42,7 +42,7 @@ function SimpleView() {
           date."
             orientation="left"
             imageConfig={{
-              src: "./backend_frontend.svg",
+              src: "/backend_frontend.svg",
               alt: "logos of the frontend technologies",
             }}
           />
