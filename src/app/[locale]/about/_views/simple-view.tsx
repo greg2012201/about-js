@@ -12,7 +12,7 @@ function SimpleView() {
       <AboutAuthor />
       <Separator />
       <WithBackgroundIcons>
-        <div className="mx-auto flex w-full flex-col items-center space-y-28 p-4 text-white ">
+        <div className="mx-auto flex w-full flex-col items-center space-y-28 p-4 pb-28 text-white ">
           <ContentContainer
             title="Frontend"
             content="Fresh new about frameworks tooling. We all know that a new library pop
