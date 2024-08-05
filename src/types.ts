@@ -1,4 +1,4 @@
-import { LOCALES } from "./constants/translations";
+import { LOCALES } from "./next-intl-config";
 
 export type Prettify<T> = { [K in keyof T]: T[K] };
 

@@ -4,8 +4,8 @@ import matter from "gray-matter";
 import GithubSlugger from "github-slugger";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import dayjs from "dayjs";
-import { DEFAULT_LOCALE } from "@/constants/translations";
 import { Locale } from "@/types";
+import { DEFAULT_LOCALE } from "@/next-intl-config";
 
 dayjs.extend(customParseFormat);
 

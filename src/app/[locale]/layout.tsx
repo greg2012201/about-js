@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { unstable_setRequestLocale } from "next-intl/server";
-import { LOCALES } from "@/constants/translations";
+import { LOCALES } from "@/next-intl-config";
 
 type Props = {
   children: React.ReactNode;
@@ -31,7 +31,7 @@ export default async function RootLayout({
 
   const messages = await getMessages();
   return (
-    <html lang={locale}>
+    <html className="dark" style={{ colorScheme: "dark" }} lang={locale}>
       <body className={lato.className}>
         <NextIntlClientProvider messages={messages}>
           <main className="relative min-h-screen bg-gradient-to-b from-[#141e30] via-[#243b55] to-[#243b55] text-white">

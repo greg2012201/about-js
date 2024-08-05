@@ -1,6 +1,6 @@
 import { getLocale as getLocaleFromNextIntl } from "next-intl/server";
 import { isLocale, Locale } from "@/types";
-import { DEFAULT_LOCALE } from "@/constants/translations";
+import { DEFAULT_LOCALE } from "@/next-intl-config";
 
 async function getLocaleServer() {
   const maybeLocale = await getLocaleFromNextIntl();
