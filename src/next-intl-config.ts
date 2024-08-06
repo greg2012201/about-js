@@ -5,14 +5,8 @@ export const LOCALES = ["en", "pl"] as const;
 
 export const pathnames: Pathnames<typeof LOCALES> = {
   "/": "/",
-  "/about": {
-    en: "/about",
-    pl: "/about",
-  },
-  "/posts": {
-    en: "/posts",
-    pl: "/posts",
-  },
+  "/about": "/about",
+  "/posts": "/posts",
 };
 
 export const localePrefix: LocalePrefix<typeof LOCALES> = "always";
