@@ -8,7 +8,7 @@ import { Subtitle, Title } from "@/components/brand-title";
 import { useTranslations } from "next-intl";
 
 function Intro() {
-  const t = useTranslations("Home");
+  const t = useTranslations("Intro");
 
   return (
     <motion.div
