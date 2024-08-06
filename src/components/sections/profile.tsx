@@ -5,6 +5,7 @@ import React from "react";
 import { Subtitle, Title } from "../brand-title";
 import { ClassNameValue, twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 type AvatarProps = { className?: ClassNameValue };
 
@@ -23,6 +24,8 @@ function Avatar({ className }: AvatarProps) {
 }
 
 function Profile() {
+  const t = useTranslations("Profile");
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -32,8 +35,8 @@ function Profile() {
     >
       <Avatar className="hidden self-start sm:block" />
       <div className="flex flex-col sm:space-y-1">
-        <Title>Welcome👋</Title>
-        <Subtitle>I am Grzegorz Dubiel</Subtitle>
+        <Title>{t("title")}</Title>
+        <Subtitle>{t("subtitle")}</Subtitle>
         <Avatar className="mx-auto mt-6 sm:hidden" />
       </div>
     </motion.div>
