@@ -7,5 +7,9 @@
   "Profile": {
     "title": "Cześć👋",
     "subtitle": "Mam na imię Grzegorz Dubiel"
+  },
+  "AboutAuthor": {
+    "title": "Kim jestem?",
+    "bio": "Uwielbiam tworzyć nowe rzeczy za pomocą kodowania. Zawsze interesowała mnie 'frontendowa strona' świata cybernetycznego. Programuję od marca 2020 roku. Zawsze byłem ciekawy, jak działają interfejsy użytkownika za kulisami i jak można je stworzyć od zera w edytorze kodu. Fascynuje mnie React; zanim poznałem tę bibliotekę, kodowałem w czystym JavaScripcie. Kiedy zacząłem uczyć się Reacta, poczułem ogromne możliwości. Jestem wielkim fanem Next.js z komponentami serwerowymi React'a. Lubię podejmować trudne wyzwania programistyczne."
   }
 }
