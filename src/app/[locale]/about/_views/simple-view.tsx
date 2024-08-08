@@ -4,8 +4,11 @@ import Profile from "@/components/sections/profile";
 import React from "@/components/sections/react";
 import Separator from "@/components/sections/separator";
 import WithBackgroundIcons from "@/components/with-backround-icons";
+import { getTranslations } from "next-intl/server";
 
-function SimpleView() {
+async function SimpleView() {
+  const t = await getTranslations("SimpleView");
+
   return (
     <>
       <Profile />
@@ -14,10 +17,8 @@ function SimpleView() {
       <WithBackgroundIcons>
         <div className="mx-auto flex w-full flex-col items-center space-y-28 p-4 pb-28 text-white ">
           <ContentContainer
-            title="Frontend"
-            content="Fresh new about frameworks tooling. We all know that a new library pop
-          out every day. If you're looking for news about React, Next.js, Tailwind etc. You can be sure that with this blog you will be up to
-          date."
+            title={t("frontend.title")}
+            content={t("frontend.content")}
             orientation="left"
             imageConfig={{
               src: "/frontend.svg",
@@ -25,10 +26,8 @@ function SimpleView() {
             }}
           />
           <ContentContainer
-            title="Backend"
-            content="Fresh new about frameworks tooling. We all know that a new library pop
-          out every day. You can be sure that with this blog you will be up to
-          date."
+            title={t("backend.title")}
+            content={t("backend.content")}
             orientation="right"
             imageConfig={{
               src: "/backend.svg",
@@ -36,10 +35,8 @@ function SimpleView() {
             }}
           />
           <ContentContainer
-            title="Web dev Fullstack"
-            content="Fresh new about frameworks tooling. We all know that a new library pop
-          out every day. You can be sure that with this blog you will be up to
-          date."
+            title={t("webDevFullstack.title")}
+            content={t("webDevFullstack.content")}
             orientation="left"
             imageConfig={{
               src: "/backend_frontend.svg",

@@ -14,5 +14,19 @@
   },
   "Separator": {
     "content": "Zobacz co znajdziesz na tym blogu"
+  },
+  "SimpleView": {
+    "frontend": {
+      "title": "Frontend",
+      "content": "Świeże newsy o frameworkach oraz bibliotakach. Wszyscy wiemy że nowe biblioteki powstają jak grzyby po deszczu. Jeżeli szukasz informacji o React, Next.js, Tailwind etc. Możesz być pewien że czytając tego bloga będziesz na czasie."
+    },
+    "backend": {
+      "title": "Backend",
+      "content": "Świeże newsy o frameworkach oraz bibliotakach. Wszyscy wiemy że nowe biblioteki powstają jak grzyby po deszczu. Jeżeli szukasz informacji o React, Next.js, Tailwind etc. Możesz być pewien że czytając tego bloga będziesz na czasie."
+    },
+    "webDevFullstack": {
+      "title": "Web dev Fullstack",
+      "content": "Świeże newsy o frameworkach oraz bibliotakach. Wszyscy wiemy że nowe biblioteki powstają jak grzyby po deszczu. Jeżeli szukasz informacji o React, Next.js, Tailwind etc. Możesz być pewien że czytając tego bloga będziesz na czasie."
+    }
   }
 }
