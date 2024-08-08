@@ -28,5 +28,8 @@
       "title": "Web dev Fullstack",
       "content": "Świeże newsy o frameworkach oraz bibliotakach. Wszyscy wiemy że nowe biblioteki powstają jak grzyby po deszczu. Jeżeli szukasz informacji o React, Next.js, Tailwind etc. Możesz być pewien że czytając tego bloga będziesz na czasie."
     }
+  },
+  "PostList": {
+    "title": "Posty"
   }
 }
