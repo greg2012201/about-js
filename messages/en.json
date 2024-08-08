@@ -31,5 +31,8 @@
   },
   "PostList": {
     "title": "Posts"
+  },
+  "PostListCardItem": {
+    "readMoreLink": "Read more..."
   }
 }
