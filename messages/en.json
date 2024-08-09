@@ -3,6 +3,10 @@
     "Home": {
       "title": "about.js | Home",
       "description": "Welcome to the about-js blog."
+    },
+    "About": {
+      "title": "about.js | About",
+      "description": "A page about the author of the about-js and about-js itself."
     }
   },
   "Intro": {
