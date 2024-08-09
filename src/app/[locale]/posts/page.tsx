@@ -1,7 +1,6 @@
 import { Title } from "@/components/brand-title";
 import PostList from "@/components/post-list";
 import SectionWrapper from "@/components/section-wrapper";
-import { PAGES_META } from "@/constants/website";
 import getMetadataTranslation from "@/lib/getMetadataTranslation";
 import { getTranslations } from "next-intl/server";
 import { unstable_setRequestLocale } from "next-intl/server";
