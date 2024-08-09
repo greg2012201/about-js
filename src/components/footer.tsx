@@ -1,7 +1,8 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Logo from "./logo";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import LanguagePicker from "./language-picker";
 
 const ICONS = [
   {
@@ -47,6 +48,7 @@ function Footer() {
         <p className="text-sm italic">
           ©Grzegorz Dubiel | {date.getFullYear()}
         </p>
+        <LanguagePicker />
       </div>
     </div>
   );

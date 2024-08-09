@@ -2,8 +2,10 @@
 import { TbArrowBigDownFilled } from "react-icons/tb";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 
 function Separator() {
+  const t = useTranslations("Separator");
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,7 +25,7 @@ function Separator() {
     >
       <div className="sticky top-20 z-10">
         <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text pb-2 text-center text-5xl  text-transparent  md:text-7xl xl:text-[80px]">
-          Here is what you will find on this blog
+          {t("content")}
         </p>
       </div>
       <motion.div

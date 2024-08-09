@@ -1,6 +1,6 @@
 import { Post } from "@/lib/posts";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { ClassNameValue, twMerge } from "tailwind-merge";
 
 type ProfileProps = Pick<
