@@ -1,4 +1,10 @@
 {
+  "Metadata": {
+    "Home": {
+      "title": "about.js | Home",
+      "description": "Welcome to the about-js blog."
+    }
+  },
   "Intro": {
     "title": "What the hack is about.js?",
     "subtitle": "Tech blog about:",

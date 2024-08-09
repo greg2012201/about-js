@@ -1,4 +1,10 @@
 {
+  "Metadata": {
+    "Home": {
+      "title": "about.js | Strona główna",
+      "description": "Witaj na stronie głównej about js"
+    }
+  },
   "Intro": {
     "title": "Czym u licha jest about.js?",
     "subtitle": "Techniczny blog o:",
