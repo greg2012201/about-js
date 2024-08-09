@@ -7,6 +7,10 @@
     "About": {
       "title": "about.js | O blogu",
       "description": "Na tej stronie dowiesz się czegoś o autorze oraz o samym blogu."
+    },
+    "Posts": {
+      "title": "about.js | Posty",
+      "description": "Strona na której znajdziesz listę postów."
     }
   },
   "Intro": {
