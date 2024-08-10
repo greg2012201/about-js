@@ -1,18 +1,18 @@
 import { MetadataRoute } from "next";
 import { getPathname } from "@/navigation";
 import { DEFAULT_LOCALE, host, LOCALES, pathnames } from "@/next-intl-config";
+import { getAllPostSlugs } from "@/lib/posts";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+function getUrl(key: keyof typeof pathnames, locale: (typeof LOCALES)[number]) {
+  const pathname = getPathname({ locale, href: key });
+  return `${host}/${locale}${pathname === "/" ? "" : pathname}`;
+}
+export default async function sitemap() {
   const keys = Object.keys(pathnames) as Array<keyof typeof pathnames>;
-
-  function getUrl(
-    key: keyof typeof pathnames,
-    locale: (typeof LOCALES)[number],
-  ) {
-    const pathname = getPathname({ locale, href: key });
-    return `${host}/${locale}${pathname === "/" ? "" : pathname}`;
-  }
-  return keys.map((key) => ({
+  const postsKeys = (await getAllPostSlugs(DEFAULT_LOCALE)).map(
+    (slug) => `/posts/${slug}`,
+  );
+  return [...keys, ...postsKeys].map((key) => ({
     lastModified: new Date(),
     url: getUrl(key, DEFAULT_LOCALE),
     alternates: {
