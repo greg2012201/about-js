@@ -93,4 +93,42 @@ async function getPosts(locale: Locale = DEFAULT_LOCALE) {
   return posts;
 }
 
+export async function getPostsCreatedAt(slug: string) {
+  const post = await getPost(slug);
+  return post.data.createdAt;
+}
+
+export class PostStorageManager {
+  posts: Post[];
+  constructor(posts: Post[]) {
+    this.posts = posts;
+  }
+
+  getPostsSlugPathnames(pathname: string) {
+    return this.posts.map((post) => `${pathname}/${post.data.slug}`);
+  }
+  getPostDate(slug: string, dateConverter?: (date: string) => string) {
+    const post = this.posts.find((post) => post.data.slug === slug);
+    if (!post) {
+      throw new Error(`Post not found: ${slug}`);
+    }
+
+    return dateConverter
+      ? dateConverter(post.data.createdAt)
+      : post.data.createdAt;
+  }
+
+  extractPostSlugFromString(stringWithSlug: string) {
+    const foundPost = this.posts.find((post) =>
+      stringWithSlug.includes(post.data.slug),
+    );
+
+    if (!foundPost) {
+      throw new Error(`Post not found in provided string: ${stringWithSlug}`);
+    }
+
+    return foundPost.data.slug;
+  }
+}
+
 export default getPosts;
