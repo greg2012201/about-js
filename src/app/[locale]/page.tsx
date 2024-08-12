@@ -3,8 +3,24 @@ import PostList from "@/components/sections/post-list";
 import React from "@/components/sections/react";
 import getMetadataTranslation from "@/lib/getMetadataTranslation";
 
+const url = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : `http://localhost:${process.env.PORT || 3000}`;
+
 export async function generateMetadata() {
-  return getMetadataTranslation("Home");
+  const intlMeta = getMetadataTranslation("Home");
+
+  return {
+    ...intlMeta,
+    metadataBase: new URL(url),
+    alternates: {
+      canonical: "/",
+      languages: {
+        en: "/en",
+        pl: "/pl",
+      },
+    },
+  };
 }
 
 export default function Home() {
