@@ -1,10 +1,7 @@
+import { BASE_URL } from "@/config";
 import { LOCALES } from "@/next-intl-config";
 import { Locale } from "@/types";
 import { getTranslations } from "next-intl/server";
-
-const url = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : `http://localhost:${process.env.PORT || 3000}`;
 
 type LocaleMap = {
   [key in Locale]: `/${key}`;
@@ -35,7 +32,7 @@ async function composeMetadata({
   const intlMeta = await getMetadataTranslation(intlNamespace);
   return {
     ...intlMeta,
-    metadataBase: new URL(url),
+    metadataBase: new URL(BASE_URL),
     alternates: {
       canonical,
       languages: getFormattedLanguages(),
