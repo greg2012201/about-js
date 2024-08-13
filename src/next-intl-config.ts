@@ -1,4 +1,5 @@
 import { Pathnames, LocalePrefix } from "next-intl/routing";
+import { Locale } from "./types";
 
 export const DEFAULT_LOCALE = "pl";
 export const LOCALES = ["en", "pl"] as const;
@@ -15,3 +16,13 @@ export const port = process.env.PORT || 3000;
 export const host = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : `http://localhost:${port}`;
+
+type LocaleMap = {
+  [key in Locale]: `/${key}`;
+};
+
+export function getLocaleMap() {
+  return LOCALES.reduce<LocaleMap>((prev, curr) => {
+    return { ...prev, ...{ [curr]: `/${curr}` } };
+  }, {} as LocaleMap);
+}

@@ -1,17 +1,7 @@
 import { BASE_URL } from "@/config";
-import { LOCALES } from "@/next-intl-config";
-import { Locale } from "@/types";
+import { getLocaleMap } from "@/next-intl-config";
 import { getTranslations } from "next-intl/server";
 
-type LocaleMap = {
-  [key in Locale]: `/${key}`;
-};
-
-function getFormattedLanguages() {
-  return LOCALES.reduce<LocaleMap>((prev, curr) => {
-    return { ...prev, ...{ [curr]: `/${curr}` } };
-  }, {} as LocaleMap);
-}
 async function getMetadataTranslation(pageNamespace: string) {
   const t = await getTranslations(`Metadata.${pageNamespace}`);
   return {
@@ -35,7 +25,7 @@ async function composeMetadata({
     metadataBase: new URL(BASE_URL),
     alternates: {
       canonical,
-      languages: getFormattedLanguages(),
+      languages: getLocaleMap(),
     },
   };
 }
