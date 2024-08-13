@@ -5,7 +5,8 @@ import GithubSlugger from "github-slugger";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import dayjs from "dayjs";
 import { Locale } from "@/types";
-import { DEFAULT_LOCALE } from "@/next-intl-config";
+import { DEFAULT_LOCALE, getLocaleMap } from "@/next-intl-config";
+import { BASE_URL } from "@/config";
 
 dayjs.extend(customParseFormat);
 
@@ -96,6 +97,24 @@ async function getPosts(locale: Locale = DEFAULT_LOCALE) {
 export async function getPostsCreatedAt(slug: string) {
   const post = await getPost(slug);
   return post.data.createdAt;
+}
+
+type ComposeMetadataProps = {
+  slug: string;
+  locale: Locale;
+};
+
+export async function composeMetadata({ locale, slug }: ComposeMetadataProps) {
+  const post = await getPost(slug, locale);
+
+  return {
+    title: post.data.title,
+    description: post.data.description,
+    alternates: {
+      canonical: `posts/${slug}`,
+      languages: getLocaleMap(),
+    },
+  };
 }
 
 export class PostStorageManager {

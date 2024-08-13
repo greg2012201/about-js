@@ -1,6 +1,6 @@
 import Header from "@/components/blog/header";
 import Share from "@/components/blog/share";
-import { getAllPostSlugs, getPost } from "@/lib/posts";
+import { composeMetadata, getAllPostSlugs, getPost } from "@/lib/posts";
 import getTableOfContentsData from "@/markdown/get-table-of-contents-data";
 import transformPost from "@/markdown/transform-post";
 import { Locale } from "@/types";
@@ -19,13 +19,7 @@ function hasCodeBlock(content: string) {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { post: slug, locale } = params;
-  const post = await getPost(slug, locale);
-
-  return {
-    title: post.data.title,
-    description: post.data.description,
-  };
+  return composeMetadata({ ...params, slug: params.post });
 }
 
 export async function generateStaticParams({
