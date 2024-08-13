@@ -1,6 +1,5 @@
 import { BASE_URL } from "@/config";
 import { getLocaleMap } from "@/next-intl-config";
-import { Locale } from "@/types";
 import { getTranslations } from "next-intl/server";
 
 export async function getRootMetadata() {
