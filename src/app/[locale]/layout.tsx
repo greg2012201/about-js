@@ -8,16 +8,24 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { LOCALES } from "@/next-intl-config";
+import { getRootMetadata } from "@/lib/compose-metadata";
+import { Locale } from "@/types";
+
+type Params = { locale: Locale };
 
 type Props = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Params;
 };
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
   subsets: ["latin"],
 });
+
+export async function generateMetadata() {
+  return await getRootMetadata();
+}
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));

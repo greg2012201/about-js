@@ -1,15 +1,20 @@
 {
   "Metadata": {
+    "Root": {
+      "title": "about.js",
+      "description": "Cześć jestem Grzegorz a to jest mój blog about.js.",
+      "applicationName": "about.js - blog Grzegorza Dubiela"
+    },
     "Home": {
-      "title": "about.js | Strona główna",
-      "description": "Witaj na stronie głównej about js"
+      "title": "Strona główna | about.js",
+      "description": "Witaj na stronie głównej about.js"
     },
     "About": {
-      "title": "about.js | O blogu",
+      "title": "O blogu",
       "description": "Na tej stronie dowiesz się czegoś o autorze oraz o samym blogu."
     },
     "Posts": {
-      "title": "about.js | Posty",
+      "title": "Posty",
       "description": "Strona na której znajdziesz listę postów."
     }
   },

@@ -1,15 +1,20 @@
 {
   "Metadata": {
+    "Root": {
+      "title": "about.js",
+      "description": "Hello I'm Grzegorz and here is my blog about.js.",
+      "applicationName": "about.js - Grzegorz Dubiel's blog"
+    },
     "Home": {
-      "title": "about.js | Home",
+      "title": "Home | about.js",
       "description": "Welcome to the about-js blog."
     },
     "About": {
-      "title": "about.js | About",
+      "title": "About",
       "description": "A page about the author of the about-js and about-js itself."
     },
     "Posts": {
-      "title": "about.js | Posts",
+      "title": "Posts",
       "description": "A page where you can find a list of posts."
     }
   },
