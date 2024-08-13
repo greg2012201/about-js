@@ -1,6 +1,6 @@
 "use client";
 
-import type { TableOfContentsItem } from "@/markdown/types";
+import type { TableOfContentsItem } from "@/lib/markdown/types";
 import { useCallback, useEffect } from "react";
 import { toast } from "sonner";
 
