@@ -1,12 +1,12 @@
 import { Title } from "@/components/brand-title";
 import PostList from "@/components/post-list";
 import SectionWrapper from "@/components/section-wrapper";
-import getMetadataTranslation from "@/lib/getMetadataTranslation";
+import composeMetadata from "@/lib/compose-metadata";
 import { getTranslations } from "next-intl/server";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata() {
-  return getMetadataTranslation("Posts");
+  return composeMetadata({ canonical: "/posts", intlNamespace: "Posts" });
 }
 
 type Props = {

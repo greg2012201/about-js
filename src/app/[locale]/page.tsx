@@ -1,26 +1,10 @@
 import Intro from "@/components/sections/intro";
 import PostList from "@/components/sections/post-list";
 import React from "@/components/sections/react";
-import getMetadataTranslation from "@/lib/getMetadataTranslation";
-
-const url = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : `http://localhost:${process.env.PORT || 3000}`;
+import composeMetadata from "@/lib/compose-metadata";
 
 export async function generateMetadata() {
-  const intlMeta = getMetadataTranslation("Home");
-
-  return {
-    ...intlMeta,
-    metadataBase: new URL(url),
-    alternates: {
-      canonical: "/",
-      languages: {
-        en: "/en",
-        pl: "/pl",
-      },
-    },
-  };
+  return composeMetadata({ canonical: "/", intlNamespace: "Home" });
 }
 
 export default function Home() {
