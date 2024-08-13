@@ -1,7 +1,7 @@
 import short from "short-uuid";
 import dedent from "dedent";
 import { BundledLanguage, BundledTheme } from "shiki";
-import transformLang from "@/utils/transfrom-lang";
+import transformLang from "@/lib/transfrom-lang";
 import { twMerge } from "tailwind-merge";
 import {
   biLogoTypescript,
