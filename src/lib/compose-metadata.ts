@@ -2,6 +2,8 @@ import { BASE_URL } from "@/config";
 import { getLocaleMap } from "@/next-intl-config";
 import { getTranslations } from "next-intl/server";
 
+const OG_URL = `${BASE_URL}/api/og`;
+
 export async function getRootMetadata() {
   const t = await getTranslations("Metadata.Root");
 
@@ -32,6 +34,23 @@ export async function getRootMetadata() {
     creator: "Grzegorz Dubiel",
     publisher: "Grzegorz Dubiel",
     metadataBase: new URL(BASE_URL),
+    openGraph: {
+      title: t("title"),
+      description: "description",
+      type: "website",
+      url: BASE_URL,
+      image: OG_URL,
+      siteName: "about.js",
+      /* locale: "pl_PL", */
+      images: [
+        {
+          url: OG_URL.toString(),
+          width: 1200,
+          height: 630,
+          alt: t("title"),
+        },
+      ],
+    },
   };
 }
 
