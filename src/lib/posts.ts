@@ -6,7 +6,7 @@ import customParseFormat from "dayjs/plugin/customParseFormat";
 import dayjs from "dayjs";
 import { Locale } from "@/types";
 import { DEFAULT_LOCALE, getLocaleMap } from "@/next-intl-config";
-import { BASE_URL } from "@/config";
+import { Metadata } from "next";
 
 dayjs.extend(customParseFormat);
 
@@ -21,6 +21,7 @@ export type Post = {
     createdAt: string;
     authorAvatar: string;
     description: string;
+    keywords: string[];
   };
   content: string;
   excerpt: string;
@@ -42,9 +43,7 @@ export async function getPost(slug: string, locale: Locale = DEFAULT_LOCALE) {
   const itemPath = path.join(POSTS_DIR, postPath);
   const postFile = await fs.promises.readFile(itemPath, "utf8");
   const { data, content } = matter(postFile);
-
   data.slug = slug;
-
   if (!data?.author) {
     data.author = "Grzegorz Dubiel";
   }
@@ -62,6 +61,8 @@ export async function getPost(slug: string, locale: Locale = DEFAULT_LOCALE) {
   if (isCratedAtValid) {
     throw new Error(`Invalid createdAt for post ${data.slug}`);
   }
+  const formattedTags = data?.tags?.length ? data.tags.split(",") : [];
+  data.keywords = formattedTags;
   return { data, content, excerpt: getExcerpt(content) } as Post;
 }
 
@@ -106,15 +107,15 @@ type ComposeMetadataProps = {
 
 export async function composeMetadata({ locale, slug }: ComposeMetadataProps) {
   const post = await getPost(slug, locale);
-
   return {
     title: post.data.title,
     description: post.data.description,
+    ...(!!post.data.keywords.length ? { keywords: post.data.keywords } : {}),
     alternates: {
       canonical: `posts/${slug}`,
       languages: getLocaleMap(),
     },
-  };
+  } as Metadata;
 }
 
 export class PostStorageManager {

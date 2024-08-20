@@ -3,7 +3,10 @@ import Profile from "./profile";
 
 type Data = Post["data"];
 
-type Props = Omit<Data, "slug" | "title" | "image" | "description">;
+type Props = Omit<
+  Data,
+  "slug" | "title" | "image" | "description" | "keywords"
+>;
 
 function Header({ author, authorAvatar, createdAt }: Props) {
   return (
