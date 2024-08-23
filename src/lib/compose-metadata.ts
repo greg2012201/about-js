@@ -1,5 +1,6 @@
 import { BASE_URL } from "@/config";
 import { getLocaleMap } from "@/next-intl-config";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 export async function getRootMetadata() {
@@ -32,7 +33,7 @@ export async function getRootMetadata() {
     creator: "Grzegorz Dubiel",
     publisher: "Grzegorz Dubiel",
     metadataBase: new URL(BASE_URL),
-  };
+  } as Metadata;
 }
 
 async function getMetadataTranslation(pageNamespace: string) {
