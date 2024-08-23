@@ -2,8 +2,6 @@ import { BASE_URL } from "@/config";
 import { getLocaleMap } from "@/next-intl-config";
 import { getTranslations } from "next-intl/server";
 
-const OG_URL = `${BASE_URL}/api/og`;
-
 export async function getRootMetadata() {
   const t = await getTranslations("Metadata.Root");
 
