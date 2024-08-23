@@ -107,13 +107,18 @@ type ComposeMetadataProps = {
 
 export async function composeMetadata({ locale, slug }: ComposeMetadataProps) {
   const post = await getPost(slug, locale);
+  const canonical = `posts/${slug}`;
   return {
     title: post.data.title,
     description: post.data.description,
     ...(!!post.data.keywords.length ? { keywords: post.data.keywords } : {}),
     alternates: {
-      canonical: `posts/${slug}`,
+      canonical,
       languages: getLocaleMap(),
+    },
+    openGraph: {
+      url: canonical,
+      type: "article",
     },
   } as Metadata;
 }
