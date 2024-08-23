@@ -119,6 +119,7 @@ export async function composeMetadata({ locale, slug }: ComposeMetadataProps) {
     openGraph: {
       url: canonical,
       type: "article",
+      siteName: post.data.title,
     },
   } as Metadata;
 }

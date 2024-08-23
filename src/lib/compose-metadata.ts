@@ -65,6 +65,7 @@ async function composeMetadata({
     },
     openGraph: {
       url: canonical,
+      siteName: intlMeta.title,
     },
   } as Metadata;
 }
