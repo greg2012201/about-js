@@ -64,7 +64,7 @@ async function composeMetadata({
       languages: getLocaleMap(),
     },
     openGraph: {
-      url: canonical,
+   //   url: canonical,
       siteName: intlMeta.title,
     },
   } as Metadata;
