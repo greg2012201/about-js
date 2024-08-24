@@ -7,6 +7,7 @@ import dayjs from "dayjs";
 import { Locale } from "@/types";
 import { DEFAULT_LOCALE, getLocaleMap } from "@/next-intl-config";
 import { Metadata } from "next";
+import { BASE_URL } from "@/config";
 
 dayjs.extend(customParseFormat);
 
@@ -117,8 +118,16 @@ export async function composeMetadata({ locale, slug }: ComposeMetadataProps) {
       languages: getLocaleMap(),
     },
     openGraph: {
-      url: canonical,
+      images: [
+        {
+          url: `${BASE_URL}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          type: "image/png",
+        },
+      ],
       type: "article",
+      url: canonical,
       siteName: post.data.title,
     },
   } as Metadata;
