@@ -33,9 +33,6 @@ export async function getRootMetadata() {
     creator: "Grzegorz Dubiel",
     publisher: "Grzegorz Dubiel",
     metadataBase: new URL(BASE_URL),
-    openGraph: {
-      type: "website",
-    },
   } as Metadata;
 }
 
@@ -64,6 +61,15 @@ async function composeMetadata({
       languages: getLocaleMap(),
     },
     openGraph: {
+      images: [
+        {
+          url: `${BASE_URL}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          type: "image/png",
+        },
+      ],
+      type: "website",
       url: canonical,
       siteName: intlMeta.title,
     },
