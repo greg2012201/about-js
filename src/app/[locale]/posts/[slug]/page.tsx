@@ -9,7 +9,7 @@ import React from "react";
 
 type Props = {
   params: {
-    post: string;
+    slug: string;
     locale: Locale;
   };
 };
@@ -19,7 +19,7 @@ function hasCodeBlock(content: string) {
 }
 
 export async function generateMetadata({ params }: Props) {
-  return composeMetadata({ ...params, slug: params.post });
+  return composeMetadata({ ...params, slug: params.slug });
 }
 
 export async function generateStaticParams({
@@ -32,11 +32,11 @@ export async function generateStaticParams({
   return allPostSlugs.map((postSlug) => ({ post: postSlug }));
 }
 
-async function Post({ params: { post, locale } }: Props) {
+async function Post({ params: { slug, locale } }: Props) {
   const {
     content,
     data: { author, authorAvatar, createdAt },
-  } = await getPost(post, locale);
+  } = await getPost(slug, locale);
   const postHTML = await transformPost(content);
   const { list: tocList } = getTableOfContentsData(postHTML);
 
