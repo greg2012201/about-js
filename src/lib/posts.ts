@@ -11,7 +11,7 @@ import { BASE_URL } from "@/config";
 
 dayjs.extend(customParseFormat);
 
-const POSTS_DIR = "/posts";
+const POSTS_DIR = "public/posts";
 
 export type Post = {
   data: {
