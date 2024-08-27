@@ -46,6 +46,9 @@
     "webDevFullstack": {
       "title": "Web dev Fullstack",
       "content": "Fresh new about frameworks tooling. We all know that a new library pop out every day. You can be sure that with this blog you will be up to date."
+    },
+    "linkSection": {
+      "link": "Start reading... 👉"
     }
   },
   "PostList": {

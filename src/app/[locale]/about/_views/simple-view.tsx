@@ -4,6 +4,7 @@ import Profile from "@/components/sections/profile";
 import React from "@/components/sections/react";
 import Separator from "@/components/sections/separator";
 import WithBackgroundIcons from "@/components/with-backround-icons";
+import { Link } from "@/navigation";
 import { getTranslations } from "next-intl/server";
 
 async function SimpleView() {
@@ -43,6 +44,15 @@ async function SimpleView() {
               alt: "logos of the frontend technologies",
             }}
           />
+
+          <section className="z-20">
+            <Link
+              className="w-full text-center text-2xl text-pink-100 hover:text-pink-200 sm:text-3xl"
+              href="/posts"
+            >
+              {t("linkSection.link")}
+            </Link>
+          </section>
         </div>
       </WithBackgroundIcons>
     </>
