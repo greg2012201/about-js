@@ -32,7 +32,7 @@ export async function generateStaticParams({
   return allPostSlugs.map((postSlug) => ({ post: postSlug }));
 }
 
-async function Post({ params: { slug, locale } }: Props) {
+async function PostPage({ params: { slug, locale } }: Props) {
   const {
     content,
     data: { author, authorAvatar, createdAt },
@@ -57,4 +57,4 @@ async function Post({ params: { slug, locale } }: Props) {
   );
 }
 
-export default Post;
+export default PostPage;
