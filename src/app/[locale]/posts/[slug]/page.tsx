@@ -29,7 +29,7 @@ export async function generateStaticParams({
 }) {
   const allPostSlugs = await getAllPostSlugs(locale);
 
-  return allPostSlugs.map((postSlug) => ({ post: postSlug }));
+  return allPostSlugs.map((postSlug) => ({ slug: postSlug }));
 }
 
 async function PostPage({ params: { slug, locale } }: Props) {
