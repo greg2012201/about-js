@@ -4,12 +4,14 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 export default async function Image() {
-  const latoItalic = fetch(
-    new URL("/public/Lato-LightItalic.ttf", import.meta.url),
-  ).then((res) => res.arrayBuffer());
-  const latoBoldItalic = fetch(
-    new URL("/public/Lato-BoldItalic.ttf", import.meta.url),
-  ).then((res) => res.arrayBuffer());
+  const [latoItalic, latoBoldItalic] = await Promise.all([
+    fetch(new URL("/public/Lato-LightItalic.ttf", import.meta.url)).then(
+      (res) => res.arrayBuffer(),
+    ),
+    fetch(new URL("/public/Lato-BoldItalic.ttf", import.meta.url)).then((res) =>
+      res.arrayBuffer(),
+    ),
+  ]);
 
   try {
     return new ImageResponse(
@@ -54,13 +56,13 @@ export default async function Image() {
         fonts: [
           {
             name: "Lato",
-            data: await latoItalic,
+            data: latoItalic,
             style: "normal",
             weight: 200, // should be thin
           },
           {
             name: "Lato-BoldItalic",
-            data: await latoBoldItalic,
+            data: latoBoldItalic,
             style: "normal",
             weight: 400,
           },
