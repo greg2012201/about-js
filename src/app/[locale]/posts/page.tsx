@@ -19,9 +19,7 @@ async function Posts({ params: { locale } }: Props) {
   return (
     <div className="flex flex-col items-center space-y-4 py-4">
       <Title className="mb-12">{t("title")}</Title>
-      <SectionWrapper className="h-fit">
-        <PostList />
-      </SectionWrapper>
+      <PostList />
     </div>
   );
 }
