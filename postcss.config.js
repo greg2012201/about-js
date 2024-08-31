@@ -1,35 +1,33 @@
-// postcss.config.js
-import tailwindcss from "tailwindcss";
-import postcssNested from "postcss-nested";
-import { default as purgecss } from "@fullhuman/postcss-purgecss";
+const isProduction = process.env.NODE_ENV === "production";
 
-const config = {
-  plugins: [
-    "postcss-flexbugs-fixes",
-    [
-      "postcss-preset-env",
-      {
-        autoprefixer: {
-          flexbox: "no-2009",
-        },
-        stage: 3,
-        features: {
-          "custom-properties": false,
-        },
+module.exports = {
+  plugins: {
+    "tailwindcss/nesting": {},
+    tailwindcss: {},
+    "postcss-flexbugs-fixes": {},
+    "postcss-preset-env": {
+      autoprefixer: {
+        flexbox: "no-2009",
       },
-    ],
-    tailwindcss,
-    postcssNested,
-    process.env.NODE_ENV === "production"
-      ? purgecss({
-          content: ["./src/app/**/*.{js,jsx,ts,tsx}"],
-          defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-          safelist: {
-            standard: ["html", "body"],
+      stage: 3,
+      features: {
+        "custom-properties": false,
+      },
+    },
+    ...(isProduction
+      ? {
+          "@fullhuman/postcss-purgecss": {
+            content: [
+              "pages/**/*.{ts,tsx}",
+              "components/**/*.{ts,tsx}",
+              "app/**/*.{ts,tsx}",
+              "src/**/*.{ts,tsx}",
+            ],
+            defaultExtractor: (content) =>
+              content.match(/[\w-/:]+(?<!:)/g) || [],
+            safelist: ["html", "body"],
           },
-        })
-      : [],
-  ],
+        }
+      : {}),
+  },
 };
-
-export default config;
