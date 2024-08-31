@@ -3,7 +3,6 @@ import { Lato } from "next/font/google";
 import "../globals.css";
 import TopBar from "@/components/top-bar";
 import Footer from "@/components/footer";
-import { Toaster } from "@/components/ui/sonner";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { unstable_setRequestLocale } from "next-intl/server";
@@ -47,7 +46,6 @@ export default async function RootLayout({
             {children}
             <Footer />
           </main>
-          <Toaster />
         </NextIntlClientProvider>
       </body>
     </html>
