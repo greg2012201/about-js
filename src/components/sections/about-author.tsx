@@ -1,9 +1,11 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import BaseText from "../base-text";
 import Title from "../title";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const BaseText = dynamic(() => import("../base-text"));
 
 function AboutAuthor() {
   const t = useTranslations("AboutAuthor");
