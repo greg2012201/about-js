@@ -1,11 +1,13 @@
 import Header from "@/components/blog/header";
-import Share from "@/components/blog/share";
 import { composeMetadata, getAllPostSlugs, getPost } from "@/lib/posts";
 import getTableOfContentsData from "@/lib/markdown/get-table-of-contents-data";
 import transformPost from "@/lib/markdown/transform-post";
 import { Locale } from "@/types";
 import Script from "next/script";
 import React from "react";
+import dynamic from "next/dynamic";
+
+const Share = dynamic(() => import("@/components/blog/share"));
 
 type Props = {
   params: {
