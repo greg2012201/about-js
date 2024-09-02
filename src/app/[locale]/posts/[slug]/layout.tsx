@@ -1,5 +1,9 @@
-import { Toaster } from "@/components/ui/sonner";
 import { ReactElement } from "react";
+import dynamic from "next/dynamic";
+
+const Toaster = dynamic(() =>
+  import("@/components/ui/sonner").then((module) => module.Toaster),
+);
 
 type Props = {
   children: ReactElement;
