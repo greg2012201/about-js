@@ -21,7 +21,6 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "./src/app/globals.css",
   ],
   prefix: "",
   theme: {
