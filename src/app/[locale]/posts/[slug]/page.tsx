@@ -6,6 +6,8 @@ import { Locale } from "@/types";
 import Script from "next/script";
 import React from "react";
 import dynamic from "next/dynamic";
+import { twMerge } from "tailwind-merge";
+import "@/app/markdown.css";
 
 const Share = dynamic(() => import("@/components/blog/share"));
 
@@ -43,19 +45,21 @@ async function PostPage({ params: { slug, locale } }: Props) {
   const { list: tocList } = getTableOfContentsData(postHTML);
 
   return (
-    <>
+    <div>
       <Header
         author={author}
         authorAvatar={authorAvatar}
         createdAt={createdAt}
       />
       <article
-        className="markdown prose prose-slate prose-invert mx-auto max-w-[680px] py-8 prose-headings:text-slate-300 prose-img:mx-auto prose-img:w-full"
+        className={twMerge(
+          `markdown prose prose-slate prose-invert mx-auto max-w-[680px] py-8 prose-headings:text-slate-300 prose-img:mx-auto prose-img:w-full`,
+        )}
         dangerouslySetInnerHTML={{ __html: postHTML }}
       />
       {hasCodeBlock(postHTML) && <Script id="markdown" src="/handle-copy.js" />}
       <Share tocList={tocList} />
-    </>
+    </div>
   );
 }
 

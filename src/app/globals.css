@@ -86,3 +86,5 @@
     font-size: 16px;
   }
 }
+
+@config "../../tailwind.config.ts";
