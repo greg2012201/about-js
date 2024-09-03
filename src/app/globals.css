@@ -75,16 +75,4 @@
   }
 }
 
-.shiki {
-  counter-reset: step;
-  counter-increment: step 0;
-  .line {
-    &::before {
-      counter-increment: step;
-      @apply mr-6 inline-block w-4 border-transparent text-right text-neutral-600;
-    }
-    font-size: 16px;
-  }
-}
-
 @config "../../tailwind.config.ts";
