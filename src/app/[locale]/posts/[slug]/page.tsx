@@ -10,6 +10,9 @@ import { twMerge } from "tailwind-merge";
 import "@/app/markdown.css";
 
 const Share = dynamic(() => import("@/components/blog/share"));
+const Toaster = dynamic(() =>
+  import("@/components/ui/sonner").then((module) => module.Toaster),
+);
 
 type Props = {
   params: {
@@ -53,12 +56,13 @@ async function PostPage({ params: { slug, locale } }: Props) {
       />
       <article
         className={twMerge(
-          `markdown prose prose-slate prose-invert mx-auto max-w-[680px] py-8 prose-headings:text-slate-300 prose-img:mx-auto prose-img:w-full`,
+          `markdown prose prose-slate prose-invert prose-headings:text-slate-300 prose-img:mx-auto prose-img:w-full mx-auto max-w-[680px] py-8`,
         )}
         dangerouslySetInnerHTML={{ __html: postHTML }}
       />
       {hasCodeBlock(postHTML) && <Script id="markdown" src="/handle-copy.js" />}
       <Share tocList={tocList} />
+      <Toaster />
     </div>
   );
 }
