@@ -1,6 +1,8 @@
 import React from "react";
 import SectionWrapper from "@/components/section-wrapper";
-import PostListComponent from "@/components/post-list";
+import dynamic from "next/dynamic";
+
+const PostListComponent = dynamic(() => import("@/components/post-list"));
 
 async function PostList() {
   return (
