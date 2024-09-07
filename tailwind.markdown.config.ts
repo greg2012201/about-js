@@ -10,6 +10,7 @@ const config = {
     "./src/app/[locale]/posts/[slug].{ts,tsx}",
   ],
   prefix: "",
+  jit: true,
   theme: {
     container: {
       center: true,
