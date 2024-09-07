@@ -14,23 +14,30 @@ function NavList({ navConfig, className }: Props) {
   const pathname = usePathname();
 
   return (
-    <nav className={className}>
-      <ul className="flex h-full flex-row flex-wrap items-center gap-x-1 font-bold  sm:gap-x-8 sm:text-xl">
-        {navConfig.map(({ label, path }, index) => {
-          const isActive = pathname === path;
+    <nav
+      className={twMerge(
+        "flex h-full list-none flex-row flex-wrap items-center gap-x-1 font-bold  sm:gap-x-8 sm:text-xl",
+        className,
+      )}
+    >
+      {navConfig.map(({ label, path }, index) => {
+        const isActive = pathname === path;
 
-          const activeClass = isActive
-            ? "text-purple-500 border-accent"
-            : "text-white hover:text-purple-500 border-transparent";
-          return (
-            <Link key={label} href={path}>
-              <li key={index} className={twMerge("p-1", activeClass)}>
-                {label}
-              </li>
+        const activeClass = isActive
+          ? "text-purple-500 border-accent"
+          : "text-white hover:text-purple-500 border-transparent";
+        return (
+          <li key={index}>
+            <Link
+              className={twMerge(" p-1", activeClass)}
+              key={label}
+              href={path}
+            >
+              {label}
             </Link>
-          );
-        })}
-      </ul>
+          </li>
+        );
+      })}
     </nav>
   );
 }
