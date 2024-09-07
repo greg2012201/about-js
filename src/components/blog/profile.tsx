@@ -1,4 +1,4 @@
-import { Post } from "@/lib/posts";
+import { Post } from "@/services/posts";
 import Image from "next/image";
 import { Link } from "@/navigation";
 import { ClassNameValue, twMerge } from "tailwind-merge";

@@ -1,7 +1,7 @@
 import React from "react";
 import PostListCardItem from "./post-list-card-item";
 import { ClassNameValue, twMerge } from "tailwind-merge";
-import getPosts from "@/lib/posts";
+import getPosts from "@/services/posts";
 import getLocaleServer from "@/lib/get-locale-server";
 
 type Props = {

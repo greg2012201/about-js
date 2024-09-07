@@ -1,5 +1,5 @@
 import Header from "@/components/blog/header";
-import { composeMetadata, getAllPostSlugs, getPost } from "@/lib/posts";
+import { composeMetadata, getAllPostSlugs, getPost } from "@/services/posts";
 import getTableOfContentsData from "@/lib/markdown/get-table-of-contents-data";
 import transformPost from "@/lib/markdown/transform-post";
 import { Locale } from "@/types";

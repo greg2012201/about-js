@@ -2,7 +2,7 @@ import { Link } from "@/navigation";
 import Profile from "../blog/profile";
 import Title from "../title";
 import BaseText from "../base-text";
-import { Post } from "@/lib/posts";
+import { Post } from "@/services/posts";
 import { getTranslations } from "next-intl/server";
 
 type PostListCardItemProps = Pick<Post, "data" | "excerpt">;

@@ -1,7 +1,10 @@
 import { MetadataRoute } from "next";
 import { getPathname } from "@/navigation";
 import { DEFAULT_LOCALE, host, LOCALES, pathnames } from "@/next-intl-config";
-import getPosts, { getAllPostSlugs, PostStorageManager } from "@/lib/posts";
+import getPosts, {
+  getAllPostSlugs,
+  PostStorageManager,
+} from "@/services/posts";
 import dayjs from "dayjs";
 
 function getUrl(key: keyof typeof pathnames, locale: (typeof LOCALES)[number]) {
