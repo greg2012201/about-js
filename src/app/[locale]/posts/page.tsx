@@ -1,6 +1,5 @@
 import { Title } from "@/components/brand-title";
 import PostList from "@/components/post-list";
-import SectionWrapper from "@/components/section-wrapper";
 import composeMetadata from "@/lib/compose-metadata";
 import { getTranslations } from "next-intl/server";
 import { unstable_setRequestLocale } from "next-intl/server";
