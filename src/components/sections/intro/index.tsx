@@ -2,13 +2,8 @@
 
 import AnimatedIcons from "./animated-icons";
 import BaseText from "@/components/base-text";
-import { Subtitle } from "@/components/brand-title";
+import { Subtitle, Title } from "@/components/brand-title";
 import { useTranslations } from "next-intl";
-import dynamic from "next/dynamic";
-
-const Title = dynamic(() =>
-  import("@/components/brand-title").then((module) => module.Title),
-);
 
 function Intro() {
   const t = useTranslations("Intro");
