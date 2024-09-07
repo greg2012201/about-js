@@ -38,6 +38,7 @@ function LanguagePicker() {
     >
       <SelectTrigger
         disableChevron
+        aria-label="Select language"
         icon={<Languages className="h-4 w-4" />}
         className="h-[30px] w-[90px] border-slate-900 bg-[#0b101a] text-[13px] font-semibold sm:h-[36px] sm:w-[94px] sm:text-sm"
       >
