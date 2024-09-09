@@ -2,7 +2,7 @@
 
 import useBreakpoints from "@/hooks/use-breakpoints";
 import { useScroll, motion, useTransform } from "framer-motion";
-import { Prettify } from "@/types";
+import { type Prettify } from "@/types";
 import Image from "next/image";
 
 type AnimationTuple = Record<

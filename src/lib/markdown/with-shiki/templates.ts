@@ -9,7 +9,7 @@ import {
   fiTerminal,
   mdOutlineDone,
 } from "./icons";
-import { Prettify } from "@/types";
+import { type Prettify } from "@/types";
 import transformLang from "./utils";
 
 type HeaderProps = {
