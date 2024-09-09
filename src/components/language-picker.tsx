@@ -6,7 +6,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components/select";
 import { Languages } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useRouter, usePathname } from "@/navigation";

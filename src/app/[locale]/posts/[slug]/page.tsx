@@ -11,7 +11,7 @@ import "@/app/markdown.css";
 
 const Share = dynamic(() => import("@/components/blog/share"));
 const Toaster = dynamic(() =>
-  import("@/components/ui/sonner").then((module) => module.Toaster),
+  import("@/components/sonner").then((module) => module.Toaster),
 );
 
 type Props = {
