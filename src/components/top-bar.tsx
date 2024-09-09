@@ -3,7 +3,7 @@ import Logo from "./logo";
 import NavList from "./nav-list";
 import LanguagePicker from "./language-picker";
 import { getLocale } from "next-intl/server";
-import { Locale } from "@/types";
+import { type Locale } from "@/types";
 
 async function TopBar() {
   const locale = (await getLocale()) as Locale;

@@ -2,7 +2,7 @@ import Header from "@/components/blog/header";
 import { composeMetadata, getAllPostSlugs, getPost } from "@/services/posts";
 import getTableOfContentsData from "@/lib/markdown/get-table-of-contents-data";
 import transformPost from "@/lib/markdown/transform-post";
-import { Locale } from "@/types";
+import { type Locale } from "@/types";
 import Script from "next/script";
 import React from "react";
 import dynamic from "next/dynamic";

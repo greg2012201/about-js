@@ -1,4 +1,4 @@
-import { Locale } from "@/types";
+import { type Locale } from "@/types";
 
 type NavLabels = "home" | "about" | "posts";
 

@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import GithubSlugger from "github-slugger";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import dayjs from "dayjs";
-import { Locale } from "@/types";
+import { type Locale } from "@/types";
 import { DEFAULT_LOCALE, getLocaleMap } from "@/next-intl-config";
 import { Metadata } from "next";
 import { BASE_URL } from "@/config";

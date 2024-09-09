@@ -7,7 +7,7 @@ import { getMessages } from "next-intl/server";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { LOCALES } from "@/next-intl-config";
 import { getRootMetadata } from "@/lib/compose-metadata";
-import { Locale } from "@/types";
+import { type Locale } from "@/types";
 
 type Params = { locale: Locale };
 
