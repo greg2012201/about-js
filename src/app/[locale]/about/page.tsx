@@ -16,9 +16,9 @@ type Props = {
 };
 
 async function About({ params: { locale } }: Props) {
-  const t = await getTranslations("AboutPageContent");
-
   unstable_setRequestLocale(locale);
+
+  const t = await getTranslations("AboutPageContent");
   return (
     <>
       <Profile />
