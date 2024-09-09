@@ -1,7 +1,6 @@
 import short from "short-uuid";
 import dedent from "dedent";
 import { BundledLanguage, BundledTheme } from "shiki";
-import transformLang from "@/lib/transfrom-lang";
 import { twMerge } from "tailwind-merge";
 import {
   biLogoTypescript,
@@ -11,6 +10,7 @@ import {
   mdOutlineDone,
 } from "./icons";
 import { Prettify } from "@/types";
+import transformLang from "./utils";
 
 type HeaderProps = {
   lang: BundledLanguage;
