@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import "./globals.css";
 
 function Layout({ children }: { children: ReactElement }) {
   return (
