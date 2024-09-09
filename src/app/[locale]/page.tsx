@@ -1,6 +1,5 @@
 import Intro from "@/components/sections/intro";
 import PostList from "@/components/sections/post-list";
-import React from "@/components/sections/react";
 import composeMetadata from "@/lib/compose-metadata";
 import { unstable_setRequestLocale } from "next-intl/server";
 
