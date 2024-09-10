@@ -12,7 +12,7 @@ type Props = {
 
 function SectionWrapper({ children, className }: Props) {
   return (
-    <section
+    <div
       className={twMerge(
         "z-20 flex h-[650px] w-full max-w-[930px] flex-col space-y-6",
         className,
@@ -27,7 +27,7 @@ function SectionWrapper({ children, className }: Props) {
       >
         {children}
       </motion.div>
-    </section>
+    </div>
   );
 }
 
