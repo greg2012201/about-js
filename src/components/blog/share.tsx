@@ -1,12 +1,14 @@
 "use client";
 
 import type { TableOfContentsItem } from "@/lib/markdown/types";
+import { useTranslations } from "next-intl";
 import { useCallback, useEffect } from "react";
 import { toast } from "sonner";
 
 type Props = { tocList: TableOfContentsItem[] };
 
 function Share({ tocList }: Props) {
+  const t = useTranslations("Share");
   const handleHeadingClick = useCallback((event: Event) => {
     const target = event.target as HTMLElement;
     navigator.clipboard
@@ -14,7 +16,7 @@ function Share({ tocList }: Props) {
         `${window.location.origin}${window.location.pathname}#${target.id}`,
       )
       .then(() => {
-        toast.success("Link copied. Thx!");
+        toast.success(t("success"));
       })
       .catch((err) => console.error("Failed to copy:", err));
   }, []);

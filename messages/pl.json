@@ -56,5 +56,8 @@
   },
   "PostListCardItem": {
     "readMoreLink": "Czytaj dalej..."
+  },
+  "Share": {
+    "success": "Link skopiowany. Dzięki!"
   }
 }
