@@ -7,5 +7,5 @@ export default createMiddleware({
   defaultLocale: DEFAULT_LOCALE,
 });
 export const config = {
-  matcher: ["/", "/(about|posts|home)/:path*", "/(pl|en)/:path*"],
+  matcher: ["/((?!api|_next|.*\\..*).*)"],
 };
