@@ -54,14 +54,14 @@ async function About({ params: { locale } }: Props) {
             }}
           />
 
-          <section className="z-20">
+          <div className="z-20">
             <Link
               className="w-full text-center text-2xl text-pink-100 hover:text-pink-200 sm:text-3xl"
               href="/posts"
             >
               {t("linkSection.link")}
             </Link>
-          </section>
+          </div>
         </div>
       </WithBackgroundIcons>
     </>
