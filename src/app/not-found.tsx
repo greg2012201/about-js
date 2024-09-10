@@ -14,7 +14,7 @@ function NotFound() {
       <div className="flex flex-col items-center justify-center space-y-20 p-4">
         <Title className="text-[80px] font-bold">404</Title>
         <Subtitle className="pb-1">
-          Ups! Something went wrong! Content should not be found...
+          Ups! Something went wrong! Content could not be found...
         </Subtitle>
         <Link href="/">
           <BaseText>Go to the home page 👉</BaseText>
