@@ -37,15 +37,15 @@
   "AboutPageContent": {
     "frontend": {
       "title": "Frontend",
-      "content": "Fresh new about frameworks tooling. We all know that a new library pop out every day. If you're looking for news about React, Next.js, Tailwind etc. You can be sure that with this blog you will be up to date."
+      "content": "Fresh new about frameworks tooling. We all know that a new library pops out every day. If you're looking for news about React, Next.js, Tailwind etc. This blog will keep you informed about React, Next.js, Tailwind, and more..."
     },
     "backend": {
       "title": "Backend",
-      "content": "Fresh new about frameworks tooling. We all know that a new library pop out every day. You can be sure that with this blog you will be up to date."
+      "content": "JavaScript has long been more than just a frontend-specific language. With Node.js and other backend tools on the belt, you can build modern, robust server-side applications. I'll show you how to do this in practice."
     },
     "webDevFullstack": {
       "title": "Web dev Fullstack",
-      "content": "Fresh new about frameworks tooling. We all know that a new library pop out every day. You can be sure that with this blog you will be up to date."
+      "content": "Putting things together is both satisfying and exciting. You can do this entirely within the JavaScript ecosystem. You can use full-stack meta-frameworks or create the backend and frontend separately. I'd like to show you my approach and how I take advantage of these possibilities."
     },
     "linkSection": {
       "link": "Start reading... 👉"
