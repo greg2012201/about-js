@@ -41,11 +41,11 @@
     },
     "backend": {
       "title": "Backend",
-      "content": "Świeże newsy o frameworkach oraz bibliotakach. Wszyscy wiemy że nowe biblioteki powstają jak grzyby po deszczu. Jeżeli szukasz informacji o React, Next.js, Tailwind etc. Możesz być pewien że czytając tego bloga będziesz na czasie."
+      "content": "JavaSctipt już od dawna nie jest tylko językiem programowania przeznaczonym tylko dla frontendu. Mając za pasem Node.js oraz inne backendowe narzędzia, możesz budować solidne serverowe aplikacje. Pokaże jak można to robić w praktyce."
     },
     "webDevFullstack": {
       "title": "Web dev Fullstack",
-      "content": "Świeże newsy o frameworkach oraz bibliotakach. Wszyscy wiemy że nowe biblioteki powstają jak grzyby po deszczu. Jeżeli szukasz informacji o React, Next.js, Tailwind etc. Możesz być pewien że czytając tego bloga będziesz na czasie."
+      "content": "Proces tworzenia plikacji webowej jest tak samo satysfakcjonujący jak i ekscytujący. Można stworzyć aplikację webową w całości w ekosystemie JavaScript. Możesz wybrać jeden z fullstackowych meta frameworków albo tworzyć frontend i backend osobno. Zaprezentuję w jaki sposób korzystam z tych możliwości."
     },
     "linkSection": {
       "link": "Zacznij czytać... 👉"
