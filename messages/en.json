@@ -41,7 +41,7 @@
     },
     "backend": {
       "title": "Backend",
-      "content": "JavaScript has long been more than just a frontend-specific language. With Node.js and other backend tools on the belt, you can build modern, robust server-side applications. I'll show you how to do this in practice."
+      "content": "JavaScript has long been more than just a frontend-specific programming language. With Node.js and other backend tools on the belt, you can build modern, robust server-side applications. I'll show you how to do this in practice."
     },
     "webDevFullstack": {
       "title": "Web dev Fullstack",
