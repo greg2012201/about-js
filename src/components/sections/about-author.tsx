@@ -7,7 +7,7 @@ const BaseText = dynamic(() => import("../base-text"));
 function AboutAuthor() {
   const t = useTranslations("AboutAuthor");
   return (
-    <div className="flex min-h-[400px] w-full max-w-[930px] flex-col space-y-6 px-4 py-4">
+    <div className="flex min-h-[400px] w-full max-w-[930px] flex-col space-y-6 px-4 py-4 pb-28">
       <Title size="large">{t("title")}</Title>
       <BaseText>{t("bio")}</BaseText>
     </div>
