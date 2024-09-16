@@ -29,7 +29,7 @@
   },
   "AboutAuthor": {
     "title": "O mnie",
-    "bio": "Uwielbiam tworzyć nowe rzeczy za pomocą kodowania. Zawsze interesowała mnie 'frontendowa strona' świata cybernetycznego. Programuję od marca 2020 roku. Zawsze byłem ciekawy, jak działają interfejsy użytkownika za kulisami i jak można je stworzyć od zera w edytorze kodu. Fascynuje mnie React; zanim poznałem tą bibliotekę, kodowałem w czystym JavaScripcie. Kiedy zacząłem uczyć się Reacta, poczułem ogromne możliwości. Jestem wielkim fanem Next.js z komponentami serwerowymi React'a. Lubię podejmować trudne wyzwania programistyczne."
+    "bio": "Uwielbiam tworzyć nowe rzeczy poprzez programowanie. Zawsze byłem budowniczym. Od budowania klocków LEGO w dzieciństwie, przez bycie muzykiem, aż po programowanie, zawsze czerpałem radość z tworzenia czegoś nowego. Wybrałem JavaScript ze względu na możliwość tworzenia aplikacji izomorficznych oraz za to, że posiada wszystkie niezbędne elementy, takie jak frameworki, pakiety npm i inne narzędzia. Początkowo skupiałem się na frontendzie, ale wraz ze wzrostem doświadczenia, moje zainteresowania rozszerzyły się na cały ekosystem JavaScript. Zdobyłem solidne doświadczenie w nowoczesnym web developmencie, pracując dla startupów. Pozostaję na bieżąco z nowymi technologiami dzięki mojej ciekawości i pasji do kodowania. Jestem tutaj, gotowy dzielić się swoim doświadczeniem i swoją podróżą po świecie tworzenia oprogramowania."
   },
   "Separator": {
     "content": "Zobacz co znajdziesz na tym blogu"
