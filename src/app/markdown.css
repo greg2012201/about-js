@@ -5,6 +5,8 @@
 .shiki {
   counter-reset: step;
   counter-increment: step 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
   .line {
     &::before {
       counter-increment: step;
