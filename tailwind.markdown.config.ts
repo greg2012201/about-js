@@ -66,6 +66,15 @@ const config = {
                 },
               },
             },
+            code: {
+              backgroundColor: "rgb(55 65 81)",
+              borderRadius: "4px",
+              padding: "0 6px",
+              "&:after, &:before": {
+                display: "none",
+                content: "",
+              },
+            },
           },
         },
       },
