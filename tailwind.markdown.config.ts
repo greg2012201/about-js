@@ -1,3 +1,4 @@
+import { FontStyle } from "shiki";
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -65,6 +66,10 @@ const config = {
                   visibility: "visible",
                 },
               },
+            },
+            a: {
+              fontStyle: "italic",
+              paddingRight: "2px",
             },
             code: {
               backgroundColor: "rgb(55 65 81)",
