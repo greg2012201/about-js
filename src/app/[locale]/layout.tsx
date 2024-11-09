@@ -40,7 +40,7 @@ export default async function RootLayout({
     <html className="dark" style={{ colorScheme: "dark" }} lang={locale}>
       <body className={lato.className}>
         <NextIntlClientProvider messages={messages}>
-          <main className="relative min-h-screen bg-gradient-to-b from-[#141e30] via-[#243b55] to-[#243b55] text-white">
+          <main className="relative flex min-h-screen flex-col justify-between bg-gradient-to-b from-[#141e30] via-[#243b55] to-[#243b55] text-white">
             <TopBar />
             {children}
             <Footer />

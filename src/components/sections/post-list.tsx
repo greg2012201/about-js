@@ -6,7 +6,7 @@ const PostListComponent = dynamic(() => import("@/components/post-list"));
 
 async function PostList() {
   return (
-    <SectionWrapper className="h-[1100px]">
+    <SectionWrapper className="h-fit pb-8">
       <PostListComponent />
     </SectionWrapper>
   );
