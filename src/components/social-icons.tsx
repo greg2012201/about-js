@@ -1,6 +1,7 @@
 import { Link } from "@/navigation";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { twMerge, type ClassNameValue } from "tailwind-merge";
 
 const ICONS = [
   {
@@ -17,9 +18,11 @@ const ICONS = [
   },
 ];
 
-function SocialIcons() {
+type Props = { className?: ClassNameValue };
+
+function SocialIcons({ className }: Props) {
   return (
-    <div className="flex space-x-4 py-2">
+    <div className={twMerge(`flex space-x-4 py-2`, className)}>
       {ICONS.map(({ icon, id, url, label }) => {
         return (
           <Link
