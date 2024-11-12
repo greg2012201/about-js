@@ -3,6 +3,7 @@ import React from "react";
 import { Subtitle, Title } from "../brand-title";
 import { ClassNameValue, twMerge } from "tailwind-merge";
 import { useTranslations } from "next-intl";
+import SocialIcons from "../social-icons";
 
 type AvatarProps = { className?: ClassNameValue };
 
@@ -30,6 +31,7 @@ function Profile() {
         <Title>{t("title")}</Title>
         <Subtitle>{t("subtitle")}</Subtitle>
         <Avatar className="mx-auto mt-6 sm:hidden" />
+        <SocialIcons className="self-center pt-4 sm:self-start sm:pt-0" />
       </div>
     </div>
   );
