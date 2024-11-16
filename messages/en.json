@@ -47,6 +47,11 @@
       "title": "Web dev Fullstack",
       "content": "Creating web applications is both a satisfying and exciting process. You can do this entirely within the JavaScript ecosystem. You can choose full-stack meta-frameworks or create the backend and frontend separately. I'd like to show how I take advantage of these possibilities."
     },
+    "webAI": {
+      "title": "Web AI",
+      "content": "These days, a lot of effort goes into integrating AI solutions with applications built using JavaScript. I work on such integrations and take great pleasure in it. I am happy to share tips, tricks, and insights about the tools I use."
+    },
+
     "linkSection": {
       "link": "Start reading... 👉"
     }

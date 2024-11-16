@@ -47,6 +47,10 @@
       "title": "Web dev Fullstack",
       "content": "Proces tworzenia aplikacji webowej jest tak samo satysfakcjonujący jak i ekscytujący. Można stworzyć aplikację w całości w ekosystemie JavaScript. Możesz wybrać jeden z fullstackowych meta frameworków albo tworzyć frontend i backend osobno. Zaprezentuję w jaki sposób korzystam z tych możliwości."
     },
+    "webAI": {
+      "title": "Web AI",
+      "content": "Obecnie wiele wysiłku wkłada się w integrację rozwiązań AI z aplikacjami tworzonymi przy użyciu JavaScriptu. Pracuję nad takimi integracjami i czerpię z tego ogromną przyjemność. Chętnie podzielę się wskazówkami, trikami i spostrzeżeniami na temat używanych przeze mnie narzędzi."
+    },
     "linkSection": {
       "link": "Zacznij czytać... 👉"
     }
