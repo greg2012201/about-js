@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import Title from "../title";
 import SectionWrapper from "../section-wrapper";
 import Image from "next/image";
@@ -11,7 +11,8 @@ type Props = {
   title: string;
   content: string;
   orientation?: "left" | "right";
-  imageConfig: {
+  renderImage?: ReactElement;
+  imageConfig?: {
     src: string;
     alt: string;
   };
@@ -19,10 +20,12 @@ type Props = {
 
 function ContentContainer({
   content,
-  imageConfig: { alt, src },
+  imageConfig,
   title,
   orientation = "left",
+  renderImage,
 }: Props) {
+  const { alt, src } = imageConfig ?? {};
   return (
     <SectionWrapper className="w max-w-1000px h-fit">
       <Card contentClassName="flex max-w-[1000px] space-y-8">
@@ -34,16 +37,20 @@ function ContentContainer({
               : "md:grid-cols-[1fr_250px]",
           )}
         >
-          <Image
-            src={src}
-            className={twMerge(
-              `row-span-2 self-center md:w-full md:pr-4`,
-              orientation === "left" ? "col-start-1" : "col-start-2",
-            )}
-            alt={alt}
-            width={175}
-            height={100}
-          />
+          {renderImage ? (
+            renderImage
+          ) : (
+            <Image
+              src={src ?? ""}
+              className={twMerge(
+                `row-span-2 self-center md:w-full md:pr-4`,
+                orientation === "left" ? "col-start-1" : "col-start-2",
+              )}
+              alt={alt ?? ""}
+              width={175}
+              height={100}
+            />
+          )}
           <Title
             className={twMerge(
               "row-start-1",
