@@ -1,4 +1,3 @@
-import { MetadataRoute } from "next";
 import { getPathname } from "@/navigation";
 import { DEFAULT_LOCALE, host, LOCALES, pathnames } from "@/next-intl-config";
 import getPosts, {
