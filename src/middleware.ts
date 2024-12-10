@@ -7,5 +7,5 @@ export default createMiddleware({
   defaultLocale: DEFAULT_LOCALE,
 });
 export const config = {
-  matcher: ["/((?!api|_next|.*\\..*).*)"],
+  matcher: ["/((?!api|_next|opengraph-image|.*\\..*).*)"],
 };
