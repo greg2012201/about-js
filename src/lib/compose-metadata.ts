@@ -55,11 +55,11 @@ async function composeMetadata({
 }: ComposeMetadataProps) {
   const locale = await getLocale();
   const intlMeta = await getMetadataTranslation(intlNamespace);
-  const canonicalWithLocale = `${canonical}/${locale}`;
+  const canonicalWithLocale = `${locale}/${canonical}/`;
   const localeMap = getLocaleMap();
   const languages = Object.entries(localeMap)
     .map(([key, value]) => ({
-      [key]: `${canonical}${value}`,
+      [key]: `${value}${canonical}/`,
     }))
     .reduce((prev, curr) => {
       return { ...prev, ...curr };
