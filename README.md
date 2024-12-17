@@ -1,8 +1,8 @@
-# [about.js](https://about-js-red.vercel.app/)
+# [about.js](https://aboutjs.dev/)
 
 ## What is this repo?
 
-This repository contains the technical blog written by me, [Grzegorz Dubiel](https://about-js-red.vercel.app/about). As the title suggests, the blog focuses on the JavaScript ecosystem. I aim to share my experiences and write about topics that excite me.
+This repository contains the technical blog written by me, [Grzegorz Dubiel](https://aboutjs.dev/about). As the title suggests, the blog focuses on the JavaScript ecosystem. I aim to share my experiences and write about topics that excite me.
 
 ## Contributing
 

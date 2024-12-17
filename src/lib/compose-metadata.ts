@@ -1,7 +1,7 @@
 import { BASE_URL } from "@/config";
 import { getLocaleMap } from "@/next-intl-config";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
 export async function getRootMetadata() {
   const t = await getTranslations("Metadata.Root");
@@ -53,12 +53,24 @@ async function composeMetadata({
   canonical,
   intlNamespace,
 }: ComposeMetadataProps) {
+  const locale = await getLocale();
   const intlMeta = await getMetadataTranslation(intlNamespace);
+  const canonicalWithLocale =
+    canonical === "/" ? `${locale}` : `${locale}/${canonical}`;
+  const localeMap = getLocaleMap();
+  const languages = Object.entries(localeMap)
+    .map(([key, value]) => ({
+      [key]: canonical === "/" ? `${value}` : `${value}${canonical}`,
+    }))
+    .reduce((prev, curr) => {
+      return { ...prev, ...curr };
+    }, {});
+
   return {
     ...intlMeta,
     alternates: {
-      canonical,
-      languages: getLocaleMap(),
+      canonical: canonicalWithLocale,
+      languages,
     },
     openGraph: {
       images: [
