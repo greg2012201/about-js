@@ -108,11 +108,11 @@ type ComposeMetadataProps = {
 
 export async function composeMetadata({ locale, slug }: ComposeMetadataProps) {
   const post = await getPost(slug, locale);
-  const canonical = `${locale}/posts/${slug}/`;
+  const canonical = `${locale}/posts/${slug}`;
   const localeMap = getLocaleMap();
   const languages = Object.entries(localeMap)
     .map(([key, value]) => ({
-      [key]: `${value}/posts/${slug}/`,
+      [key]: `${value}/posts/${slug}`,
     }))
     .reduce((prev, curr) => {
       return { ...prev, ...curr };
