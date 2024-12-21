@@ -202,7 +202,7 @@ export default function ExamplePage() {
 
 We use the `cookies` function exported from `next/headers`, which provides several methods for managing cookies. But how is this technically possible?
 
-### Now it's time to start our re-implementation"
+### Now it's time to start our re-implementation
 
 First, I want to mention that this example is based on the knowledge I gained from a great [video](https://youtu.be/JejwWxhsfZw?si=JRRZq75o84n4jCNw), by [Lee Robinson](https://x.com/leeerob?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) and diving in the Next.js repository.
 
