@@ -453,4 +453,4 @@ Pomimo wielu zalet, warto wziąć pod uwagę pewne niedogodności. Słyszałem o
 
 **Dzięki za przeczytanie i do zobaczenia w następnym poście!👋**
 
-PS: Możesz znaleźć omówione przykłady(oraz jeden bonusowy) [tutaj](https://github.com/greg2012201/async-local-storage-examples)
+PS: Możesz znaleźć omówione przykłady(oraz jeden bonusowy) [tutaj na GitHub'ie](https://github.com/greg2012201/async-local-storage-examples)
