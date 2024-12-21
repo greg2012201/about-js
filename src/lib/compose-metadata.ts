@@ -29,13 +29,15 @@ export async function getRootMetadata() {
       "css",
       "fullstack",
     ],
+    verification: {
+      google: process.env.GOOGLE_VERIFICATION_KEY,
+    },
     referrer: "origin-when-cross-origin",
     creator: "Grzegorz Dubiel",
     publisher: "Grzegorz Dubiel",
     metadataBase: new URL(BASE_URL),
   } as Metadata;
 }
-
 async function getMetadataTranslation(pageNamespace: string) {
   const t = await getTranslations(`Metadata.${pageNamespace}`);
   return {
