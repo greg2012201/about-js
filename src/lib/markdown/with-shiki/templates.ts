@@ -37,7 +37,7 @@ export const headerTemplate = ({ lang, codeBlockId }: HeaderProps) => {
           ${transformLang(lang)}
       </p>    
     </div>
-    <button id="${buttonId}" class="copy-button h-[24px]" onclick="handleCopy('${codeBlockId}', '${buttonId}')" type="button">
+    <button id="${buttonId}" aria-label="Copy to clipboard" class="copy-button h-[24px]" onclick="handleCopy('${codeBlockId}', '${buttonId}')" type="button">
       ${mdOutlineDone}${faCopy}
     </button>
   </div>
