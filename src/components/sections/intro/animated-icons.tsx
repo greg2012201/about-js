@@ -266,7 +266,7 @@ function AnimatedIcons() {
           alt="javascript logo"
           width={120}
           height={120}
-          src="./logo-javascript.svg"
+          src="/logo-javascript.svg"
         />
       </motion.div>
 
@@ -283,7 +283,7 @@ function AnimatedIcons() {
           alt="typescript logo"
           width={120}
           height={120}
-          src="./logo-typescript.svg"
+          src="/logo-typescript.svg"
         />
       </motion.div>
     </div>
