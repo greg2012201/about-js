@@ -44,6 +44,8 @@ asyncLocalStorage.run({ userId }, async () => {
 The `run()` method takes two arguments: `storage`, which contains the data we want to share, and `callback`, where we place our logic. As a result, the `storage` becomes accessible in every function call within the `callback`, allowing for seamless data sharing across asynchronous operations.
 
 ```ts
+import { asyncLocalStorage } from "./context";
+
 async function collectUsersData() {
   const context = asyncLocalStorage.getStore();
 }
