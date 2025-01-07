@@ -93,7 +93,11 @@ async function getPosts(locale: Locale = DEFAULT_LOCALE) {
     console.error(result.reason);
   });
 
-  return posts;
+  return posts.sort((a, b) =>
+    dayjs(b.data.createdAt, "DD-MM-YYYY").diff(
+      dayjs(a.data.createdAt, "DD-MM-YYYY"),
+    ),
+  );
 }
 
 export async function getPostsCreatedAt(slug: string) {
