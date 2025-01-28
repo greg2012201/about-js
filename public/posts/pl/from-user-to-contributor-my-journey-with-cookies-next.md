@@ -15,6 +15,8 @@ API jest dość proste. Po stronie serwera wymagane jest przekazanie kontekstu l
 
 Poniżej kilka przykładów:
 
+**Client**
+
 ```jsx
 // USING HOOKS
 

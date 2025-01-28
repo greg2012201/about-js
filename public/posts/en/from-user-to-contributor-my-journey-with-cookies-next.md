@@ -406,6 +406,6 @@ I’m not in favor of using an npm package for everything; sometimes, I prefer t
 
 Community support is also a key factor. When I create my own utils, I must take care of every dependency related to them. If one of the dependencies releases a new version with breaking changes, I’ll have to handle it myself. But when I use a library with an active community and good support from maintainers, I can get involved and work with them to deliver updates more quickly and safely. A great example of this is, again, `cookies-next`, where we delivered updates that followed breaking changes in Next.js.
 
-So, don’t hesitate — pick` cookies-next` for cookie management in your Next.js app.
+So, don’t hesitate — pick `cookies-next` for cookie management in your Next.js app.
 
 **Thanks for reading, and see you in the next post!👋**
