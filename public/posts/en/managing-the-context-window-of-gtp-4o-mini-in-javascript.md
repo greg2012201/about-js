@@ -276,4 +276,4 @@ Managing the context window is crucial, especially when focusing on large text a
 
 **Thanks for reading 🙌**
 
-PS: Look at the repo of the keywords extractor app [here on GitHub](https://github.com/greg2012201/keywords-extractor)
+PS: Look at the repo of the keywords extractor app [here on GitHub](https://github.com/greg2012201/keyword-extractor)

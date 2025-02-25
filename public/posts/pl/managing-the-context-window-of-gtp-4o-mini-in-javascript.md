@@ -274,4 +274,4 @@ Zarządzanie context window jest kluczowe, szczególnie gdy skupiamy się na ana
 
 **Dzieki za przeczytanie 🙌**
 
-PS: Zerknij na repo keword extractora [tutaj na GitHub'ie](https://github.com/greg2012201/keywords-extractor)
+PS: Zerknij na repo keword extractora [tutaj na GitHub'ie](https://github.com/greg2012201/keyword-extractor)
