@@ -10,10 +10,10 @@ function Footer() {
       <div className="flex flex-col items-center space-y-1">
         <Logo />
         <a
-          href="mailto:greg2012201@gmail.com"
+          href="mailto:greg@aboutjs.dev"
           className=" text-sm text-slate-100 hover:underline"
         >
-          greg2012201@gmail.com
+          greg@aboutjs.dev
         </a>
         <SocialIcons />
         <p className="text-sm italic">
