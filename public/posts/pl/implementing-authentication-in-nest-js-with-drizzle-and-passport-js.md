@@ -427,7 +427,7 @@ export class UserRepository {
 }
 ```
 
-W tej klasie mamy kilka metod zarządzających encją użytkownika. Ciekawa część dotyczy definicji konstruktora, gdzie przekazujemy token `DrizzleProvider` do dekoratora `@Inject()`, aby powiedzieć NestJS, aby wstrzyknął wartość do klasy. Wspominałem o tym wcześniej [w sekcji konfiguracji bazy danych](https://www.aboutjs.dev/pl/posts/implementing-authentication-in-nest-js-with-drizzle-and-passport-js#database-setup). Dzięki tej logice, nasz parametr `db` będzie przechowywał połączenie z bazą danych. Możliwe, że zauważyłeś, że nasz niestandardowy provider drizzle nie jest klasą. Gdyby nią był, nie musielibyśmy używać dekoratora `@Inject()`, ponieważ system DI NestJS wiedziałby, którą klasę wstrzyknąć, patrząc tylko na typ przypisany do parametru konstruktora.
+W tej klasie mamy kilka metod zarządzających encją użytkownika. Ciekawa część dotyczy definicji konstruktora, gdzie przekazujemy token `DrizzleProvider` do dekoratora `@Inject()`, aby powiedzieć NestJS, aby wstrzyknął wartość do klasy. Wspominałem o tym wcześniej [w sekcji konfiguracji bazy danych](https://www.aboutjs.dev/pl/posts/implementing-authentication-in-nest-js-with-drizzle-and-passport-js#konfiguracja-bazy-danych). Dzięki tej logice, nasz parametr `db` będzie przechowywał połączenie z bazą danych. Możliwe, że zauważyłeś, że nasz niestandardowy provider drizzle nie jest klasą. Gdyby nią był, nie musielibyśmy używać dekoratora `@Inject()`, ponieważ system DI NestJS wiedziałby, którą klasę wstrzyknąć, patrząc tylko na typ przypisany do parametru konstruktora.
 
 Dodajmy naszą klasę repozytorium do tablicy exports w pliku module. Dodatkowo, musimy upewnić się, że nasz niestandardowy provider jest poprawnie zaimportowany.
 
