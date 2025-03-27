@@ -1,6 +1,8 @@
 import { BundledLanguage } from "shiki";
 
-export const ALLOWED_LANGUAGES: BundledLanguage[] = [
+type Language = BundledLanguage | "env" | "md";
+
+export const ALLOWED_LANGUAGES: Language[] = [
   "typescript",
   "html",
   "css",
@@ -10,4 +12,6 @@ export const ALLOWED_LANGUAGES: BundledLanguage[] = [
   "console",
   "jsx",
   "json",
+  "md",
+  "yml",
 ];

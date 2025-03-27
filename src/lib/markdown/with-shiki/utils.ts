@@ -31,6 +31,12 @@ export function transformLang(lang: string) {
   if (["console", "powershell"].includes(lang)) {
     return "terminal";
   }
+  if (lang.toLocaleLowerCase() === "md") {
+    return "Markdown";
+  }
+  if (lang.toLocaleLowerCase() === "yml") {
+    return "YML";
+  }
   if (lang.toLocaleLowerCase() === "jsx") {
     return "JSX";
   }

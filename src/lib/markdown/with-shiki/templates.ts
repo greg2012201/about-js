@@ -4,9 +4,11 @@ import { BundledLanguage, BundledTheme } from "shiki";
 import { twMerge } from "tailwind-merge";
 import {
   biLogoTypescript,
+  bsFiletypeYml,
   faCode,
   faCopy,
   fiTerminal,
+  liaMarkdown,
   mdOutlineDone,
 } from "./icons";
 import { type Prettify } from "@/types";
@@ -22,6 +24,8 @@ const LANG_ICONS: Prettify<Partial<Record<BundledLanguage, string>>> = {
   powershell: fiTerminal,
   typescript: biLogoTypescript,
   jsx: faCode,
+  md: liaMarkdown,
+  yml: bsFiletypeYml,
 };
 
 const LANG_ICONS_MAP = new Map<string, string>(Object.entries(LANG_ICONS));
