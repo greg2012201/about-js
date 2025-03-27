@@ -431,7 +431,7 @@ export class UserRepository {
 }
 ```
 
-In this class, we have several methods that manage the user entity. The interesting part is in the constructor definition, where we pass the `DrizzleProvider` token to the `@Inject()` decorator to tell NestJS to inject the value into the class. I mentioned this earlier in the [database setup section](https://www.aboutjs.dev/posts/building-authentication-in-nest-jswith-drizzle-and-passport-js#database-setup). Once this is done, our `db` parameter will hold the database connection. You might have noticed that our custom drizzle provider is not a class. If it were, we wouldn’t need to use the `@Inject()` decorator, as NestJS DI system would know which class to inject by simply looking at the type assigned to the constructor's parameter.
+In this class, we have several methods that manage the user entity. The interesting part is in the constructor definition, where we pass the `DrizzleProvider` token to the `@Inject()` decorator to tell NestJS to inject the value into the class. I mentioned this earlier in the [database setup section](https://www.aboutjs.dev/en/posts/building-authentication-in-nest-jswith-drizzle-and-passport-js#database-setup). Once this is done, our `db` parameter will hold the database connection. You might have noticed that our custom drizzle provider is not a class. If it were, we wouldn’t need to use the `@Inject()` decorator, as NestJS DI system would know which class to inject by simply looking at the type assigned to the constructor's parameter.
 
 Let’s add our repository class to the module exports. Additionally, we need to ensure that our custom provider is imported correctly.
 
