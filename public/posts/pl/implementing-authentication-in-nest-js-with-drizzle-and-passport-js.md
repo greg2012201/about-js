@@ -759,4 +759,4 @@ Na pierwszy rzut oka Nest.js może wydawać się nieco skomplikowany i trudny do
 
 **Dzięki za przeczytanie, zpraszam do śledzenia kolejnych artykułów! 👋**
 
-PS: Kod możesz znaleść [tutaj na GitHub`ie](https://github.com/greg2012201/nest-auth)
+PS: Kod możesz znaleść [tutaj na GitHub`ie](https://github.com/greg2012201/nest-auth/tree/only-google-auth)

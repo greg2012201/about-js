@@ -763,4 +763,4 @@ At first glance, Nest.js might seem a bit complex and difficult to grasp, but on
 
 **Thanks for reading, and stay tuned for more articles! 👋**
 
-PS: You can find the project's code [here on GitHub](https://github.com/greg2012201/nest-auth)
+PS: You can find the project's code [here on GitHub](https://github.com/greg2012201/nest-auth/tree/only-google-auth)
