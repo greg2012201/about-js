@@ -412,10 +412,10 @@ An ideal usage scenario would look like this:
   <AlertDialogTrigger>Open Dialog</AlertDialogTrigger>
   <AlertDialogContent>
     <AlertDialogDescription>Hello! I am a little alert</AlertDialogDescription>
-    <AlertOptions>
-      <AlertClose>Close</AlertClose>
+    <AlertDialogOptions>
+      <AlertDialogClose>Close</AlertClose>
       <AlertConfirm>Confirm</AlertConfirm>
-    </AlertOptions>
+    </AlertDialogOptions>
   </AlertDialogContent>
 </AlertDialog>
 /* Rest of the code */
@@ -593,7 +593,7 @@ import { twMerge } from "tailwind-merge";
 
 interface AlertOptionsProps extends HTMLAttributes<HTMLDivElement> {}
 
-const AlertOptions = forwardRef(
+const AlertDialogOptions = forwardRef(
     ({ children, className, ...props }: AlertOptionsProps, ref: ForwardedRef<HTMLDivElement>) => {
         return (
             <div ref={ref} className={twMerge("mt-4 flex justify-end space-x-2", className)} {...props}>
@@ -602,7 +602,7 @@ const AlertOptions = forwardRef(
         );
     }
 );
-AlertOptions.displayName = "AlertOptions";
+AlertDialogOptions.displayName = "AlertDialogOptions";
 
 interface AlertDialogDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {}
 const AlertDialogDescription = forwardRef(
@@ -617,12 +617,12 @@ const AlertDialogDescription = forwardRef(
 AlertDialogDescription.displayName = "AlertDialogDescription";
 
 export {
-    AlertOptions,
+    AlertDialogOptions,
     AlertDialogDescription
 }
 ```
 
-The `AlertOptions` component serves as a layout for control buttons, and the `AlertDialogDescription` is just a container for text.
+The `AlertDialogOptions` component serves as a layout for control buttons, and the `AlertDialogDescription` is just a container for text.
 
 Every component that is a building block of the `AlertDialog` has "holes" where we can place other building blocks for the alert.
 Our component is completely decoupled from the application logic, so we can use it anywhere and connect our business logic through the control buttons' handlers.

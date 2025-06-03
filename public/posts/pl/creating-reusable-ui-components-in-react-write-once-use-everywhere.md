@@ -409,10 +409,10 @@ Idealny scenariusz użycia wyglądałby tak:
   <AlertDialogTrigger>Open Dialog</AlertDialogTrigger>
   <AlertDialogContent>
     <AlertDialogDescription>Hello! I am a little alert</AlertDialogDescription>
-    <AlertOptions>
-      <AlertClose>Close</AlertClose>
-      <AlertConfirm>Confirm</AlertConfirm>
-    </AlertOptions>
+    <AlertDialogOptions>
+      <AlertDialogClose>Close</AlertDialogClose>
+      <AlertDialogConfirm>Confirm</AlertDialogConfirm>
+    </AlertDialogOptions>
   </AlertDialogContent>
 </AlertDialog>
 /* Rest of the code */
@@ -537,12 +537,12 @@ import { type ForwardedRef, forwardRef } from "react";
 import { Button, ButtonProps } from "./button";
 
 
-interface AlertConfirmProps extends ButtonProps {
+interface AlertDialogConfirmProps extends ButtonProps {
     onConfirm?: () => void;
 }
 
-const AlertConfirm = forwardRef(
-    ({ children, onConfirm, ...props }: AlertConfirmProps, ref: ForwardedRef<HTMLButtonElement>) => {
+const AlertDialogConfirm = forwardRef(
+    ({ children, onConfirm, ...props }: AlertDialogConfirmProps, ref: ForwardedRef<HTMLButtonElement>) => {
         const { handleClose } = useDialogContext();
         return (
             <Button
@@ -559,12 +559,12 @@ const AlertConfirm = forwardRef(
         );
     }
 );
-AlertConfirm.displayName = "AlertConfirm";
+AlertDialogConfirm.displayName = "AlertDialogConfirm";
 
-interface AlertCloseContent extends ButtonProps {}
+interface AlertDialogCloseContent extends ButtonProps {}
 
-const AlertClose = forwardRef(
-    ({ children, variant, ...props }: AlertCloseContent, ref: ForwardedRef<HTMLButtonElement>) => {
+const AlertDialogClose = forwardRef(
+    ({ children, variant, ...props }: AlertDialogCloseContent, ref: ForwardedRef<HTMLButtonElement>) => {
         const { handleClose } = useDialogContext();
         return (
             <Button variant={variant ?? "outline"} size="sm" onClick={handleClose} ref={ref} {...props}>
@@ -573,11 +573,11 @@ const AlertClose = forwardRef(
         );
     }
 );
-AlertClose.displayName = "AlertClose";
+AlertDialogClose.displayName = "AlertDialogClose";
 
 export {
-    AlertConfirm,
-    AlertClose
+    AlertDialogConfirm,
+    AlertDialogClose
 }
 ```
 
@@ -589,10 +589,10 @@ Ostatnimi elementami alertu są wrappery dla treści oraz przycisków sterujący
 import { type HTMLAttributes, type ForwardedRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-interface AlertOptionsProps extends HTMLAttributes<HTMLDivElement> {}
+interface AlertDialogOptionsProps extends HTMLAttributes<HTMLDivElement> {}
 
-const AlertOptions = forwardRef(
-    ({ children, className, ...props }: AlertOptionsProps, ref: ForwardedRef<HTMLDivElement>) => {
+const AlertDialogOptions = forwardRef(
+    ({ children, className, ...props }: AlertDialogOptionsProps, ref: ForwardedRef<HTMLDivElement>) => {
         return (
             <div ref={ref} className={twMerge("mt-4 flex justify-end space-x-2", className)} {...props}>
                 {children}
@@ -600,7 +600,7 @@ const AlertOptions = forwardRef(
         );
     }
 );
-AlertOptions.displayName = "AlertOptions";
+AlertDialogOptions.displayName = "AlertDialogOptions";
 
 interface AlertDialogDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {}
 const AlertDialogDescription = forwardRef(
@@ -615,12 +615,12 @@ const AlertDialogDescription = forwardRef(
 AlertDialogDescription.displayName = "AlertDialogDescription";
 
 export {
-    AlertOptions,
+    AlertDialogOptions,
     AlertDialogDescription
 }
 ```
 
-Komponent `AlertOptions` pełni rolę layoutu dla przycisków sterujących, a `AlertDialogDescription` to po prostu kontener dla tekstu.
+Komponent `AlertDialogOptions` pełni rolę layoutu dla przycisków sterujących, a `AlertDialogDescription` to po prostu kontener dla tekstu.
 
 Każdy komponent będący częścią `AlertDialog` ma miejsca, w które możemy wstawić inne elementy składowe alertu.
 Nasz komponent jest całkowicie oddzielony od treści i logiki aplikacji, dzięki czemu możemy używać go w dowolnym miejscu i podłączać logikę biznesową za pomocą handlerów przekazywanych do przycisków sterujących.
