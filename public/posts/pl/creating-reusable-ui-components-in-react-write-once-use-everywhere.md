@@ -404,16 +404,16 @@ Idealny scenariusz użycia wyglądałby tak:
 
 ```jsx
 /* Rest of the code */
-<AlertDialog>
+<AlertDialog onOpenChange={setIsOpen} isOpen={isOpen}>
   {/* <AlertDialog onOpenChange={setIsOpen} isOpen={isOpen}> */}
   <AlertDialogTrigger>Open Dialog</AlertDialogTrigger>
-  <AlertDialogOverlay>
-    <AlertDialogContent>Hello! I am a little alert</AlertDialogContent>
+  <AlertDialogContent>
+    <AlertDialogDescription>Hello! I am a little alert</AlertDialogDescription>
     <AlertOptions>
       <AlertClose>Close</AlertClose>
-      <AlertConfirm onConfirm={handleConfirm}>Confirm</AlertConfirm>
+      <AlertConfirm>Confirm</AlertConfirm>
     </AlertOptions>
-  </AlertDialogOverlay>
+  </AlertDialogContent>
 </AlertDialog>
 /* Rest of the code */
 ```
