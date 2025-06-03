@@ -414,7 +414,7 @@ An ideal usage scenario would look like this:
     <AlertDialogDescription>Hello! I am a little alert</AlertDialogDescription>
     <AlertDialogOptions>
       <AlertDialogClose>Close</AlertClose>
-      <AlertConfirm>Confirm</AlertConfirm>
+      <AlertDialogConfirm>Confirm</AlertDialogConfirm>
     </AlertDialogOptions>
   </AlertDialogContent>
 </AlertDialog>
@@ -538,12 +538,12 @@ import { type ForwardedRef, forwardRef } from "react";
 import { Button, ButtonProps } from "./button";
 
 
-interface AlertConfirmProps extends ButtonProps {
+interface AlertDialogConfirmProps extends ButtonProps {
     onConfirm?: () => void;
 }
 
-const AlertConfirm = forwardRef(
-    ({ children, onConfirm, ...props }: AlertConfirmProps, ref: ForwardedRef<HTMLButtonElement>) => {
+const AlertDialogConfirm = forwardRef(
+    ({ children, onConfirm, ...props }: AlertDialogConfirmProps, ref: ForwardedRef<HTMLButtonElement>) => {
         const { handleClose } = useDialogContext();
         return (
             <Button
@@ -560,7 +560,7 @@ const AlertConfirm = forwardRef(
         );
     }
 );
-AlertConfirm.displayName = "AlertConfirm";
+AlertDialogConfirm.displayName = "AlertDialogConfirm";
 
 interface AlertCloseContent extends ButtonProps {}
 
@@ -577,7 +577,7 @@ const AlertClose = forwardRef(
 AlertClose.displayName = "AlertClose";
 
 export {
-    AlertConfirm,
+    AlertDialogConfirm,
     AlertClose
 }
 ```
