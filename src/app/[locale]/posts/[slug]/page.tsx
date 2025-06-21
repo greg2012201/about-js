@@ -8,6 +8,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { twMerge } from "tailwind-merge";
 import "@/app/markdown.css";
+import PostsImageViewer from "@/components/blog/posts-image-viewer";
 
 const Share = dynamic(() => import("@/components/blog/share"));
 const Toaster = dynamic(() =>
@@ -56,12 +57,13 @@ async function PostPage({ params: { slug, locale } }: Props) {
       />
       <article
         className={twMerge(
-          `markdown prose prose-slate prose-invert prose-headings:text-slate-300 prose-img:mx-auto prose-img:w-full mx-auto max-w-[680px] py-8`,
+          `markdown prose prose-slate prose-invert prose-headings:text-slate-300 prose-img:mx-auto prose-img:w-full prose-img:cursor-pointer mx-auto max-w-[680px] py-8`,
         )}
         dangerouslySetInnerHTML={{ __html: postHTML }}
       />
       {hasCodeBlock(postHTML) && <Script id="markdown" src="/handle-copy.js" />}
       <Share tocList={tocList} />
+      <PostsImageViewer />
       <Toaster />
     </div>
   );
