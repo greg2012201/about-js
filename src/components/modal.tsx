@@ -33,7 +33,7 @@ function Modal({ isOpen, onClose, children, className }: ModalProps) {
   return (
     <Portal>
       <div
-        className="fixed inset-0 z-50 bg-black bg-opacity-50"
+        className="fixed inset-0 z-50 bg-black bg-opacity-80"
         onClick={onClose}
       >
         <div
